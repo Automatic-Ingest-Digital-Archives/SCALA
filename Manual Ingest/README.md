@@ -38,9 +38,25 @@ You should be able to restore the original filestructure based on the filelist. 
 **Manuals**
 * Create filelist using Windows Powershell: --> verder uitwerken in nieuw markdown-file. Twee gedeeltes: een filelist maken voor één folder + een filelist maken voor meerdere folders.
 * Create filelist using Linux Terminal: --> verder uitwerken in nieuw markdown-file
-* Create filelist using Treesize: --> niet prioritair om uit te werken
-* Create filelist using Python os.module --> niet prioritair om uit te werken.
+* Create filelist using Treesize: --> verder uitwerken in nieuwe markdown-file
+* Create filelist using Python os.module --> Verder uitwerken in nieuwe markdown-file. Data bij Wim
+
+Andere partners kunnen andere methodes toevoegen.
+
+You can also create a filelist of the whole archive and include this in the documentation folder.
 
 ### Delete system files -- recommended
+The SCALA digital repository contains a delete systemfiles function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in Roda-in.
+Only do this after creation of a filelist.
+
+* Delete system files with shell script --> Amsab verder uitwerken.
+
+Andere partners kunnen andere methodes toevoegen
 
 ### Unpack zipped files -- optional
+The SCALA digital repository does not unpack container files or zipped files, due to multiple possible issues. zip-files in the SIP will be zip-files in the AIP. If you want to unpack all ZIP-files you can do this before. However, be aware that this always requires some human control.
+
+* Unpack zipped files using powershell script
+* Unpack zipped files using Linux terminal
+
+Andere partners kunnen andere methodes toevoegen.
