@@ -31,7 +31,15 @@ There are several options that allow you to produce SIPs in bulk more efficientl
 With Roda-in, you can create basic SIPs for ingest into the SCALA repository. All Roda does is to create a descriptive metadata file with a METS-file, preserving the checksums. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations.
 
 ### Create a filelist for each SIP -- recommended
+It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders.
 
+You should be able to restore the original filestructure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)
+
+**Manuals**
+* Create filelist using Windows Powershell: --> verder uitwerken in nieuw markdown-file. Twee gedeeltes: een filelist maken voor één folder + een filelist maken voor meerdere folders.
+* Create filelist using Linux Terminal: --> verder uitwerken in nieuw markdown-file
+* Create filelist using Treesize: --> niet prioritair om uit te werken
+* Create filelist using Python os.module --> niet prioritair om uit te werken.
 
 ### Delete system files -- recommended
 
