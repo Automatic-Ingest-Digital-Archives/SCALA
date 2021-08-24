@@ -1,62 +1,50 @@
 # SCALA ingest manual
+> The SCALA way to create and store SIPs and AIPs
 
-## Basic ingest with Roda-in
-For Roda-in installation and configuration, see --> link naar pagina met Roda-in
+This manual provides step-by-step instructions for getting your archival data into an AIP.
 
-Basic ingest with Roda-in implies the following steps:
-1. Prepare your essence or data in a folder
-2. Load folders in Roda-in using option (één of twee, ik weet het niet meer zo goed)
-3. Add descriptive metadata
-4. Add - if applicable - documentation
+We use the following definitions:
 
-Bear in mind that Roda-in deletes empty folders without a log. If you need to find a work around for this, see other pre-ingest steps under.
+| Definition | Explanation |
+| :-- | :-- |
+|TS|<ul><li>Transfer Set.</li><li>Folder containing all archival materials that are to be converted to an AIP.</li></ul>|
+|SIP|<ul><li>Submission Information Package.</li><li>An E-ARK conform set of files that is offered to the e-depot.</li><li>A content producer creates one SIP from one TS.</li></ul>|
+|AIP|<ul><li>Archival Information Package.</li><li>An E-ARK conform structure that stores the files in the SIP in the e-depot.</li></ul>|
+|RODA-In|<ul><li>SIP creation software by KEEP SOLUTIONS.</li></ul>|
+|RODA|<ul><li>AIP (re)ingestion browser tool by KEEP SOLUTIONS.</li></ul>|
+|meemoo|<ul><li>Long term archival storage provider.</li></ul>|
 
-### Prepare folders
-@Jelle: Verder uitwerken
-### Load folders in Roda-in
-@Jelle: Verder uitwerken (voorlopig uitgaan van creatie bulkSIP)
-### Add descriptive metadata
-@Jelle: Verder uitwerken (voorlopig wel nog block hier op hoe ons definitief descriptive metadataschema eruit gaat zien)
-### Add documentation
-@Jelle: Verder uitwerken
+There are instructions for Win10 and Mac/Linux operating systems.
 
-## Advanced ingest with Roda-in
-There are several options that allow you to produce SIPs in bulk more efficiently
-1. Add metadata from a file
+The manual is structured as follows:
+  1. **Using a terminal** - for some tasks, basic knowledge about using a terminal is needed.
+  2. **Testing best practices** - if you are using this manual for testing purposes, consider these best practices.
+  3. **Archival data preparation** - tasks to execute before submitting a TS to RODA-In.
+  4. **RODA-In SIP creation**
+  5. **RODA AIP creation & storage**
+  6. **Issues & questions** - what to do if you encounter issues or have questions.
 
-### Add metadata from a file
-@Jelle: Verder uitwerken. Focus op de vijf à zes essentiële metadata. Voorlopig wel nog block
+## Using a terminal
 
-## Other pre-ingest steps
-With Roda-in, you can create basic SIPs for ingest into the SCALA repository. All Roda does is to create a descriptive metadata file with a METS-file, preserving the checksums. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations.
+Some tasks are best performed by running a script in a terminal. A terminal is a program where you can write instructions for your computer to execute. Computers normally come with a terminal program installed by default. On Windows the program is “PowerShell” and on Mac/Linux it is usually “Bash”. A terminal looks something like this:
 
-### Create a filelist for each SIP -- recommended
-It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders.
 
-You should be able to restore the original filestructure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)
 
-**Manuals**
-* Create filelist using Windows Powershell: --> verder uitwerken in nieuw markdown-file. Twee gedeeltes: een filelist maken voor één folder + een filelist maken voor meerdere folders.
-* Create filelist using Linux Terminal: --> verder uitwerken in nieuw markdown-file
-* Create filelist using Treesize: --> verder uitwerken in nieuwe markdown-file
-* Create filelist using Python os.module --> Verder uitwerken in nieuwe markdown-file. Data bij Wim
+## Testing best practices
 
-Andere partners kunnen andere methodes toevoegen.
+## Archival data preparation
 
-You can also create a filelist of the whole archive and include this in the documentation folder.
+### Create your TS
 
-### Delete system files -- recommended
-The SCALA digital repository contains a delete systemfiles function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in Roda-in.
-Only do this after creation of a filelist.
+### Extra data preparation tasks
 
-* Delete system files with shell script --> Amsab verder uitwerken.
+#### Unpack zipped files [optional]
+#### Remove backup files [optional]
+#### Create a filelist and filetree [recommended]
+#### Delete system files [recommended]
 
-Andere partners kunnen andere methodes toevoegen
+## RODA-In SIP creation
 
-### Unpack zipped files -- optional
-The SCALA digital repository does not unpack container files or zipped files, due to multiple possible issues. zip-files in the SIP will be zip-files in the AIP. If you want to unpack all ZIP-files you can do this before. However, be aware that this always requires some human control.
+## RODA AIP creation & storage
 
-* Unpack zipped files using powershell script
-* Unpack zipped files using Linux terminal
-
-Andere partners kunnen andere methodes toevoegen.
+## Issues & questions
