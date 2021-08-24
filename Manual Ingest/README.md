@@ -28,7 +28,7 @@ The manual is structured as follows:
 
 Some tasks are best performed by running a script in a terminal. A terminal is a program where you can write instructions for your computer to execute. Computers normally come with a terminal program installed by default. On Windows the program is “PowerShell” and on Mac/Linux it is usually “Bash”. A terminal looks something like this:
 
-
+![Terminals](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture1.png)
 
 ## Testing best practices
 
