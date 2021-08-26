@@ -5,14 +5,40 @@ This manual provides step-by-step instructions for getting your archival data in
 
 We use the following definitions:
 
-| Definition | Explanation |
-| :-- | :-- |
-|TS|<ul><li>Transfer Set.</li><li>Folder containing all archival materials that are to be converted to an AIP.</li></ul>|
-|SIP|<ul><li>Submission Information Package.</li><li>An E-ARK conform set of files that is offered to the e-depot.</li><li>A content producer creates one SIP from one TS.</li></ul>|
-|AIP|<ul><li>Archival Information Package.</li><li>An E-ARK conform structure that stores the files in the SIP in the e-depot.</li></ul>|
-|RODA-In|<ul><li>SIP creation software by KEEP SOLUTIONS.</li></ul>|
-|RODA|<ul><li>AIP (re)ingestion browser tool by KEEP SOLUTIONS.</li></ul>|
-|meemoo|<ul><li>Long term archival storage provider.</li></ul>|
+<table>
+    <thead>
+        <tr>
+            <th>Definition</th>
+            <th>Explanation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TS</td>
+            <td><ul><li>Transfer Set.</li><li>Folder containing all archival materials that are to be converted to an AIP.</li></ul>          </td>
+      </tr>
+      <tr>
+            <td>SIP</td>
+            <td><ul><li>Submission Information Package.</li><li>An E-ARK conform set of files that is offered to the e-depot.</li><li>A content producer creates one SIP from one TS.</li></ul>          </td>
+      </tr>
+      <tr>
+            <td>AIP</td>
+            <td><ul><li>Archival Information Package.</li><li>An E-ARK conform structure that stores the files in the SIP in the e-depot.</li></ul>          </td>
+      </tr>
+      <tr>
+            <td>RODA-In</td>
+            <td><ul><li>SIP creation software by KEEP SOLUTIONS.</li></ul>          </td>
+      </tr>
+      <tr>
+            <td>RODA</td>
+            <td><ul><li>AIP (re)ingestion browser tool by KEEP SOLUTIONS.</li></ul>          </td>
+      </tr>
+      <tr>
+            <td>meemoo</td>
+            <td><ul><li>Long term archival storage provider.</li></ul>          </td>
+      </tr>
+    </tbody>
+</table>
 
 There are instructions for Win10 and Mac/Linux operating systems.
 
@@ -24,7 +50,7 @@ The manual is structured as follows:
   5. **RODA AIP creation & storage**
   6. **Issues & questions** - what to do if you encounter issues or have questions.
 
-## Using a terminal
+## 1. Using a terminal
 
 Some tasks are best performed by running a script in a terminal. A terminal is a program where you can write instructions for your computer to execute. Computers normally come with a terminal program installed by default. On Windows the program is “PowerShell” and on Mac/Linux it is usually “Bash”. A terminal looks something like this:
 
@@ -56,7 +82,7 @@ There are always two tasks involved when using a terminal for a SCALA ingest tas
 
 Now, whenever you are requested to “Open a terminal and run ``` some script ```”, you can execute both tasks above.
 
-## Testing best practices
+## 2. Testing best practices
 
 If you are using this manual for testing purposes, please consider these best practices.
 
@@ -81,19 +107,243 @@ If you are using this manual for testing purposes, please consider these best pr
     </tbody>
 </table>
 
-## Archival data preparation
+## 3. Archival data preparation
 
-### Create your TS
+ ### a. Create your TS
 
-### Extra data preparation tasks
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Create your TS</li></ul></td>
+            <td colspan=2>Create a working folder (with a unique id) with your essence or data that needs to be transformed in a SIP. The folder contains the original files and files already migrated before ingestion.</td>
+        </tr>
+        <tr>
+            <td><ul><li>Create and add a descriptive metadata file to your TS [optional]</li></ul></td>
+            <td colspan=2>Create a metadata XML-file which follows the instructions at Add descriptive metadata.</td>
+      </tr>
+      <tr>
+        <td><ul><li>Create and add additional unstructured metadata [optional]</li></ul></td>
+            <td colspan=2>Create a folder called “submissionDocumentation” in the root of the TS.</br> Add additional unstructured metadata accompanying the content files.
+</td>
+        </tr>
+    </tbody>
+</table>
 
-#### Unpack zipped files [optional]
-#### Remove backup files [optional]
-#### Create a filelist and filetree [recommended]
-#### Delete system files [recommended]
+### b.  Extra data preparation tasks
 
-## RODA-In SIP creation
+Here are optional but recommended tasks to execute before submitting a TS to RODA-In. Please execute your chosen tasks in the order presented.
 
-## RODA AIP creation & storage
+#### i. Unpack zipped files [optional]
 
-## Issues & questions
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Unpack zipped files</li></ul></td>
+          <td>Open a terminal and run:</br><code>Expand-Archive -Path ".\*.zip"</code>,</br>where * is the name of the zip file.</td>
+            <td>Open a terminal and run:</br><code>unzip "*.zip" && ls -l</code>,</br>where * is the name of the zip file.</td>
+        </tr>
+    </tbody>
+</table>
+
+#### ii.  Remove backup files [optional]
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Remove backup files</li></ul></td>
+          <td colspan=2>Manually remove backup files.</td>
+        </tr>
+    </tbody>
+</table>
+
+#### iii. Create a filelist and filetree [recommended]
+
+A filelist is a text file containing all folders and files in your TS. A filetree contains the same information in a more human readable form.
+
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture4.png">
+
+If you are on Mac or Linux, you have to install the “tree” app. Windows has it installed by default.
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Install the “tree” app</li></ul></td>
+          <td></td>
+          <td>Install on Mac</br>Open a terminal and run:</br><code>brew install tree</code></br></br>Install on Linux</br>Open a terminal and run:</br><code>sudo apt update && sudo apt-get install tree</td>
+        </tr>
+    </tbody>
+</table>
+
+You can create a filelist and filetree for the root folder you are in using option 1. Alternatively, if you want to create filelists and filetrees for many TS’ at once, please follow option 2.
+
+<b>Option 1:</b> create a filelist and filetree for the current TS.
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Create a filelist and filetree for the current TS</li></ul></td>
+          <td>Open a terminal and run:</br></br><code>
+$File = "tree.txt";
+$Path = "./submissionDocumentation"
+md -Force $Path | Out-Null
+Get-ChildItem -Path .\ -Recurse -Force | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
+if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
+	New-Item -Path $Path -Name $File -ItemType File
+};
+Tree /f | tee $Path\$File
+  </code>
+</td>
+          <td>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
+DIR="./submissionDocumentation" &&
+if [ ! -d "$DIR" ]; then
+mkdir $DIR
+fi &&
+touch $DIR/$FILE &&
+find | tee $DIR/filelist.txt &&
+tree | tee $DIR/$FILE
+</code>
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<b>Option 2:</b> create a filelist and filetree for a list of TS’ in the current root folder. Therefore, open a terminal in the root folder containing all your TS’ in separate folders.
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Create a filelist and filetree for each TS in the current folder</li></ul></td>
+          <td>Open a terminal and run:</br></br><code>
+$File = "tree.txt";
+Get-ChildItem |
+where {$_.PsIsContainer} |
+foreach {
+$Path = "$_/submissionDocumentation";
+md -Force $Path | Out-Null;
+Get-ChildItem -Path $_ -Recurse | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
+if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
+	New-Item -Path $Path -Name $File -ItemType File
+};
+Tree $_ /f | tee $Path\$File
+}
+  </code>
+</td>
+          <td>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
+find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
+DIR="./submissionDocumentation" &&
+if [ ! -d "$DIR" ]; then
+mkdir $DIR
+fi &&
+touch $DIR/$FILE &&
+find | tee $DIR/filelist.txt &&
+tree | tee $DIR/$FILE
+" \;
+</code>
+</td>
+        </tr>
+    </tbody>
+</table>
+
+#### iv.  Delete system files [recommended]
+
+Make sure to only execute this step after Create a filelist and filetree [recommended].
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Delete system files</li></ul></td>
+          <td colspan=2>Manually delete system files.</td>
+        </tr>
+    </tbody>
+</table>
+
+## 4. RODA-In SIP creation
+
+### a. RODA-In installation & configuration
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Install & start RODA-In</li></ul></td>
+          <td colspan=2>Follow the installation guide on https://rodain.roda-community.org/.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">
+</td>
+        </tr>
+        <tr>
+            <td><ul><li>Configure RODA-In to use the SCALA metadata template</li></ul></td>
+          <td colspan=2>Open the configuration folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture6.png"></br>Download the “scala.xml.hbs” and “config.properties” files from https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Roda-In.<br><ol><li>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</li><li>Overwrite the config file in “\roda-in” with the “config.properties” file.</li><ol><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture7.png">
+</td>
+        </tr>
+    </tbody>
+</table>
+
+### b. Using RODA-In
+
+## 5. RODA AIP creation & storage
+
+### a. RODA account
+
+### b. Install an FTP client and connect to meemoo
+
+### c. Using RODA
+
+## 6. Issues & questions
+
+All issues can be reported in the SCALA GitHub repository: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/issues. Please check if the same issue was already reported before creating a new issue.
+
+Alternatively, you can contact jelle.kleevens@vai.be to report the issue or for any other questions.
