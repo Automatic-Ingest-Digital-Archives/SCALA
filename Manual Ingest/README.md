@@ -75,8 +75,8 @@ If you are using this manual for testing purposes, please consider these best pr
         </tr>
         <tr>
             <td><ul><li>Install dedicated file management software to transfer files from your external hard drive to your computer</li></ul></td>
-            <td>One option is to download and install Total Commander from https://www.ghisler.com/download.htm. </br></td>
-            <td>One option is to download and install Double Commander from https://doublecmd.sourceforge.io/.</td>
+            <td>One option is to download and install Total Commander from <a href="https://www.ghisler.com/download.htm">this website</a>. </br></td>
+            <td>One option is to download and install Double Commander from <a href="https://doublecmd.sourceforge.io/">this website</a>.</td>
         </tr>
     </tbody>
 </table>
