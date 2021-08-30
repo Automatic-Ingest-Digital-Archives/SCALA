@@ -107,9 +107,7 @@ folder of your TS and (2) copy-paste the script in the terminal and press “Ent
         <tr>
             <td>
                 <ul>
-                    <li>Open terminal at <i><span
-                                title="Depending on the script you wish to execute, Root Folder can be either the parent folder containing all of 1 TS. Or it can be the parent folder containing multiple TS' in a separate folder each.">root
-                                folder</span></i></li>
+                    <li>Open terminal at <i><span title="Depending on the script you wish to execute, Root Folder can be either the parent folder containing all of 1 TS. Or it can be the parent folder containing multiple TS' in a separate folder each.">root folder</span></i></li>
                 </ul>
             </td>
             <td><b> Option 1 </b> </br> Navigate to the root folder in File Explorer. </br> Shift + right click the
@@ -164,10 +162,7 @@ If you are using this manual for testing purposes, please consider these best pr
         <tr>
             <td>
                 <ul>
-                    <li><span
-                            title="These tools are preferred over the default file transfer tools of Win10 and Mac. They are fast and give clear error messages."><i>Install
-                                dedicated file management software to transfer files from your external hard drive to
-                                your computer</i></span></li>
+                    <li><span title="These tools are preferred over the default file transfer tools of Win10 and Mac. They are fast and give clear error messages."><i>Install dedicated file management software to transfer files from your external hard drive to your computer</i></span></li>
                 </ul>
             </td>
             <td>One option is to download and install <a href="https://www.ghisler.com/download.htm">Total
@@ -216,22 +211,18 @@ If you are using this manual for testing purposes, please consider these best pr
                 </ul>
             </td>
             <td colspan=2>Create a folder called “submissionDocumentation” in the root of the TS.</br>
-                <span title="E.g. file format identification files, file lists, etc."><i>Add additional unstructured
-                        metadata accompanying the content files</i></span>.
+                <span title="E.g. file format identification files, file lists, etc."><i>Add additional unstructured metadata accompanying the content files</i></span>.
             </td>
         </tr>
     </tbody>
 </table>
 
-### b. Extra <span
-    title="With RODA-In, you can create basic SIPs for ingest into the SCALA repository. All Roda-In does is to create a descriptive metadata file with a METS-file, preserving fixity. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations."><i>data
-        preparation tasks</i></span>
+### b. Extra <span title="With RODA-In, you can create basic SIPs for ingest into the SCALA repository. All Roda-In does is to create a descriptive metadata file with a METS-file, preserving fixity. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations."><i>data preparation tasks</i></span>
 
 Here are optional but recommended tasks to execute before submitting a TS to RODA-In. Please execute your chosen tasks
 in the order presented.
 
-#### i. Unpack zipped files <span
-    title="The SCALA digital repository does not unpack container files or zipped files, due to multiple possible issues. zip-files in the SIP will be zip-files in the AIP. If you want to unpack all ZIP-files you can do this before. However, be aware that this always requires some human control."><i>[optional]</i></span>
+#### i. Unpack zipped files <span title="The SCALA digital repository does not unpack container files or zipped files, due to multiple possible issues. zip-files in the SIP will be zip-files in the AIP. If you want to unpack all ZIP-files you can do this before. However, be aware that this always requires some human control."><i>[optional]</i></span>
 
 <table>
     <thead>
@@ -279,8 +270,7 @@ in the order presented.
     </tbody>
 </table>
 
-#### iii. Create a filelist and filetree <span
-    title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>
+#### iii. Create a filelist and filetree <span title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>
 
 A filelist is a text file containing all folders and files in your TS. A filetree contains the same information in a
 more human readable form.
@@ -400,8 +390,7 @@ tree | tee $DIR/$FILE
     </tbody>
 </table>
 
-#### iv. Delete system files <span
-    title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>
+#### iv. Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>
 
 Make sure to only execute this step after Create a filelist and filetree [recommended].
 
@@ -486,9 +475,7 @@ SIP creation
         <tr>
             <td>
                 <ul>
-                    <li><span
-                            title="Bear in mind that Roda-in deletes empty folders without a log. If you need a work around for this issue, see other pre-ingest steps “Create a filelist and filetree for each SIP”."><i>Load
-                                your TS in RODA-In</i></span></li>
+                    <li><span title="Bear in mind that Roda-in deletes empty folders without a log. If you need a work around for this issue, see other pre-ingest steps “Create a filelist and filetree for each SIP”."><i>Load your TS in RODA-In</i></span></li>
                 </ul>
             </td>
             <td colspan=2>Choose the working folder in your file system. This will serve as the root of your
@@ -522,13 +509,10 @@ SIP creation
         <tr>
             <td>
                 <ul>
-                    <li><span
-                            title="This will determine how (S)IPs will be associated with eachother (e.g. are two IPs siblings or parent-child)."><i>Select
-                                an association method</i></span></li>
+                    <li><span title="This will determine how (S)IPs will be associated with eachother (e.g. are two IPs siblings or parent-child)."><i>Select an association method</i></span></li>
                 </ul>
             </td>
-            <td colspan=2>Choose the association method <span
-                    title="We may explore other SIP/AIP association methods in the future."><i>“One information package
+            <td colspan=2>Choose the association method <span title="We may explore other SIP/AIP association methods in the future."><i>“One information package
                         for each selected files or folders”</i></span>.</br>
                 Click on the button “Continue”.
                 </br><img
@@ -729,9 +713,7 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
                 <img
                     src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture19.png"></br>
                 After they are uploaded, access SIPs via the RODA website.</br></br>
-                <span
-                    title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option
-                            2:</b> Upload SIPs via the RODA website.</i></span>
+                <span title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option 2:</b> Upload SIPs via the RODA website.</i></span>
                 <ol>
                     <li>On the “Ingest” dropdown menu, click on “Transfer”.</li>
                     <li>On the transfer page, click on the three dots. Then select “Upload”.</br>
