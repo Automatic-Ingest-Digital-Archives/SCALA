@@ -334,6 +334,92 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
 
 ### b. Using RODA-In
 
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+            <th>Mac/Linux</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li>Load your TS in RODA-In</li></ul></td>
+          <td colspan=2>Choose the working folder in your file system. This will serve as the root of your project.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture8.png">
+</td>
+        </tr>
+        <tr>
+            <td><ul><li>Create a new classification scheme</li></ul></td>
+          <td colspan=2>Click to create a new classification scheme.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture9.png">
+</td>
+        </tr>
+	        <tr>
+            <td><ul><li>Add the TS to the IP panel</li></ul></td>
+          <td colspan=2>Select the root folder of your TS.</br>
+Add this folder to the IP panel by clicking “Associate” or by dragging it to the IP panel.</br>
+You can also choose to select and add folders/files individually.
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture10.png">
+</td>
+        </tr>
+	        <tr>
+            <td><ul><li>Select an association method</li></ul></td>
+          <td colspan=2>Choose the association method “One information package for each selected files or folders”.</br>
+Click on the button “Continue”. 
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture11.png">
+</td>
+        </tr>
+	        <tr>
+            <td><ul><li>Add descriptive metadata</li></ul></td>
+	<td colspan=2><b>Option 1:</b> Create new metadata from a template.</br>
+Select option 1.</br>
+Select the descriptive metadata standard/type of your choice.</br>
+Click “Continue”.</br></br>
+<b>Option 2:</b> Load metadata from a single file.</br>
+Select option 2.</br>
+Select and add the descriptive metadata file.</br>
+Select the descriptive metadata standard/type of your file.</br>
+Click “Continue”.
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture12.png">
+</td>
+        </tr>
+	 <tr>
+            <td><ul><li>Edit descriptive metadata [optional]</li></ul></td>
+          <td colspan=2>Make changes to the metadata file using the tool. 
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture13.png">
+</td>
+        </tr>
+	 <tr>
+            <td><ul><li>Add more representations of the data [optional]</li></ul></td>
+          <td colspan=2>Click “Add representation”. 
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture14.png">
+</td>
+        </tr>
+	 <tr>
+            <td><ul><li>Add documentation [optional]</li></ul></td>
+          <td colspan=2>Click on “Documentation”.</br>
+Drop files or folders from your file explorer to add documentation.
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture15.png">
+</td>
+        </tr>
+	 <tr>
+            <td><ul><li>Create SIP(s)</li></ul></td>
+          <td colspan=2>Click “Create SIP(s)”.
+</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture16.png"></br>
+On the popup screen, select the following options:</br>
+<ol><li>Export all items - toggle this off if you only want to create a SIP from the currently selected IP. Toggle on if you want to create SIPs for all IPs in the IP (middle) panel. Toggle off by default.</li>
+<li>Include hierarchy - toggle on to keep relationships between SIPs in their METS (e.g. siblings, parent-child). Toggle on by default.</li>
+<li>Create inventory report - toggle on to make a list of all items contained per SIP. Toggle off by default.</li>
+	<li>Output directory - select where the SIP(s) will be saved.</li>
+	<li>SIP format - select E-ARK2.</li>
+	<li>SIP names - select Title + ID. This will render the SIP(s) easy to work with later on.</li>
+	</ol>
+Click “Start” to create the SIP(s).</br>
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture17.png">
+</td>
+        </tr>
+    </tbody>
+</table>
+
 ## 5. RODA AIP creation & storage
 
 ### a. RODA account
