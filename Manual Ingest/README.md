@@ -49,7 +49,7 @@ We use the following definitions:
                 </ul>
             </td>
         </tr>
-        <tr>
+        <tr>zinsc
             <td>RODA</td>
             <td>
                 <ul>
@@ -671,11 +671,11 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
                     <li>Download and install an FTP client</li>
                 </ul>
             </td>
-            <td>You can choose whichever client you wish. Here is one option:</br></br>
-                <a href="https://winscp.net/eng/download.php">Download WinSCP</a>.</br></br>
+            <td>You can choose whichever client you wish. Here is one option:</br>
+                <a href="https://winscp.net/eng/download.php">Download WinSCP</a>.</br>
                 Install WinSCP.
             </td>
-            <td>You can choose whichever client you wish. Here is one option:</br></br>
+            <td>You can choose whichever client you wish. Here is one option:</br>
                 <a href="https://filezilla-project.org/download.php?platform=osx">Download FileZilla</a>.</br>
                 Install FileZilla.
             </td>
