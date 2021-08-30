@@ -49,7 +49,7 @@ We use the following definitions:
                 </ul>
             </td>
         </tr>
-        <tr>zinsc
+        <tr>
             <td>RODA</td>
             <td>
                 <ul>
