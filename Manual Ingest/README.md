@@ -415,9 +415,7 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
     </tbody>
 </table>
 
-## 4. <span
-    title="Roda-in is a tool designed to create Submission Information Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders available on the local file system."><i>RODA-In</i></span>
-SIP creation
+## 4. <span title="Roda-in is a tool designed to create Submission Information Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders available on the local file system."><i>RODA-In</i></span> SIP creation
 
 ### a. RODA-In installation & configuration
 
