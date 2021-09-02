@@ -52,3 +52,9 @@ py .\descriptionxmlgen.py $line.replace('"', "'") $delimiter > "./$path/descript
 };
 Stop-Transcript;
 </code>
+
+<b>Bash</b>
+
+<code>
+To be added
+</code>
