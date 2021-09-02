@@ -17,7 +17,7 @@ ET.SubElement(root, 'localId').text = data[1]
 ET.SubElement(root, 'titel').text = data[2]
 ET.SubElement(root, 'beschrijving').text = data[6]
 ET.SubElement(root, 'archiefvormer')
-ET.SubElement(root, 'datering').text = '/'.join(data[3:5]) if data[3] != '' and data[4] != '' else '/'.join(data[3], "..") if data[3] != '' and data[4] == '' else '/'.join("..", data[4]) if data[3] == '' and data[4] != '' else ''
+ET.SubElement(root, 'datering').text = '/'.join(data[3:5]) if data[3] != '' and data[4] != '' else '/'.join([data[3], ".."]) if data[3] != '' and data[4] == '' else '/'.join(["..", data[4]]) if data[3] == '' and data[4] != '' else ''
 ET.SubElement(root, 'isOnderdeelVan').text = data[5]
 ET.SubElement(root, 'naamBewaarinstelling')
 ET.SubElement(root, 'idBewaarinstelling')
