@@ -10,6 +10,14 @@
 Must contain the following headers in that exact order:
 container_id;reference_code;title;start_year;end_year;top_archive_value;content_remarks
 
+- container_id: This must be the exact name of the SIP folder for which you create this description.xml.
+- reference_code
+- title
+- start_year
+- end_year
+- top_archive_value
+- content_remarks
+
 Put the csv file in the root folder of your SIPs.
 
 ## 2. Download and install Python
@@ -24,8 +32,7 @@ Put the python file in the root folder of your SIPs.
 
 ## 4. Execute shell script
 
-Open a terminal in the root folder of your SIPs. Then execute the script below.
-! Please note: depending on your OS language settings, your csv file may be delimited with comma's or with semicolons. Please adjust the $delimiter variable in the script accordingly.
+Open a terminal in the root folder of your SIPs. Then execute the script below. Please note: depending on your OS language settings, your csv file may be delimited with comma's or with semicolons. Please adjust the $delimiter variable in the script accordingly.
 
 <b>PowerShell</b>
 
