@@ -32,14 +32,19 @@ Put the python file in the root folder of your SIPs.
 
 ## 4. Execute shell script
 
-Open a terminal in the root folder of your SIPs. Then execute the script below. Please note: depending on your OS language settings, your csv file may be delimited with commas or with semicolons. Please adjust the $delimiter variable in the script accordingly. For Belgium, the delimiter is normally ";".
+Open a terminal in the root folder of your SIPs. Then execute the script below.
+
+! Please note:
+
+- In the script replace {{INSERT FILE NAME HERE}} with the name of your csv file.
+- Depending on your OS language settings, your csv file may be delimited with commas or with semicolons. Please adjust the $delimiter variable in the script accordingly. For Belgium, the delimiter is normally ";".
 
 <b>PowerShell</b>
 
 <code>
 Start-Transcript;
 $delimiter = ";";
-$csv = Get-Content "./20210901_metadata_CK.csv";
+$csv = Get-Content "./{{INSERT FILE NAME HERE}}.csv";
 foreach ($line in ($csv | select -skip 1)){
 $path = $line.Split($delimiter)[0];
 $path;
