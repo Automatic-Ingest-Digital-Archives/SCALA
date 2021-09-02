@@ -26,7 +26,7 @@ https://www.python.org/downloads/
 
 ## 3. Download Python script
 
-https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/descriptionxmlgen.py
+https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/DescriptionXML/descriptionxmlgen.py
 
 Put the python file in the root folder of your SIPs.
 
