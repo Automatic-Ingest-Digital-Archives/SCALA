@@ -1,4 +1,33 @@
-###PS
+# How to generate discription.xml files for all your SIPs
+
+1. Prepare a correct csv file
+2. Download and install Python
+3. Download Python script
+4. Execute shell script
+
+## 1. Prepare a correct csv file
+
+Must contain the following headers in that exact order:
+container_id;reference_code;title;start_year;end_year;top_archive_value;content_remarks
+
+Put the csv file in the root folder of your SIPs.
+
+## 2. Download and install Python
+
+https://www.python.org/downloads/
+
+## 3. Download Python script
+
+https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/descriptionxmlgen.py
+
+Put the python file in the root folder of your SIPs.
+
+## 4. Execute shell script
+
+Open a terminal in the root folder of your SIPs. Then execute the script below.
+! Please note: depending on your OS language settings, your csv file may be delimited with comma's or with semicolons. Please adjust the $delimiter variable in the script accordingly.
+
+<b>PowerShell</b>
 
 <code>
 Start-Transcript;
