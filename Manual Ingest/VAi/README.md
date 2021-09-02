@@ -32,7 +32,7 @@ Put the python file in the root folder of your SIPs.
 
 ## 4. Execute shell script
 
-Open a terminal in the root folder of your SIPs. Then execute the script below. Please note: depending on your OS language settings, your csv file may be delimited with comma's or with semicolons. Please adjust the $delimiter variable in the script accordingly.
+Open a terminal in the root folder of your SIPs. Then execute the script below. Please note: depending on your OS language settings, your csv file may be delimited with commas or with semicolons. Please adjust the $delimiter variable in the script accordingly. For Belgium, the delimiter is normally ";".
 
 <b>PowerShell</b>
 
