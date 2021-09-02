@@ -8,7 +8,7 @@
 ## 1. Prepare a correct csv file
 
 Must contain the following headers in that exact order:
-container_id;reference_code;title;start_year;end_year;top_archive_value;content_remarks
+`container_id;reference_code;title;start_year;end_year;top_archive_value;content_remarks`
 
 - container_id: This must be the exact name of the SIP folder for which you create this description.xml.
 - reference_code
