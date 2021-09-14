@@ -327,7 +327,7 @@ if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
 Tree /f | tee $Path\$File
   </code>
             </td>
-            <td>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
+            <td><b>On Linux:</b></br>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
 DIR="./submissionDocumentation" &&
 if [ ! -d "$DIR" ]; then
 mkdir $DIR
@@ -335,6 +335,17 @@ fi &&
 touch $DIR/$FILE &&
 find | tee $DIR/filelist.txt &&
 tree | tee $DIR/$FILE
+</code></br></br>
+<b>On Mac:</b></br>Open a terminal and run:</br></br><code>
+		DIR="./submissionDocumentation" &&
+	TREE="tree.txt" &&
+	FILELIST="filelist.txt" &&
+	ls -lahR > $FILELIST &&
+	tree > $TREE &&
+	if [ ! -d "$DIR" ]; then
+	mkdir $DIR
+	fi &&
+	mv $TREE $FILELIST $DIR
 </code>
             </td>
         </tr>
@@ -345,49 +356,62 @@ tree | tee $DIR/$FILE
 in the root folder containing all your TS’ in separate folders.
 
 <table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Create a filelist and filetree for each TS in the current folder</li>
-                </ul>
-            </td>
-            <td>Open a terminal and run:</br></br><code>
-$File = "tree.txt";
-Get-ChildItem |
-where {$_.PsIsContainer} |
-foreach {
-$Path = "$_/submissionDocumentation";
-md -Force $Path | Out-Null;
-Get-ChildItem -Path $_ -Recurse | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
-if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
-	New-Item -Path $Path -Name $File -ItemType File
-};
-Tree $_ /f | tee $Path\$File
-}
-  </code>
-            </td>
-            <td>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
-find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
-DIR="./submissionDocumentation" &&
-if [ ! -d "$DIR" ]; then
-mkdir $DIR
-fi &&
-touch $DIR/$FILE &&
-find | tee $DIR/filelist.txt &&
-tree | tee $DIR/$FILE
-" \;
-</code>
-            </td>
-        </tr>
-    </tbody>
+   <thead>
+      <tr>
+         <th>Task</th>
+         <th>Win10</th>
+         <th>Mac/Linux</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>
+            <ul>
+               <li>Create a filelist and filetree for each TS in the current folder</li>
+            </ul>
+         </td>
+         <td>Open a terminal and run:</br></br><code>
+            $File = "tree.txt";
+            Get-ChildItem |
+            where {$_.PsIsContainer} |
+            foreach {
+            $Path = "$_/submissionDocumentation";
+            md -Force $Path | Out-Null;
+            Get-ChildItem -Path $_ -Recurse | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
+            if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
+            New-Item -Path $Path -Name $File -ItemType File
+            };
+            Tree $_ /f | tee $Path\$File
+            }
+            </code>
+         </td>
+         <td><b>On Linux:</b></br>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
+            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
+            DIR="./submissionDocumentation" &&
+            if [ ! -d "$DIR" ]; then
+            mkdir $DIR
+            fi &&
+            touch $DIR/$FILE &&
+            find | tee $DIR/filelist.txt &&
+            tree | tee $DIR/$FILE
+            " \;
+            </code></br></br>
+            <b>On Mac:</b></br>Open a terminal and run:</br></br><code>
+            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
+            DIR="./submissionDocumentation" &&
+            TREE="tree.txt" &&
+            FILELIST="filelist.txt" &&
+            ls -lahR > $FILELIST &&
+            tree > $TREE &&
+            if [ ! -d "$DIR" ]; then
+            mkdir $DIR
+            fi &&
+            mv $TREE $FILELIST $DIR
+            " \;
+            </code>
+         </td>
+      </tr>
+   </tbody>
 </table>
 
 #### iv. Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>
