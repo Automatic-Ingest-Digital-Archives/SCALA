@@ -118,4 +118,34 @@ See if you can find the following information in the PREMIS above:
 
 ### Example representation/file level PREMIS
 
-### Example description.xml
+### [Example description.xml](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/SCALA_sample_descriptive_metadata.xml)
+
+```xml
+  
+<?xml version="1.0" encoding="UTF-8"?>
+<VIAA xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/">
+   <CP>AMSAB-IG</CP>
+   <CP_id>OR-jq0st8z<!--21-09-16 for now we use the generic APA OR-iD; later we will use the OR-ID's of the individual CP's--></CP_id>
+   <dc_title>aanwinst van ABVV</dc_title>
+   <dc_description>collectie van een aantal digitale dragers uit de bureau's van een aantal medewerkers</dc_description>
+   <dc_identifier_localid>collectie12345</dc_identifier_localid>
+   <dc_identifier_localids type="list">      
+      <ScalaID>UUID12345<!--UUID of SIP produced by Roda-In?--></ScalaID>
+   </dc_identifier_localids>
+   <dc_titles type="list">
+      <archief>144: Archief van Algemeen Belgisch Vakverbond (ABVV)</archief>
+   </dc_titles>
+   <dc_creators type="list">
+         <Archiefvormer>ABVV</Archiefvormer>
+   </dc_creators>
+   <dc_contributors type="list">
+      <Producer>SCALA<!--aim is to be able to filter out Scala content, still looking into this--></Producer>
+   </dc_contributors>
+   <dc_rights_licenses/> 
+   <dc_rights_comment>niet-raadpleegbaar</dc_rights_comment>
+   <dcterms_created>2021-09-13<!--creation date of AIP?--></dcterms_created>
+   <md5>582925fef639c663e0abf9c47cad0727</md5>
+</VIAA>
+```
