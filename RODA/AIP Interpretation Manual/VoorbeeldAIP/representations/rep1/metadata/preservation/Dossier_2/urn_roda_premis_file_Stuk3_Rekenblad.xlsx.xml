@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<v3:object xsi:type="v3:file" xmlns:v3="http://www.loc.gov/premis/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <v3:objectIdentifier>
+    <v3:objectIdentifierType>URN</v3:objectIdentifierType>
+    <v3:objectIdentifierValue>urn:roda:premis:file:Stuk3_Rekenblad.xlsx</v3:objectIdentifierValue>
+  </v3:objectIdentifier>
+  <v3:preservationLevel>
+    <v3:preservationLevelValue>full</v3:preservationLevelValue>
+  </v3:preservationLevel>
+  <v3:objectCharacteristics>
+    <v3:fixity>
+      <v3:messageDigestAlgorithm>SHA-1</v3:messageDigestAlgorithm>
+      <v3:messageDigest>4C6330C33291639481BC5296E5BD05DFC8A9EB36</v3:messageDigest>
+      <v3:messageDigestOriginator>RODA</v3:messageDigestOriginator>
+    </v3:fixity>
+    <v3:fixity>
+      <v3:messageDigestAlgorithm>SHA-256</v3:messageDigestAlgorithm>
+      <v3:messageDigest>73AF9A825F4C3C5281591F4680CF00F83C04D603E89A9DCBDC1C6EACFB5B9DCD</v3:messageDigest>
+      <v3:messageDigestOriginator>RODA</v3:messageDigestOriginator>
+    </v3:fixity>
+    <v3:fixity>
+      <v3:messageDigestAlgorithm>MD5</v3:messageDigestAlgorithm>
+      <v3:messageDigest>30E5954A0416F317C14A28C0F1862B5D</v3:messageDigest>
+      <v3:messageDigestOriginator>RODA</v3:messageDigestOriginator>
+    </v3:fixity>
+    <v3:size>6192</v3:size>
+    <v3:format>
+      <v3:formatDesignation>
+        <v3:formatName>Microsoft Excel for Windows</v3:formatName>
+        <v3:formatVersion>2007 onwards</v3:formatVersion>
+      </v3:formatDesignation>
+    </v3:format>
+    <v3:format>
+      <v3:formatRegistry>
+        <v3:formatRegistryName>pronom</v3:formatRegistryName>
+        <v3:formatRegistryKey>fmt/214</v3:formatRegistryKey>
+      </v3:formatRegistry>
+    </v3:format>
+    <v3:format>
+      <v3:formatRegistry>
+        <v3:formatRegistryName>mime</v3:formatRegistryName>
+        <v3:formatRegistryKey>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</v3:formatRegistryKey>
+      </v3:formatRegistry>
+    </v3:format>
+  </v3:objectCharacteristics>
+  <v3:originalName>Stuk3_Rekenblad.xlsx</v3:originalName>
+  <v3:storage>
+    <v3:contentLocation>
+      <v3:contentLocationType/>
+      <v3:contentLocationValue/>
+    </v3:contentLocation>
+  </v3:storage>
+</v3:object>

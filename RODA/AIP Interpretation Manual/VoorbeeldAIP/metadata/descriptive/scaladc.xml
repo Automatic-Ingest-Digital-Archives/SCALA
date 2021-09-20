@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	  <field name="id">uuid-6981ba8e-9d2b-4e8a-912e-6e2a6ad44c3d</field>
+	  <field name="originalTitle">Dossier_met_mappen</field>
+	  <field name="producer"/>
+	  <field name="date">2021-09-20</field>
+	  <field name="dcterms:type">http://purl.org/dc/dcmitype/Collection</field>
+	  <field name="edm:provider"/>
+	  <field name="dcterms:identifier"/>
+	  <field name="dc:title"/>
+	  <field name="dcterms:accessRights"/>
+	  <field name="marc:owner"/>
+	  <field name="dc:creator"/>
+	  <field name="edm:dataprovider"/>
+	  <field name="dcterms:isPartOf"/>
+	  <field name="dc:description"/>
+	  <field name="cld:itemFormat"/>
+	  <field name="dcterms:created"/>
+	  <field name="dcterms:extent"/>
+	  <field name="dcterms:language"/>
+	  <field name="dcterms:subject"/>
+</metadata>
