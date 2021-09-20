@@ -64,4 +64,58 @@ Check out [this example AIP](https://github.com/Automatic-Ingest-Digital-Archive
 
 Now let's take a closer look at some of the metadata files.
 
-[Example package level PREMIS.xml](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VoorbeeldAIP/metadata/preservation/urn_roda_premis_event_06079fd0-aa57-4931-922e-1df092a09183.xml)
+### [Example AIP level PREMIS.xml](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VoorbeeldAIP/metadata/preservation/urn_roda_premis_event_06079fd0-aa57-4931-922e-1df092a09183.xml)
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<event xmlns="http://www.loc.gov/premis/v3">
+  <eventIdentifier>
+    <eventIdentifierType>URN</eventIdentifierType>
+    <eventIdentifierValue>urn:roda:premis:event:06079fd0-aa57-4931-922e-1df092a09183</eventIdentifierValue>
+  </eventIdentifier>
+  <eventType>virus check</eventType>
+  <eventDateTime>2021-09-20T10:42:13.36Z</eventDateTime>
+  <eventDetailInformation>
+    <eventDetail>Scanned package for malicious programs using ClamAV.</eventDetail>
+  </eventDetailInformation>
+  <eventOutcomeInformation>
+    <eventOutcome>SUCCESS</eventOutcome>
+    <eventOutcomeDetail>
+      <eventOutcomeDetailNote>The package does not contain any known malicious programs.
+/roda/data/storage/aip/668b3f2f-51be-4dd7-ace6-d73a41b8526c: OK
+
+----------- SCAN SUMMARY -----------
+Infected files: 0
+Time: 0.325 sec (0 m 0 s)
+Start Date: 2021:09:20 10:42:13
+End Date:   2021:09:20 10:42:13</eventOutcomeDetailNote>
+    </eventOutcomeDetail>
+  </eventOutcomeInformation>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:org.roda.core.plugins.plugins.antivirus.AntivirusPlugin@ClamAV 0.103.2/26261/Thu Aug 12 08:22:34 2021</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:jkleevens</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingObjectIdentifier>
+    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
+    <linkingObjectIdentifierValue>urn:roda:aip:668b3f2f-51be-4dd7-ace6-d73a41b8526c</linkingObjectIdentifierValue>
+    <linkingObjectRole>outcome</linkingObjectRole>
+  </linkingObjectIdentifier>
+</event>
+```
+
+See if you can find the following information in the PREMIS.xml above:
+
+- What type of event is this PREMIS about?
+- Is there more detailed information about the event available?
+- Was the outcome of the event a success or a failure?
+- Can you find two linkingAgentIdentifier tags?
+- Who are the agents involved in this event? Hint: one agent is a user, one is a piece of software.
+- Can you find a linkingObjectIdentifier tag? Can you see that the object it refers to, is the AIP itself?
+
+### Example representation/file level PREMIS.xml
+
+### Example description.xml
