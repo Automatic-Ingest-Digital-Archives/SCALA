@@ -210,3 +210,5 @@ See if you can make an educated guess as to the information contained in each ta
    <md5>582925fef639c663e0abf9c47cad0727</md5>
 </VIAA>
 ```
+
+This is similar to a label you'd put on an archive box. The more quality information included about its contents, the more easily it can be retrieved later on!
