@@ -58,7 +58,7 @@ Let's see what each section contains:
 
 **Aip.json** - Contains data about the AIP ingest, its contents and any updates it has had.
 
-## Examples
+## Examples/exercises
 
 Check out [this example AIP](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/RODA/AIP%20Interpretation%20Manual/VoorbeeldAIP) and see if you can find all sections discussed above.
 
