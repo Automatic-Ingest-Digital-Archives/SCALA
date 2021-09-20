@@ -30,7 +30,21 @@ Let's see what each section contains:
 
 **Documentation** - Additional files with information related to, but not part of the IP itself.
 
-**Description.xml** - Provided information about the archives contained in the AIP.
+**Description.xml** - Provided information about the archives contained in the AIP. Tags include:
+
+- *CP* - Content provider.
+- *CP_id* - Content provider ID.
+- *dc_title* - IP title.
+- *dc_description* - IP description.
+- *dc_identifier_localid* - IP identifier used by the archiver.
+- *dc_identifier_localids* - List of other IDs, such as SCALA ID; RODA-In SIP ID, ...
+- *dc_titles* - List of names of the archive. (?)
+- *dc_creators* - List of people/institutions who made the archive.
+- *dc_contributors*
+- *dc_rights_licenses*
+- *dc_rights_comment*
+- *dcterms_created* - Creation date of the IP.
+- *md5* - MD5 checksum value.
 
 **PREMIS.xml (AIP level)** - All PREMIS files of events/processes that were run on the AIP's data. Such events include:
 
