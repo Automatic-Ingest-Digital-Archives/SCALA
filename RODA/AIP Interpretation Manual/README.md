@@ -64,7 +64,7 @@ Check out [this example AIP](https://github.com/Automatic-Ingest-Digital-Archive
 
 Now let's take a closer look at some of the metadata files.
 
-### [Example AIP level PREMIS.xml](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VoorbeeldAIP/metadata/preservation/urn_roda_premis_event_06079fd0-aa57-4931-922e-1df092a09183.xml)
+### [Example AIP level PREMIS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VoorbeeldAIP/metadata/preservation/urn_roda_premis_event_06079fd0-aa57-4931-922e-1df092a09183.xml)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -107,7 +107,7 @@ End Date:   2021:09:20 10:42:13</eventOutcomeDetailNote>
 </event>
 ```
 
-See if you can find the following information in the PREMIS.xml above:
+See if you can find the following information in the PREMIS above:
 
 - What type of event is this PREMIS about?
 - Is there more detailed information about the event available?
@@ -116,6 +116,6 @@ See if you can find the following information in the PREMIS.xml above:
 - Who are the agents involved in this event? Hint: one agent is a user, one is a piece of software.
 - Can you find a linkingObjectIdentifier tag? Can you see that the object it refers to, is the AIP itself?
 
-### Example representation/file level PREMIS.xml
+### Example representation/file level PREMIS
 
 ### Example description.xml
