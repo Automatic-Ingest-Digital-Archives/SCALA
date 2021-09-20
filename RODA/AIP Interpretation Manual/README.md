@@ -130,12 +130,59 @@ See if you can find the following information in the PREMIS above:
 - Who are the agents involved in this event? Hint: one agent is a user, one is a piece of software.
 - Can you find a linkingObjectIdentifier tag? Can you see that the object it refers to, is the AIP itself?
 
-### Example representation/file level PREMIS
+### [Example representation/file level PREMIS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VoorbeeldAIP/representations/rep1/metadata/preservation/Dossier_met_mappen/urn_roda_premis_file_Stuk1_Tekstdocument.docx.xml)
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<v3:object xsi:type="v3:file" xmlns:v3="http://www.loc.gov/premis/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <v3:objectIdentifier>
+    <v3:objectIdentifierType>URN</v3:objectIdentifierType>
+    <v3:objectIdentifierValue>urn:roda:premis:file:Stuk1_Tekstdocument.docx</v3:objectIdentifierValue>
+  </v3:objectIdentifier>
+  <v3:preservationLevel>
+    <v3:preservationLevelValue>full</v3:preservationLevelValue>
+  </v3:preservationLevel>
+  <v3:objectCharacteristics>
+    <v3:fixity>
+      <v3:messageDigestAlgorithm>MD5</v3:messageDigestAlgorithm>
+      <v3:messageDigest>DC5D4F96B81E7453C48664F7CBBE32BF</v3:messageDigest>
+      <v3:messageDigestOriginator>RODA</v3:messageDigestOriginator>
+    </v3:fixity>
+    <v3:size>11803</v3:size>
+    <v3:format>
+      <v3:formatDesignation>
+        <v3:formatName>Microsoft Word for Windows</v3:formatName>
+        <v3:formatVersion>2007 onwards</v3:formatVersion>
+      </v3:formatDesignation>
+    </v3:format>
+    <v3:format>
+      <v3:formatRegistry>
+        <v3:formatRegistryName>pronom</v3:formatRegistryName>
+        <v3:formatRegistryKey>fmt/412</v3:formatRegistryKey>
+      </v3:formatRegistry>
+    </v3:format>
+    <v3:format>
+      <v3:formatRegistry>
+        <v3:formatRegistryName>mime</v3:formatRegistryName>
+        <v3:formatRegistryKey>application/vnd.openxmlformats-officedocument.wordprocessingml.document</v3:formatRegistryKey>
+      </v3:formatRegistry>
+    </v3:format>
+  </v3:objectCharacteristics>
+  <v3:originalName>Stuk1_Tekstdocument.docx</v3:originalName>
+  <v3:storage>
+    <v3:contentLocation>
+      <v3:contentLocationType/>
+      <v3:contentLocationValue/>
+    </v3:contentLocation>
+  </v3:storage>
+</v3:object>
+```
+
+See if you can make an educated guess as to the information contained in each tag.
 
 ### [Example description.xml](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/SCALA_sample_descriptive_metadata.xml)
 
 ```xml
-  
 <?xml version="1.0" encoding="UTF-8"?>
 <VIAA xmlns:xs="http://www.w3.org/2001/XMLSchema"
       xmlns:dc="http://purl.org/dc/elements/1.1/"
