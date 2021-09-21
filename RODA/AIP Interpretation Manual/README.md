@@ -878,6 +878,12 @@ The representation folder structure is copied. Then for each data file an Apache
 </details>
     
 ## VeraPDF
+  
+The representation folder structure is copied. Then for each pdf file a VeraPDF HTML file is made.
+  
+[Example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VeraPDF_Example_Output.pdf.html)
+   
+</details>
 
 </details>
     
