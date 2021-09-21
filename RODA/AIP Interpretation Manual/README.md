@@ -859,6 +859,23 @@ The representation folder structure is copied. Then for each data file a Siegrie
 </details>
 
 ## ApacheTika
+  
+The representation folder structure is copied. Then for each data file an ApacheTika XML file is made.
+    
+<details>
+    <summary>Example</summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <field name="X-Parsed-By">org.apache.tika.parser.DefaultParser</field>
+  <field name="X-Parsed-By">org.apache.tika.parser.txt.TXTParser</field>
+  <field name="Content-Encoding">ISO-8859-1</field>
+  <field name="Content-Type">text/plain; charset=ISO-8859-1</field>
+</metadata>
+```
+   
+</details>
     
 ## VeraPDF
 
