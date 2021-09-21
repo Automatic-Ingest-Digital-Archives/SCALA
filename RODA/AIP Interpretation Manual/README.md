@@ -30,7 +30,13 @@ AIP metadata will be explored in detail in the following segments.
 
 # Descriptive metadata
 
+<details>
+  <summary>Click to expand</summary>
+    
 Description.xml contains provided information about the archives contained in the AIP. The following table contains an overview of all tags considered, including mapping between descriptive metadata standards. It also shows how these standards are then mapped to the meemoo.xml.
+
+<details>
+    <summary>Expand table</summary>
 
 | ISAD(G)                                                   | EAD 2002                                                          | RODA-In EAD                                 | DC Elements | RODA-In DC   | sidecar XML                                                                  | SCALA priority | SCALA description                |
 |-----------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------|-------------|--------------|------------------------------------------------------------------------------|----------------|----------------------------------|
@@ -85,8 +91,15 @@ Description.xml contains provided information about the archives contained in th
 | N/A                                                       | <unitid> REPOSITORYCODE attribute                                 | Repository code                             | N/A         | N/A          |                                                                              | SHOULD         |                                  |
 
 [Table source](https://drive.google.com/file/d/1O1x-21RBuIK6d0WqePyFhu16Czd66J0x/view)
-    
+
+</details>
+
+</details>
+
 # Preservation metadata
+    
+<details>
+  <summary>Click to expand</summary>
     
 ## Object metadata
 
@@ -96,7 +109,8 @@ Contains structural information about each file, like its name, fixity informati
 
 The representation folder structure is copied. Then for each data file a file object PREMIS is made. Each file object PREMIS is given the filename of the original file.
     
-> Example of a file object.
+<details>
+  <summary>Example of a file object</summary>
     
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -144,11 +158,14 @@ The representation folder structure is copied. Then for each data file a file ob
 </v3:object>
 ```
 
+</details>
+    
 ### Representation object metadata
     
 Contains structural information about a representation, like its contained files and relations between them.
-    
-> Example of a representation object.
+
+<details>
+  <summary>Example of a representation object</summary>
     
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -179,35 +196,31 @@ Contains structural information about a representation, like its contained files
 </v3:object>
 ```
     
+</details>
+    
 ## Event metadata
     
 Events are saved at the AIP level. An event is a process which is run on the AIP.
 
 An event PREMIS file is a log file about an event. It involves three parts:
 - The type of event. Check the full list below.
-- The outcome of the event. An event can have a SUCCESS or a FAILED outcome. Or it can be SKIPPED, meaning the process was considered but not executed.
-- The agents involved in the event. Agents can be users, software programs or objects.
+- The outcome of the event. An event can have a SUCCESS or a FAILURE outcome. Or it can be SKIPPED, meaning the process was considered but not executed.
+- The agents involved in the event. Agents can be users or software programs.
+- The objects involved in the event. Objects can be files, representations, the AIP and even the ingested SIP.
 
-Dan zou ik per event expliciet noteren:
-Agents involvedMogelijke waardes voor eventOutcome --> Dit moet je mogelijk aan Roda vragenMogelijke eventOutcome die wordt gegeven (bv. SUCCESS/FAILED/WARNING)Niveau van links met objecten: Representatie/File/Representatie&File
 Here follows a list of event PREMIS metadata per event type.
-    
-- Check if digital signatures are valid and/or strip them.
-- Check that the received SIP is well formed, complete and that no unexpected files were included.
-- Identify the object's file formats and versions using Siegfried.
-- Scan package for malicious programs using ClamAV.
-- Start of the ingest process.
-- End of the ingest process.
-- Check whether the descriptive metadata is included in the SIP and if this metadata is valid according to the established policy.
-- Extract technical metadata using Apache Tika.
-- Add package to the inventory. After this point, the responsibility for the digital content’s preservation is passed on to the repository.
-- Check if PDF files are veraPDF valid.
-- Extract objects from package in E-ARK SIP 2 format.
-- Create base PREMIS objects with file original name and file fixity information (SHA-256).
-- Check user permissions to ensure that they has sufficient authorization to store the AIP under the desired node of the classification scheme.
     
 ### Wellformedness check
 
+Checked that the received SIP is well formed, complete and that no unexpected files were included.
+
+Agents involved: EARKSIP2ToAIPPlugin, user starting ingest process.
+    
+Objects involved: SIP, AIP.
+
+<details>
+    <summary>Example</summary>
+    
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <event xmlns="http://www.loc.gov/premis/v3">
@@ -246,8 +259,65 @@ Here follows a list of event PREMIS metadata per event type.
   </linkingObjectIdentifier>
 </event>
 ```
+
+</details>
+
+Checked whether the descriptive metadata is included in the SIP and if this metadata is valid according to the established policy.
+
+Agents involved: DescriptiveMetadataValidationPlugin, user starting ingest process.
     
+Objects involved: AIP.
+
+<details>
+    <summary>Example</summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<event xmlns="http://www.loc.gov/premis/v3">
+  <eventIdentifier>
+    <eventIdentifierType>URN</eventIdentifierType>
+    <eventIdentifierValue>urn:roda:premis:event:5794d4d2-4d8e-4ebc-977e-1f0d3b5d077e</eventIdentifierValue>
+  </eventIdentifier>
+  <eventType>wellformedness check</eventType>
+  <eventDateTime>2021-09-20T10:42:13.39Z</eventDateTime>
+  <eventDetailInformation>
+    <eventDetail>Checked whether the descriptive metadata is included in the SIP and if this metadata is valid according to the established policy.</eventDetail>
+  </eventDetailInformation>
+  <eventOutcomeInformation>
+    <eventOutcome>SUCCESS</eventOutcome>
+    <eventOutcomeDetail>
+      <eventOutcomeDetailNote>Descriptive metadata is well formed and complete.
+Schemas used on validation: scala-dc (1.0)</eventOutcomeDetailNote>
+    </eventOutcomeDetail>
+  </eventOutcomeInformation>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:org.roda.core.plugins.plugins.base.DescriptiveMetadataValidationPlugin@1.0</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:jkleevens</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingObjectIdentifier>
+    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
+    <linkingObjectIdentifierValue>urn:roda:aip:668b3f2f-51be-4dd7-ace6-d73a41b8526c</linkingObjectIdentifierValue>
+    <linkingObjectRole>outcome</linkingObjectRole>
+  </linkingObjectIdentifier>
+</event>
+```
+ 
+</details>
+
 ### Format identification
+
+Identified the object's file formats and versions using Siegfried.
+
+Agents involved: SiegfriedPlugin, user starting ingest process.
+    
+Objects involved: all files.
+ 
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -295,50 +365,21 @@ Here follows a list of event PREMIS metadata per event type.
     <linkingObjectIdentifierValue>urn:roda:file:5d9ee2c8-1dca-38dd-af8e-4ff1df860875</linkingObjectIdentifierValue>
     <linkingObjectRole>source</linkingObjectRole>
   </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:cc3b0acb-6e8f-3b9d-8c73-8d3346892fe0</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:fc0f0965-fafd-318a-8083-8629f6e9b34d</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:dad944fa-bcb2-3ce5-819e-4db7180b2bae</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:6666c8fe-48c9-3bf1-9760-1cf46e2709dc</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:5def9637-8d2e-3821-9f45-6b6dc2536155</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:58f15db9-c6ae-3f1f-bb7b-c7933c936698</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:5b827362-03be-3cc9-b8df-859afb624edc</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
-  <linkingObjectIdentifier>
-    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
-    <linkingObjectIdentifierValue>urn:roda:file:783bc417-d04e-33a4-be82-cfc7cd4c17e7</linkingObjectIdentifierValue>
-    <linkingObjectRole>source</linkingObjectRole>
-  </linkingObjectIdentifier>
 </event>
 ```
-    
+  
+</details>
+
 ### Virus check
+
+Scanned package for malicious programs using ClamAV.
+
+Agents involved: AntivirusPlugin, user starting ingest process.
+    
+Objects involved: AIP.
+    
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -380,8 +421,19 @@ End Date:   2021:09:20 10:42:13</eventOutcomeDetailNote>
   </linkingObjectIdentifier>
 </event>
 ```
-    
+  
+</details>
+
 ### Authorization check
+
+User permissions have been checked to ensure that he has sufficient authorization to store the AIP under the desired node of the classification scheme.
+
+Agents involved: VerifyUserAuthorizationPlugin, user starting ingest process.
+    
+Objects involved: AIP.
+ 
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -417,8 +469,19 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
   </linkingObjectIdentifier>
 </event>
 ```
-    
+   
+</details>
+
 ### Ingest start
+
+The ingest process has started.
+
+Agents involved: ConfigurableIngestPlugin, user starting ingest process.
+    
+Objects involved: SIP, AIP.
+    
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -458,8 +521,19 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
   </linkingObjectIdentifier>
 </event>
 ```
-    
+ 
+</details>
+
 ### Ingest end
+
+The ingest process has ended.
+
+Agents involved: ConfigurableIngestPlugin, user starting ingest process.
+    
+Objects involved: SIP, AIP.
+    
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -500,7 +574,18 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
 </event>
 ```
     
+</details>
+
 ### Message digest calculation
+
+Created base PREMIS objects with file original name and file fixity information (SHA-256).
+
+Agents involved: PremisSkeletonPlugin, user starting ingest process.
+    
+Objects involved: AIP.
+   
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -535,8 +620,19 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
   </linkingObjectIdentifier>
 </event>
 ```
-    
+  
+</details>
+
 ### Accession
+
+Added package to the inventory. After this point, the responsibility for the digital content’s preservation is passed on to the repository.
+
+Agents involved: AutoAcceptSIPPlugin, user starting ingest process.
+    
+Objects involved: AIP.
+    
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -571,8 +667,19 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
   </linkingObjectIdentifier>
 </event>
 ```
-    
+ 
+</details>
+
 ### Unpacking
+
+Extracted objects from package in E-ARK SIP 2 format.
+
+Agents involved: EARKSIP2ToAIPPlugin, user starting ingest process.
+    
+Objects involved: SIP, AIP.
+    
+<details>
+    <summary>Example</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -612,13 +719,124 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
   </linkingObjectIdentifier>
 </event>
 ```
+ 
+</details>
+
+### Digital signature validation
+
+Checked if digital signatures were valid and/or stripped them.
+
+Agents involved: DigitalSignaturePlugin, user starting ingest process.
+    
+No objects involved.
+    
+<details>
+    <summary>Example</summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<event xmlns="http://www.loc.gov/premis/v3">
+  <eventIdentifier>
+    <eventIdentifierType>URN</eventIdentifierType>
+    <eventIdentifierValue>urn:roda:premis:event:909e5fc4-d6e7-4f9d-a750-a9679c3f2dc0</eventIdentifierValue>
+  </eventIdentifier>
+  <eventType>digital signature validation</eventType>
+  <eventDateTime>2021-07-19T07:28:51.56Z</eventDateTime>
+  <eventDetailInformation>
+    <eventDetail>Checked if digital signatures were valid and/or stripped them.</eventDetail>
+  </eventDetailInformation>
+  <eventOutcomeInformation>
+    <eventOutcome>SKIPPED</eventOutcome>
+    <eventOutcomeDetail>
+      <eventOutcomeDetailNote>The package skipped the action.
+No file was stripped on this aip.</eventOutcomeDetailNote>
+    </eventOutcomeDetail>
+  </eventOutcomeInformation>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:org.roda.core.plugins.external.DigitalSignaturePlugin@1.0</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:admin</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+</event>
+```
+    
+</details>
+
+### Metadata extraction
+
+Extraction of technical metadata using Apache Tika.
+
+Agents involved: TikaFullTextPlugin, user starting ingest process.
+    
+Objects involved: all files.
+    
+<details>
+    <summary>Example</summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<event xmlns="http://www.loc.gov/premis/v3">
+  <eventIdentifier>
+    <eventIdentifierType>URN</eventIdentifierType>
+    <eventIdentifierValue>urn:roda:premis:event:1f1fae7e-c9f3-47da-9843-ddb5b200f1bc</eventIdentifierValue>
+  </eventIdentifier>
+  <eventType>metadata extraction</eventType>
+  <eventDateTime>2021-07-19T07:28:50.61Z</eventDateTime>
+  <eventDetailInformation>
+    <eventDetail>Extraction of technical metadata using Apache Tika.</eventDetail>
+  </eventDetailInformation>
+  <eventOutcomeInformation>
+    <eventOutcome>FAILURE</eventOutcome>
+    <eventOutcomeDetail>
+      <eventOutcomeDetailNote>Failed to extract technical metadata from file.
+Could not create binary</eventOutcomeDetailNote>
+    </eventOutcomeDetail>
+  </eventOutcomeInformation>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:org.roda.core.plugins.external.TikaFullTextPlugin@1.0</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingAgentIdentifier>
+    <linkingAgentIdentifierType>URN</linkingAgentIdentifierType>
+    <linkingAgentIdentifierValue>urn:roda:premis:agent:admin</linkingAgentIdentifierValue>
+  </linkingAgentIdentifier>
+  <linkingObjectIdentifier>
+    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
+    <linkingObjectIdentifierValue>urn:roda:file:4a1b6500-8136-3b9f-9bb6-cb1f45d34ff1</linkingObjectIdentifierValue>
+    <linkingObjectRole>source</linkingObjectRole>
+  </linkingObjectIdentifier>
+  <linkingObjectIdentifier>
+    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
+    <linkingObjectIdentifierValue>urn:roda:file:aada1e36-ec4a-3322-bec0-578c77cf97d0</linkingObjectIdentifierValue>
+    <linkingObjectRole>source</linkingObjectRole>
+  </linkingObjectIdentifier>
+  <linkingObjectIdentifier>
+    <linkingObjectIdentifierType>URN</linkingObjectIdentifierType>
+    <linkingObjectIdentifierValue>urn:roda:file:78852e6c-9b8a-3350-b6eb-0e6755501e57</linkingObjectIdentifierValue>
+    <linkingObjectRole>source</linkingObjectRole>
+  </linkingObjectIdentifier>
+</event>
+```
+  
+</details>
+
+</details>
     
 # Other metadata
+
+<details>
+<summary>Click to expand</summary>
     
 ## Siegfried
     
 The representation folder structure is copied. Then for each data file a Siegried JSON file is made.
     
+<details>
+    <summary>Example</summary>
+
 ```JSON
 {
     "filename": "/roda/data/storage/aip/668b3f2f-51be-4dd7-ace6-d73a41b8526c/representations/rep1/data/Dossier_1/Stuk1_Tekstdocument.docx",
@@ -637,7 +855,12 @@ The representation folder structure is copied. Then for each data file a Siegrie
     ]
 }
 ```
-    
+   
+</details>
+
 ## ApacheTika
     
 ## VeraPDF
+
+</details>
+    
