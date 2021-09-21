@@ -212,7 +212,7 @@ Here follows a list of event PREMIS metadata per event type.
     
 ### Wellformedness check
 
-Checked that the received SIP is well formed, complete and that no unexpected files were included.
+Checks that the received SIP is well formed, complete and that no unexpected files were included.
 
 Agents involved: EARKSIP2ToAIPPlugin, user starting ingest process.
     
@@ -262,7 +262,7 @@ Objects involved: SIP, AIP.
 
 </details>
 
-Checked whether the descriptive metadata is included in the SIP and if this metadata is valid according to the established policy.
+Checks whether the descriptive metadata is included in the SIP and if this metadata is valid according to the established policy.
 
 Agents involved: DescriptiveMetadataValidationPlugin, user starting ingest process.
     
@@ -310,7 +310,7 @@ Schemas used on validation: scala-dc (1.0)</eventOutcomeDetailNote>
 
 ### Format identification
 
-Identified the object's file formats and versions using Siegfried.
+Identifies the object's file formats and versions using Siegfried.
 
 Agents involved: SiegfriedPlugin, user starting ingest process.
     
@@ -372,7 +372,7 @@ Objects involved: all files.
 
 ### Virus check
 
-Scanned package for malicious programs using ClamAV.
+Scans package for malicious programs using ClamAV.
 
 Agents involved: AntivirusPlugin, user starting ingest process.
     
@@ -426,7 +426,7 @@ End Date:   2021:09:20 10:42:13</eventOutcomeDetailNote>
 
 ### Authorization check
 
-User permissions have been checked to ensure that he has sufficient authorization to store the AIP under the desired node of the classification scheme.
+User permissions are checked to ensure that they have sufficient authorization to store the AIP under the desired node of the classification scheme.
 
 Agents involved: VerifyUserAuthorizationPlugin, user starting ingest process.
     
@@ -474,7 +474,7 @@ Done with checking user authorization for AIP 668b3f2f-51be-4dd7-ace6-d73a41b852
 
 ### Ingest start
 
-The ingest process has started.
+The ingest process starts.
 
 Agents involved: ConfigurableIngestPlugin, user starting ingest process.
     
@@ -526,7 +526,7 @@ Objects involved: SIP, AIP.
 
 ### Ingest end
 
-The ingest process has ended.
+The ingest process ends.
 
 Agents involved: ConfigurableIngestPlugin, user starting ingest process.
     
@@ -578,7 +578,7 @@ Objects involved: SIP, AIP.
 
 ### Message digest calculation
 
-Created base PREMIS objects with file original name and file fixity information (SHA-256).
+Creates base PREMIS objects with file original name and file fixity information (like MD5 or SHA-256).
 
 Agents involved: PremisSkeletonPlugin, user starting ingest process.
     
@@ -625,7 +625,7 @@ Objects involved: AIP.
 
 ### Accession
 
-Added package to the inventory. After this point, the responsibility for the digital content’s preservation is passed on to the repository.
+Adds the package to the inventory. After this point, the responsibility for the digital content’s preservation is passed on to the repository.
 
 Agents involved: AutoAcceptSIPPlugin, user starting ingest process.
     
@@ -672,7 +672,7 @@ Objects involved: AIP.
 
 ### Unpacking
 
-Extracted objects from package in E-ARK SIP 2 format.
+Extracts objects from the package in E-ARK SIP 2 format.
 
 Agents involved: EARKSIP2ToAIPPlugin, user starting ingest process.
     
@@ -724,7 +724,7 @@ Objects involved: SIP, AIP.
 
 ### Digital signature validation
 
-Checked if digital signatures were valid and/or stripped them.
+Checks if digital signatures were valid and/or strips them.
 
 Agents involved: DigitalSignaturePlugin, user starting ingest process.
     
