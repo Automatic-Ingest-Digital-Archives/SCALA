@@ -9,7 +9,7 @@ AIP
 │   ├───descriptive
 │   └───preservation
 ├───representations
-│   └───rep1
+│   ├───rep1
 │   |   ├───data
 │   |   └───metadata
 │   |       ├───other
