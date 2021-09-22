@@ -10,10 +10,10 @@ AIP
 │   └───preservation
 ├───representations
 │   └───rep1
-│       ├───data
-│       └───metadata
-│           ├───other
-│           └───preservation
+│   |   ├───data
+│   |   └───metadata
+│   |       ├───other
+│   |       └───preservation
 |   └───...
 └───schemas
 ```
