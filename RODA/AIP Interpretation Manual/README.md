@@ -44,7 +44,7 @@ Description.xml contains provided information about the archives contained in th
 | date(s)                      | ead/archdesc/did/unitdate                       |                                      |
 | archive creator(s)           | ead/archdesc/did/origination@label="creator"    | /viaa/dc_creators/Archiefvormer      |
 | producer                     | ead/archdesc/did/origination@label="creator"    | /viaa/dc_publishers/publisher        |
-| repsitory ID                 | ead/archdesc/did/unitid @label="repositorycode" |                                      |
+| repository ID                | ead/archdesc/did/unitid @label="repositorycode" |                                      |
 | repository name              | ead/archdesc/did/repository/corpname            | /viaa/CP                             |
 | scope / content              | ead/archdesc/did/scopecontent                   | /viaa/dc_description                 |
 | conditions governing access  | ead/archdesc/did/accessrestrict                 | /viaa/dc_rights_comment              |
