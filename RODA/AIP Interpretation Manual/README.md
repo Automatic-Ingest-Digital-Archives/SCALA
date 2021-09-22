@@ -49,8 +49,7 @@ Description.xml contains provided information about the archives contained in th
 | scope / content              | ead/archdesc/did/scopecontent                   | /viaa/dc_description                 |
 | conditions governing access  | ead/archdesc/did/accessrestrict                 | /viaa/dc_rights_comment              |
 | related units of description | ead/archdesc/did/relatedmaterial                | /viaa/dc_titles/archief              |
-| beschrijving van een         | ead/archdesc/did/accessrestrict                 |                                      |
-| date of ceation              | ead/archdesc/procesinfo                         |                                      |
+| date of creation             | ead/archdesc/procesinfo                         |                                      |
 
 [Table source](https://docs.google.com/spreadsheets/d/1Za5ffiPs2Szpvpwx85ow2Y3wPLuSTrNZPgCWaP0tXO4/edit#gid=1231888693)
 
