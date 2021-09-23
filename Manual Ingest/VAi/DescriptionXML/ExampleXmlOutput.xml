@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<eadheader>
+		<eadid/>
+		<filedesc>
+			<titlestmt>
+				<titleproper/>
+			</titlestmt>
+		</filedesc>
+		<profiledesc>
+			<creation>JelleKleevensVAI</creation>
+		</profiledesc>
+	</eadheader>
+	<archdesc level="Collection">
+		<did>
+			<unittitle>Aanbevelingsbrief van Bob van Reeth voor Christian Kieckens betreffende een project te Nederland</unittitle>
+			<unitid label="scalaID"/>
+			<unitid repositorycode="BE/653717" label="localID">0099-CK_0167</unitid>
+			<unitdate>2010/..</unitdate>
+			<repository>
+				<corpname>Vai</corpname>
+			</repository>
+			<origination label="creator">
+				<name>Vai</name>
+			</origination>
+			<origination label="producer">
+				<name>SCALA?</name>
+			</origination>
+		</did>
+		<scopecontent>
+			<p>Bevat 3 scans van een vraag van Cees Nagelkerke aan Bob van Reeth. Nagelkerke vraagt aanbevelingen voor Belgische architecten die ervaring hebben met gebouw- en interieurdesign. BVR beveelt enkele architecten aan waaronder Kieckens.</p>
+		</scopecontent>
+		<relatedmaterial>
+			<p/>
+		</relatedmaterial>
+		<accessrestrict>
+			<p>Enkel raadpleegbaar door Vai</p>
+		</accessrestrict>
+		<processinfo>
+			<p>
+				<date>2021-09-23</date>
+			</p>
+		</processinfo>
+		<dsc type="combined"/>
+	</archdesc>
+</ead>
