@@ -5,7 +5,7 @@
 3. Download Python script
 4. Execute shell script
 
-Each output description.xml file will look like [this example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/DescriptionXML/ExampleXmlOutput.xml).
+Each output description.xml file will look like [this example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/ExampleXmlOutput.xml).
 
 ## 1. Prepare a correct XLSX (Excel) file
 
@@ -13,7 +13,7 @@ Must contain the following headers:
 `destinationDirectory	creation	archdeskLevel	unitTitle	scalaID	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
 `
 
-Please refer to this [example XLSX](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/DescriptionXML/ExampleDescriptions.xlsx) when creating your file. The contents should make clear what is expected under each header.
+Please refer to this [example XLSX](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/ExampleDescriptions.xlsx) when creating your file. The contents should make clear what is expected under each header.
 
 Put the XLSX file in the **root folder** of your SIPs.
 
@@ -23,7 +23,7 @@ https://www.python.org/downloads/
 
 ## 3. Download Python script
 
-[Download here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/DescriptionXML/DescriptionGenerator.py)
+[Download here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/DescriptionGenerator.py)
 
 Put the python file in the **root folder** of your SIPs.
 
