@@ -86,6 +86,9 @@ over it.
 
 ## 1. Using a terminal
 
+<details>
+  <summary>Click to expand</summary>
+
 Some tasks are best performed by running a script in a terminal. A terminal is a program where you can write
 instructions for your computer to execute. Computers normally come with a terminal program installed by default. On
 Windows the program is “PowerShell” and on Mac/Linux it is usually “Bash”. A terminal looks something like this:
@@ -138,7 +141,12 @@ folder of your TS and (2) copy-paste the script in the terminal and press “Ent
 
 Now, whenever you are requested to “Open a terminal and run ``` some script ```”, you can execute both tasks above.
 
+</details>
+
 ## 2. Testing best practices
+
+<details>
+  <summary>Click to expand</summary>
 
 If you are using this manual for testing purposes, please consider these best practices.
 
@@ -173,7 +181,12 @@ If you are using this manual for testing purposes, please consider these best pr
     </tbody>
 </table>
 
+</details>
+
 ## 3. Archival data preparation
+
+<details>
+  <summary>Click to expand</summary>
 
 ### a. Create your TS
 
@@ -439,7 +452,12 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
     </tbody>
 </table>
 
+</details>
+
 ## 4. <span title="Roda-in is a tool designed to create Submission Information Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders available on the local file system."><i>RODA-In</i></span> SIP creation
+
+<details>
+  <summary>Click to expand</summary>
 
 ### a. RODA-In installation & configuration
 
@@ -624,7 +642,12 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
     </tbody>
 </table>
 
+</details>
+
 ## 5. RODA AIP creation & storage
+
+<details>
+  <summary>Click to expand</summary>
 
 ### a. RODA account
 
@@ -878,6 +901,8 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
         </tr>
     </tbody>
 </table>
+
+</details>
 
 ## 6. Issues & questions
 
