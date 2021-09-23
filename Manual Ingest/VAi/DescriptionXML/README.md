@@ -5,6 +5,8 @@
 3. Download Python script
 4. Execute shell script
 
+Each output description.xml file will look like [this example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/VAi/DescriptionXML/ExampleXmlOutput.xml).
+
 ## 1. Prepare a correct XLSX (Excel) file
 
 Must contain the following headers:
