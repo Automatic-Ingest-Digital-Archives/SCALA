@@ -161,7 +161,7 @@ Contains structural information about a representation, like its contained files
     
 An event is a process which is run on the AIP. Events are normally run and saved at the AIP level. It is possible to explicitely ask RODA to run certain events at representation or file level. In those cases, the event data will be stored in PREMIS metadata at the respective level.
 
-An event PREMIS file is a log file about an event. It involves three parts:
+An event PREMIS file is a log file about an event. It contains the following parts:
 - The type of event. Check the full list below.
 - The outcome of the event. An event can have a SUCCESS or a FAILURE outcome. Or it can be SKIPPED, meaning the process was considered but not executed.
 - The agents involved in the event. Agents can be users or software programs.
