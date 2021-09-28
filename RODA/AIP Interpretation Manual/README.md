@@ -1,6 +1,6 @@
 # Structure
 
-A RODA AIP has the following general folder/file structure:
+A RODA AIP has the following general folder structure:
 
 ```
 AIP
