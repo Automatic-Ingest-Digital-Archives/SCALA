@@ -687,7 +687,7 @@ Checks if digital signatures were valid and/or strips them.
 
 Agents involved: DigitalSignaturePlugin, user starting ingest process.
     
-No objects involved.
+Objects involved: AIP.
     
 <details>
     <summary>Example</summary>
