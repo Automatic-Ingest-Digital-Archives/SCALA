@@ -26,11 +26,12 @@ Put the XLSX file in the **root folder** of your SIPs.
 
 https://www.python.org/downloads/
 
-## 3. Download Python script
+## 3. Download Python script and requirements
 
 [Download here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/DescriptionGenerator.py)
+[And here.]()
 
-Put the python file in the **root folder** of your SIPs.
+Put both in the **root folder** of your SIPs.
 
 ## 4. Execute shell script
 
@@ -41,5 +42,7 @@ Open a terminal in the root folder of your SIPs. Then execute the script below.
 <b>PowerShell</b>
 
 ```powershell
+py -m pip install --upgrade pip
+pip install -r requirements.txt
 py .\DescriptionGenerator.py .\{{YOURFILE}}.xlsx
 ```
