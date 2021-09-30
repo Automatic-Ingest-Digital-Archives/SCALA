@@ -90,6 +90,6 @@ for record in records:
     try:
         with open(savePath, 'w', encoding='UTF-8') as f:
             print(f"Writing {fileName} for {directoryName}.")
-        f.write(xml)
+            f.write(xml)
     except Exception as Argument:
         print(Argument)
