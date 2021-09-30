@@ -28,14 +28,15 @@ https://www.python.org/downloads/
 
 ## 3. Download Python script and requirements
 
-[Download here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/DescriptionGenerator.py)
-[And here.]()
+[Download the Python script here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/DescriptionGenerator.py)
+
+[And the required dependencies here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/requirements.txt)
 
 Put both in the **root folder** of your SIPs.
 
 ## 4. Execute shell script
 
-Open a terminal in the root folder of your SIPs. Then execute the script below.
+Open a terminal in the root folder of your SIPs. Then copy, paste and execute the script below.
 
 ! Please note: in the script replace {{YOURFILE}} with the name of your XLSX file.
 
