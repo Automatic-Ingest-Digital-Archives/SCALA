@@ -86,6 +86,10 @@ for record in records:
     Path(os.path.join(currentDir, directoryName)).mkdir(
         parents=True, exist_ok=True)
     savePath = os.path.join(currentDir, directoryName, fileName)
-    with open(savePath, 'w', encoding='UTF-8') as f:
-        print(f"Writing {fileName} for {directoryName}.")
+
+    try:
+        with open(savePath, 'w', encoding='UTF-8') as f:
+            print(f"Writing {fileName} for {directoryName}.")
         f.write(xml)
+    except Exception as Argument:
+        print(Argument)
