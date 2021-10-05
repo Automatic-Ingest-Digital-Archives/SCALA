@@ -331,7 +331,7 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
             <td><ul><li>Create a filelist and filetree for the current TS</li></ul></td>
           <td>Open a terminal and run:</br></br><code>
 $File = "tree.txt";
-$Path = "./submissionDocumentation"
+$Path = "./submissionDocumentation";
 md -Force $Path | Out-Null
 Get-ChildItem -Path .\ -Recurse -Force | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
 if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
