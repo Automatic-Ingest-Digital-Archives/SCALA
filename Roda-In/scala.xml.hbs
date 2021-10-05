@@ -1,43 +1,236 @@
-{{~field name="id" order='10' mandatory=true auto-generate="id" label="{\"en\": \"ID\"}" xpath="//*:field[@name='id']/string()"~}}
-{{~field name="originalTitle" mandatory=true order='20'	label="{\"en\": \"originalTitle\",\"pt\": \"Título\"}" auto-generate="title" xpath="//*:field[@name='originalTitle']/string()"~}}
-{{~field name="user" hidden=true order='30' label="{\"en\": \"Producer\",\"pt\": \"Produtor\"}" xpath="//*:field[@name='producer']/string()"~}}
-{{~field name="date" mandatory=true order='40'	type="date" label="{\"en\": \"Date\",\"pt\": \"Data\"}" auto-generate="now" xpath="//*:field[@name='date']/string()"~}}
-{{~field name="dcterms:type" order='50' mandatory=true label="{\"en\": \"dcterms:type\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:type']/string()"~}}
-{{~field name="edm:provider" order='60'  mandatory=true label="{\"en\": \"edm:provider\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='edm:provider']/string()"~}}
-{{~field name="dcterms:identifier" order='70'  mandatory=true label="{\"en\": \"dcterms:identifier\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:identifier']/string()"~}}
-{{~field name="dc:title" order='80'  mandatory=true label="{\"en\": \"dc:title\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dc:title']/string()"~}}
-{{~field name="dcterms:accessRights" order='90'  label="{\"en\": \"dcterms:accessRights\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:accessRights']/string()"~}}
-{{~field name="marc:owner" order='100'  label="{\"en\": \"marc:owner\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='marc:owner']/string()"~}}
-{{~field name="dc:creator" order='110'  label="{\"en\": \"dc:creator\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dc:creator']/string()"~}}
-{{~field name="edm:dataprovider" order='120'  label="{\"en\": \"edm:dataprovider\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='edm:dataprovider']/string()"~}}
-{{~field name="dcterms:isPartOf" order='130'  label="{\"en\": \"dcterms:isPartOf\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:isPartOf']/string()"~}}
-{{~field name="dc:description" order='140'  label="{\"en\": \"dc:description\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dc:description']/string()"~}}
-{{~field name="cld:itemFormat" order='150'  label="{\"en\": \"cld:itemFormat\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='cld:itemFormat']/string()"~}}
-{{~field name="dcterms:created" order='160'  label="{\"en\": \"dcterms:created\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:created']/string()"~}}
-{{~field name="dcterms:extent" order='170'  label="{\"en\": \"dcterms:extent\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:extent']/string()"~}}
-{{~field name="dcterms:language" order='180'  label="{\"en\": \"dcterms:language\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:language']/string()"~}}
-{{~field name="dcterms:subject" order='190'  label="{\"en\": \"dcterms:subject\",\"pt\": \"Identificador\"}" xpath="//*:field[@name='dcterms:subject']/string()"~}}
+{{~field name="ScalaID"					order="10" auto-generate="id" labeli18n="crosswalks.dissemination.html.ead.reference.ScalaID" label="{\"en\": \"ScalaID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid[@label='ScalaID']/string()"~}}
+{{~field name="LocalID"					order="20" type="text" labeli18n="crosswalks.dissemination.html.ead.reference.LocalID" label="{\"en\": \"LocalID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid[@label='LocalID']/string()"~}}
+{{~field name="level" 					order="25" type="text" value="collection" label="{\"i18n\": \"crosswalks.dissemination.html.ead.level\", \"en\": \"Description level\"}" xpath="//*:archdesc/@level/string()" ~}}
+{{~field name="otherlevel" 				hidden="true" order="90" labeli18n="crosswalks.dissemination.html.ead.otherlevel" label="{\"en\": \"Other level\"}" xpath="/*:ead/*:archdesc/@otherlevel/string()"~}}
+{{~field name="title"       			order="30" auto-generate='title' labeli18n="crosswalks.dissemination.html.ead.title" label="{\"en\": \"Title\"}" xpath="/*:ead/*:archdesc/*:did/*:unittitle/string()"~}}
+{{~field name="dates"   				order="60" type="text" label="{\"i18n\": \"crosswalks.dissemination.html.ead.unitdate\", \"en\": \"Date(s)\"}" xpath="/*:ead/*:archdesc/*:did/*:unitdate/string()"~}}
+{{~field name="creator"     			order="190" labeli18n="crosswalks.dissemination.html.ead.creator" label="{\"en\": \"Creator(s)\"}" xpath="/*:ead/*:archdesc/*:did/*:origination[@label='creator']/*:name/string()"~}}
+{{~field name="producer"    			order="200" labeli18n="crosswalks.dissemination.html.ead.producer" label="{\"en\": \"Producer\"}" xpath="/*:ead/*:archdesc/*:did/*:origination[@label='producer']/*:name/string()"~}}
+{{~field name="repositoryCode" 			order="210" labeli18n="crosswalks.dissemination.html.ead.repositorycode" label="{\"en\": \"Repository ID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid/@repositorycode/string()"~}}
+{{~field name="repository" 				order="220" labeli18n="crosswalks.dissemination.html.ead.repository" label="{\"en\": \"Repository Name\"}" xpath="/*:ead/*:archdesc/*:did/*:repository/*:corpname/string()"~}}
+{{~field name="scopeContent" 			order="260" type="text-area" labeli18n="crosswalks.dissemination.html.ead.description" label="{\"en\": \"Scope and content\"}" xpath="/*:ead/*:archdesc/*:scopecontent/*:p/string()"~}}
+{{~field name="accessrestrict" 			order="320" type="text-area" labeli18n="crosswalks.dissemination.html.ead.accessrestrictions" label="{\"en\": \"Conditions governing access\"}" xpath="/*:ead/*:archdesc/*:accessrestrict/*:p/string()"~}}
+{{~field name="relatedmaterial"         order="390" type="text-area" labeli18n="crosswalks.dissemination.html.ead.relatedmaterials" label="{\"en\": \"Related units of description\"}" xpath="/*:ead/*:archdesc/*:relatedmaterial/*:p/string()"~}}
+{{~field name="notes" 					order="430" type="text-area" labeli18n="crosswalks.dissemination.html.ead.notes" label="{\"en\": \"Notes\"}" xpath="/*:ead/*:archdesc/*:did/*:note[@type='generalNote']/string()"~}}
 
 
-<?xml version="1.0" encoding="utf-8" ?>
-<metadata>
-	<field name="id">{{id}}</field>
-	<field name="originalTitle">{{originalTitle}}</field>
-	<field name="producer">{{user}}</field>
-	<field name="date">{{date}}</field>
-	<field name="dcterms:type">{{#if dcterms:type=""}}http://purl.org/dc/dcmitype/Collection{{/if}}</field>
-	<field name="edm:provider">{{edm:provider}}</field>
-	<field name="dcterms:identifier">{{dcterms:identifier}}</field>
-	<field name="dc:title">{{dc:title}}</field>
-	<field name="dcterms:accessRights">{{dcterms:accessRights}}</field>
-	<field name="marc:owner">{{marc:owner}}</field>
-	<field name="dc:creator">{{dc:creator}}</field>
-	<field name="edm:dataprovider">{{edm:dataprovider}}</field>
-	<field name="dcterms:isPartOf">{{dcterms:isPartOf}}</field>
-	<field name="dc:description">{{dc:description}}</field>
-	<field name="cld:itemFormat">{{cld:itemFormat}}</field>
-	<field name="dcterms:created">{{dcterms:created}}</field>
-	<field name="dcterms:extent">{{dcterms:extent}}</field>
-	<field name="dcterms:language">{{dcterms:language}}</field>
-	<field name="dcterms:subject">{{dcterms:subject}}</field>
-</metadata>
+<?xml version="1.0" encoding="utf-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<eadheader>
+		<eadid/>
+		<filedesc>
+			<titlestmt>
+				<titleproper/>
+			</titlestmt>
+		</filedesc>
+		<profiledesc>
+			<creation>
+				Generated by RODA version 2.0
+			</creation>
+			{{~#if rules~}}
+				<descrules>{{rules}}</descrules>
+			{{~/if~}}
+		</profiledesc>
+	</eadheader>
+  <archdesc level="collection">
+    <did>
+    	{{~#if title~}}
+      	<unittitle {{#if titleType}}type="{{titleType}}"{{/if}}>{{title}}</unittitle>
+      	{{~/if~}}
+      	{{~#ifCond "||" countryCode repositoryCode id~}}
+      	<unitid label="LocalID"{{#if countryCode}}countrycode="{{countryCode}}"{{/if}} {{#if repositoryCode}}repositorycode="{{repositoryCode}}"{{/if}}>{{LocalID}}</unitid>
+      	{{~/ifCond~}}
+		{{~#if dateInitial~}}
+			{{~#if dateFinal~}}
+				<unitdate label="UnitDates" normal='{{dateInitial}}/{{dateFinal}}'>{{#if descDate}}{{descDate}}{{/if}}</unitdate>
+			{{~^~}}
+				<unitdate label="UnitDateInitial" normal="{{dateInitial}}">{{#if descDate}}{{descDate}}{{/if}}</unitdate>
+			{{~/if~}}
+		{{~^~}}
+			{{~#if dateFinal~}}
+				<unitdate label="UnitDateFinal" normal="{{dateFinal}}">{{#if descDate}}{{descDate}}{{/if}}</unitdate>
+			{{~^~}}
+				{{~#if descDate~}}
+					<unitdate label="UnitDate">{{dates}}</unitdate>
+				{{~/if~}}
+			{{~/if~}}
+		{{~/if~}}
+		{{~#ifCond "||" extent physdesc dimensions physfacet~}} 
+			<physdesc>
+				{{~#if extent~}}
+				<extent>{{extent}}</extent>
+				{{~/if~}}
+				{{~#if dimensions~}}
+				<dimensions>{{dimensions}}</dimensions>
+				{{~/if~}}
+				{{~#if physfacet~}}
+				<physfacet>{{physfacet}}</physfacet>
+				{{~/if~}}
+				{{~#if physdesc~}}
+				{{physdesc}}
+				{{~/if~}}
+			</physdesc>
+		{{~/ifCond~}}
+		{{~#if repository~}}
+      	<repository>
+        	<corpname>{{repository}}</corpname>
+      	</repository>
+      	{{~/if~}}
+		{{~#if language~}}
+      	<langmaterial>
+      		<language>{{language}}</language>
+            {{languageScriptNotes}}     
+        </langmaterial>
+        {{~/if~}}
+       {{~#if sources~}} 
+      <note type="sourcesDescription">
+        <p>{{sources}}</p>
+      </note>
+      {{~/if~}}
+      {{~#if notes~}} 
+      <note type="generalNote">
+        <p>{{notes}}</p>
+      </note>
+      {{~/if~}}
+      {{~#if creator~}} 
+      <origination label='creator'>
+        <name>{{creator}}</name>
+      </origination>
+      {{~/if~}}
+      {{~#if producer~}} 
+      <origination label='producer'>
+        <name id="OR-jq0st8z">SCALA</name>
+      </origination>
+      {{~/if~}}
+      {{~#if materialspec~}} 
+      <materialspec>{{materialspec}}</materialspec>
+      {{~/if~}}
+      {{~#if origination~}} 
+      <origination>{{origination}}</origination>
+      {{~/if~}}
+    </did>
+    {{~#if publicationStatus~}} 
+    <odd type="publicationStatus">
+      <p>{{publicationStatus}}</p>
+    </odd>
+    {{~/if~}}
+    {{~#if levelOfDetail~}} 
+    <odd type="levelOfDetail">
+      <p>{{levelOfDetail}}</p>
+    </odd>
+    {{~/if~}}
+    {{~#if statusDescription~}} 
+    <odd type="statusDescription">
+      <p>{{statusDescription}}</p>
+    </odd>
+    {{~/if~}}
+    {{~#if descriptionIdentifier~}} 
+    <odd type="descriptionIdentifier">
+      <p>{{descriptionIdentifier}}</p>
+    </odd>
+    {{~/if~}}
+    {{~#if institutionIdentifier~}} 
+    <odd type="institutionIdentifier">
+      <p>{{institutionIdentifier}}</p>
+    </odd>
+    {{~/if~}}
+    {{~#if scopeContent~}} 
+    <scopecontent>
+      <p>{{scopeContent}}</p>
+    </scopecontent>
+     {{~/if~}}
+     {{~#if systemOfArrangement~}} 
+    <arrangement>
+      <p>{{systemOfArrangement}}</p>
+    </arrangement>
+    {{~/if~}}
+    {{~#ifCond "||" nameAccessPoint subjectAccessPoint placeAccessPoint~}} 
+    <controlaccess>
+    	{{~#if nameAccessPoint~}} 
+      	<name role="subject">{{nameAccessPoint}}</name>
+      	{{~/if~}}
+      	{{~#if subjectAccessPoint~}} 
+      	<subject>{{subjectAccessPoint}}</subject>
+      	{{~/if~}}
+      	{{~#if placeAccessPoint~}} 
+      	<geogname>{{placeAccessPoint}}</geogname>
+      	{{~/if~}}
+    </controlaccess>
+    {{~/ifCond~}}
+    {{~#if appraisal~}} 
+    <appraisal>
+      <p>{{appraisal}}</p>
+    </appraisal>
+    {{~/if~}}
+    {{~#if acqinfo~}} 
+    <acqinfo>
+      <p>{{acqinfo}}</p>
+    </acqinfo>
+    {{~/if~}}
+    {{~#if accruals~}} 
+    <accruals>
+      <p>{{accruals}}</p>
+    </accruals>
+    {{~/if~}}
+    {{~#if custodhist~}} 
+    <custodhist>
+      <p>{{custodhist}}</p>
+    </custodhist>
+    {{~/if~}}
+        {{~#ifCond "||" processDates archivistNotes~}} 
+    <processinfo>
+	  {{~#if processDates~}}<p><date>{{processDates}}</date></p>{{~/if~}}
+      {{~#if archivistNotes~}}<p>{{archivistNotes}}</p>{{~/if~}}
+    </processinfo>
+    {{~/ifCond~}}
+    {{~#if originalsloc~}} 
+    <originalsloc>
+      <p>{{originalsloc}}</p>
+    </originalsloc>
+    {{~/if~}}
+    {{~#if altformavail~}} 
+    <altformavail>
+      <p>{{altformavail}}</p>
+    </altformavail>
+    {{~/if~}}
+    {{~#if relatedmaterial~}} 
+    <relatedmaterial>
+      <p>{{relatedmaterial}}</p>
+    </relatedmaterial>
+    {{~/if~}}
+    {{~#if accessrestrict~}} 
+    <accessrestrict>
+      <p>{{accessrestrict}}</p>
+    </accessrestrict>
+    {{~/if~}}
+    {{~#if userestrict~}} 
+    <userestrict>
+      <p>{{userestrict}}</p>
+    </userestrict>
+    {{~/if~}}
+    {{~#if otherfindaid~}} 
+    <otherfindaid>
+      <p>{{otherfindaid}}</p>
+    </otherfindaid>
+    {{~/if~}}
+    {{~#if phystech~}} 
+    <phystech>
+      <p>{{phystech}}</p>
+    </phystech>
+    {{~/if~}}
+    {{~#if bibliography~}} 
+    <bibliography>
+      <p>{{bibliography}}</p>
+    </bibliography>
+    {{~/if~}}
+    <dsc type="combined">  
+  </dsc>
+  	{{~#if quote~}} 
+  	<prefercite>
+  	<p>
+  	{{quote}}
+  	</p>
+  	</prefercite>
+  	{{~/if~}}
+  </archdesc>
+</ead>
