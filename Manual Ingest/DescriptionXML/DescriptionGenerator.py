@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import sys
 import os
 from pathlib import Path
+import uuid
 
 """ sys.argv[0] = script name
     sys.argv[1] = XLSX path
@@ -41,8 +42,8 @@ for record in records:
     unittitle = ET.SubElement(did, "unittitle")
     unittitle.text = record["unitTitle"]
     unitid1 = ET.SubElement(did, "unitid")
-    unitid1.set("label", "scalaID")
-    unitid1.text = record["scalaID"]
+    unitid1.set("label", "scalaUUID")
+    unitid1.text = "uuid-" + str(uuid.uuid4()) #record["scalaID"]
     unitid2 = ET.SubElement(did, "unitid")
     unitid2.set("repositorycode", record["repositoryCode"])
     unitid2.set("label", "localID")
