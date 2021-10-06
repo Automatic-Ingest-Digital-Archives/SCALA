@@ -8,7 +8,7 @@ import uuid
 """ sys.argv[0] = script name
     sys.argv[1] = XLSX path
     Expected XLSX headers:
-        destinationDirectory	creation	archdeskLevel	unitTitle	scalaID	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
+        destinationDirectory	creation	archdeskLevel	unitTitle	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
 """
 
 """Read records from XLS"""
