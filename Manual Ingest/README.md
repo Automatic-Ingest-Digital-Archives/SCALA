@@ -18,7 +18,8 @@ We use the following definitions:
             <td>
                 <ul>
                     <li>Transfer Set.</li>
-                    <li>Folder containing all archival materials that are to be converted to an AIP.</li>
+                    <li>Folder containing all archival materials that are to be converted to an AIP.</br>
+			<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_1.png"></li>
                 </ul>
             </td>
         </tr>
