@@ -502,7 +502,7 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
             </td>
             <td colspan=2>Open the configuration folder.</br><img
                     src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture6.png"></br><a
-                    href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Roda-In">Download</a> the
+                    href="https://drive.google.com/drive/folders/1PTWH4zf_BDFZ4FjzZVVD_6BreUhwFLZb?usp=sharing">Download</a> the
                 “scala.xml.hbs” and “config.properties” files.<br>
                 <ol>
                     <li>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</li>
