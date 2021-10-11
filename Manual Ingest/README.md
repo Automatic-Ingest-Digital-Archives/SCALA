@@ -236,7 +236,7 @@ If you are using this manual for testing purposes, please consider these best pr
                     <li>Create and add additional unstructured metadata [optional]</li>
                 </ul>
             </td>
-            <td colspan=2>Create a folder called “submissionDocumentation” in the root of the TS.</br>
+            <td colspan=2>Create a folder called “_submissionDocumentation” in the root of the TS.</br>
                 <span title="E.g. file format identification files, file lists, etc."><i>Add additional unstructured metadata accompanying the content files</i></span>.
             </td>
         </tr>
@@ -344,7 +344,7 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
             <td><ul><li>Create a filelist and filetree for the current TS</li></ul></td>
           <td>Open a terminal and run:</br></br><code>
 $File = "tree.txt";
-$Path = "./submissionDocumentation";
+$Path = "./_submissionDocumentation";
 md -Force $Path | Out-Null;
 Get-ChildItem -Path .\ -Recurse -Force | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
 if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
@@ -354,7 +354,7 @@ Tree /f | tee $Path\$File
   </code>
             </td>
             <td><b>On Linux:</b></br>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
-DIR="./submissionDocumentation" &&
+DIR="./_submissionDocumentation" &&
 if [ ! -d "$DIR" ]; then
 mkdir $DIR
 fi &&
@@ -363,7 +363,7 @@ find | tee $DIR/filelist.txt &&
 tree | tee $DIR/$FILE
 </code></br></br>
 <b>On Mac:</b></br>Open a terminal and run:</br></br><code>
-		DIR="./submissionDocumentation" &&
+		DIR="./_submissionDocumentation" &&
 	TREE="tree.txt" &&
 	FILELIST="filelist.txt" &&
 	ls -lahR > $FILELIST &&
@@ -401,7 +401,7 @@ in the root folder containing all your TS’ in separate folders.
             Get-ChildItem |
             where {$_.PsIsContainer} |
             foreach {
-            $Path = "$_/submissionDocumentation";
+            $Path = "$_/_submissionDocumentation";
             md -Force $Path | Out-Null;
             Get-ChildItem -Path $_ -Recurse | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
             if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
@@ -413,7 +413,7 @@ in the root folder containing all your TS’ in separate folders.
          </td>
          <td><b>On Linux:</b></br>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
             find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
-            DIR="./submissionDocumentation" &&
+            DIR="./_submissionDocumentation" &&
             if [ ! -d "$DIR" ]; then
             mkdir $DIR
             fi &&
@@ -424,7 +424,7 @@ in the root folder containing all your TS’ in separate folders.
             </code></br></br>
             <b>On Mac:</b></br>Open a terminal and run:</br></br><code>
             find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
-            DIR="./submissionDocumentation" &&
+            DIR="./_submissionDocumentation" &&
             TREE="tree.txt" &&
             FILELIST="filelist.txt" &&
             ls -lahR > $FILELIST &&
