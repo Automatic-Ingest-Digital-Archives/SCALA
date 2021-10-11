@@ -179,6 +179,18 @@ If you are using this manual for testing purposes, please consider these best pr
             <td>One option is to download and install <a href="https://doublecmd.sourceforge.io/">Double Commander</a>.
             </td>
         </tr>
+	<tr>
+            <td>
+                <ul>
+                    <li>Show hidden files and file extensions</li>
+                </ul>
+            </td>
+            <td colspan=2>In your file management and browsing software, check the boxes to view all files and extensions.</br>
+	<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_2.png">
+		    </br>
+  <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_3.png">
+	</td>
+        </tr>
     </tbody>
 </table>
 
@@ -755,9 +767,21 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
             <td colspan=2><b>Option 1 (preferred):</b> Upload SIPs via your FTP client.</br>
                 Follow the guidelines in <a
                     href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Dropfolder%20-%20User%20guide.pdf">this
-                    user guide</a>.</br>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture19.png"></br>
+                    user guide</a>.</br></br>Here is a short version:</br>
+1. Create a .ready file locally on your computer.</br>
+Call the file ".ready". You might have to use your FTP program or a terminal to create this special file. If you have issues creating this file, please contact jelle.kleevens@vai.be.</br>
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_4.png"></br>
+2. Create a job folder for your SIPs on the server.</br>
+On the RODA/meemoo server side of your FTP program, navigate to the "incoming" folder. Then navigate to the folder of your institution/company (if there is no such folder, just remain in the "incoming" folder).</br>
+Create a new "job" folder. Give it any name you want. This folder will contain all SIPs to be uploaded in this job.</br>
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_6.png"></br>
+Then navigate into this new job folder.</br>
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_7.png"></br>
+3. Load your SIPs into the job folder.</br>
+Wait until all SIPs have loaded before going to the next step.</br>
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_8.png"></br>
+4. Drag the .ready file into the job folder.</br>
+<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_9.png"></br>
                 After they are uploaded, access SIPs via the RODA website.</br></br>
                 <span title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option 2:</b> Upload SIPs via the RODA website.</i></span>
                 <ol>
