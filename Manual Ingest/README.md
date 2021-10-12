@@ -342,30 +342,9 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
     <tbody>
         <tr>
             <td><ul><li>Create a filelist and filetree for the current TS</li></ul></td>
-          <td>Open a terminal and run:</br></br><code>
-$File = "tree.txt";
-$Path = "./_submissionDocumentation";
-md -Force $Path | Out-Null;
-Get-ChildItem -Path .\ -Recurse -Force | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
-if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
-	New-Item -Path $Path -Name $File -ItemType File
-};
-Tree /f | tee $Path\$File
-  </code>
-            </td>
-            <td><b>On Linux:</b></br>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
-DIR="./_submissionDocumentation" &&
-if [ ! -d "$DIR" ]; then
-mkdir $DIR
-fi &&
-touch $DIR/$FILE &&
-find | tee $DIR/filelist.txt &&
-tree | tee $DIR/$FILE
-</code></br></br>
-<b>On Mac:</b></br>Open a terminal and run:</br></br><code>
-DIR="_submissionDocumentation" && TREE="tree.txt" && FILELIST="filelist.txt" && ls -lahR | grep -vw -E $FILELIST > $FILELIST && if [ ! -d "$DIR" ]; then mkdir $DIR; fi && mv $FILELIST $DIR && tree -I "$DIR" > "$DIR/$TREE"
-</code>
-            </td>
+            <td>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_powershell_option1.ps1">this script.</a></td>
+            <td><b>On Linux:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_linux_bash_option1.txt">this script.</a></br></br>
+<b>On Mac:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_mac_bash_option1.txt">this script.</a></td>
         </tr>
     </tbody>
 </table>
@@ -388,49 +367,9 @@ in the root folder containing all your TS’ in separate folders.
                <li>Create a filelist and filetree for each TS in the current folder</li>
             </ul>
          </td>
-         <td>Open a terminal and run:</br></br><code>
-            $File = "tree.txt";
-            Get-ChildItem |
-            where {$_.PsIsContainer} |
-            foreach {
-            $Path = "$_/_submissionDocumentation";
-            md -Force $Path | Out-Null;
-            Get-ChildItem -Path $_ -Recurse | Resolve-Path -Relative | sort | tee $Path\filelist.txt;
-            if (-not(Test-Path -Path $Path\$File -PathType Leaf)) {
-            New-Item -Path $Path -Name $File -ItemType File
-            };
-            Tree $_ /f | tee $Path\$File
-            }
-            </code>
-         </td>
-         <td><b>On Linux:</b></br>Open a terminal and run:</br></br>
-         <code>FILE="tree.txt" &&</br>
-            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' &&
-            DIR="./_submissionDocumentation" &&
-            if [ ! -d "$DIR" ]; then
-            mkdir $DIR
-            fi &&
-            touch $DIR/$FILE &&
-            find | tee $DIR/filelist.txt &&
-            tree | tee $DIR/$FILE
-            " \;
-            </code></br></br>
-            <p><strong>On Mac:</strong></p>
-            <p>Open a terminal and run:</p>
-            <p><code>
-            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' &&
-            DIR="_submissionDocumentation" &&
-            TREE="tree.txt" &&
-            FILELIST="filelist.txt" &&
-            ls -lahR | grep -vw -E $FILELIST > $FILELIST &&
-            if [ ! -d "$DIR" ]; then
-            mkdir $DIR
-            fi &&
-            mv $FILELIST $DIR &&
-            tree -I "$DIR" > "$DIR/$TREE"
-            " \;
-            </p></code>
-         </td>
+         <td>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_powershell_option2.ps1">this script.</a></td>
+            <td><b>On Linux:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_linux_bash_option2.txt">this script.</a></br></br>
+<b>On Mac:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_mac_bash_option2.txt">this script.</a></td>
       </tr>
    </tbody>
 </table>
