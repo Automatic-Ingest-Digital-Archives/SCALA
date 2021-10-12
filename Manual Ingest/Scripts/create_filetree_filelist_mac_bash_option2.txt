@@ -1,12 +1,11 @@
 #!/bin/bash
-find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' &&
-DIR="./submissionDocumentation" &&
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' &&
+DIR="_submissionDocumentation" &&
 TREE="tree.txt" &&
 FILELIST="filelist.txt" &&
-ls -lahR > $FILELIST &&
-tree > $TREE &&
+ls -lahR | grep -vw -E $FILELIST > $FILELIST &&
 if [ ! -d "$DIR" ]; then
 mkdir $DIR
 fi &&
-mv $TREE $FILELIST $DIR
-" \;
+mv $FILELIST $DIR &&
+tree -I "$DIR" > "$DIR/$TREE" " \;
