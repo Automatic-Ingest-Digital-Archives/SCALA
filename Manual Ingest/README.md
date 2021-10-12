@@ -363,15 +363,7 @@ find | tee $DIR/filelist.txt &&
 tree | tee $DIR/$FILE
 </code></br></br>
 <b>On Mac:</b></br>Open a terminal and run:</br></br><code>
-		DIR="./_submissionDocumentation" &&
-	TREE="tree.txt" &&
-	FILELIST="filelist.txt" &&
-	ls -lahR > $FILELIST &&
-	tree > $TREE &&
-	if [ ! -d "$DIR" ]; then
-	mkdir $DIR
-	fi &&
-	mv $TREE $FILELIST $DIR
+DIR="_submissionDocumentation" && TREE="tree.txt" && FILELIST="filelist.txt" && ls -lahR | grep -vw -E $FILELIST > $FILELIST && if [ ! -d "$DIR" ]; then mkdir $DIR; fi && mv $FILELIST $DIR && tree -I "$DIR" > "$DIR/$TREE"
 </code>
             </td>
         </tr>
@@ -411,8 +403,9 @@ in the root folder containing all your TS’ in separate folders.
             }
             </code>
          </td>
-         <td><b>On Linux:</b></br>Open a terminal and run:</br></br><code>FILE="tree.txt" &&
-            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
+         <td><b>On Linux:</b></br>Open a terminal and run:</br></br>
+         <code>FILE="tree.txt" &&</br>
+            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' &&
             DIR="./_submissionDocumentation" &&
             if [ ! -d "$DIR" ]; then
             mkdir $DIR
@@ -422,19 +415,21 @@ in the root folder containing all your TS’ in separate folders.
             tree | tee $DIR/$FILE
             " \;
             </code></br></br>
-            <b>On Mac:</b></br>Open a terminal and run:</br></br><code>
-            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' && 
-            DIR="./_submissionDocumentation" &&
+            <p><strong>On Mac:</strong></p>
+            <p>Open a terminal and run:</p>
+            <p><code>
+            find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' &&
+            DIR="_submissionDocumentation" &&
             TREE="tree.txt" &&
             FILELIST="filelist.txt" &&
-            ls -lahR > $FILELIST &&
-            tree > $TREE &&
+            ls -lahR | grep -vw -E $FILELIST > $FILELIST &&
             if [ ! -d "$DIR" ]; then
             mkdir $DIR
             fi &&
-            mv $TREE $FILELIST $DIR
+            mv $FILELIST $DIR &&
+            tree -I "$DIR" > "$DIR/$TREE"
             " \;
-            </code>
+            </p></code>
          </td>
       </tr>
    </tbody>
