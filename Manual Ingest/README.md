@@ -646,6 +646,7 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
                     <li>Output directory - select where the SIP(s) will be saved.</li>
                     <li>SIP format - select E-ARK2.</li>
                     <li>SIP names - select Title + ID. This will render the SIP(s) easy to work with later on.</li>
+		    <li>Newer versions of RODA-In also require you to add a submitter name and a submitter ID. Simply enter your name; if you don't have an ID from your organization, just enter your name again in the ID field.</li>
                 </ol>
                 Click “Start” to create the SIP(s).</br>
                 <img
