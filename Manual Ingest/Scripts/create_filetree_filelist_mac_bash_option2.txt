@@ -1,0 +1,12 @@
+#!/bin/bash
+find . -maxdepth 1 -type d  \( ! -name . \) -exec bash -c "cd '{}' &&
+DIR="./submissionDocumentation" &&
+TREE="tree.txt" &&
+FILELIST="filelist.txt" &&
+ls -lahR > $FILELIST &&
+tree > $TREE &&
+if [ ! -d "$DIR" ]; then
+mkdir $DIR
+fi &&
+mv $TREE $FILELIST $DIR
+" \;

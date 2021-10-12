@@ -1,0 +1,8 @@
+#!/bin/bash
+DIR="./_submissionDocumentation" &&</br>
+if [ ! -d "$DIR" ]; then
+mkdir $DIR
+fi &&</br>
+touch $DIR/$FILE &&</br>
+find | tee $DIR/filelist.txt &&</br>
+tree | tee $DIR/$FILE
