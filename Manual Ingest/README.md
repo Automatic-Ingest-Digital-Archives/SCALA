@@ -69,17 +69,6 @@ We use the following definitions:
     </tbody>
 </table>
 
-The manual is structured as follows:
-<ol>
-    <li><b>Using a terminal</b> - for some tasks, basic knowledge about using a terminal is needed.</li>
-    <li><b>Testing best practices</b> - if you are using this manual for testing purposes, consider these best
-        practices.</li>
-    <li><b>Archival data preparation</b> - tasks to execute before submitting a TS to RODA-In.</li>
-    <li><b>RODA-In SIP creation</b></li>
-    <li><b>RODA AIP creation & storage</b></li>
-    <li><b>Issues & questions</b> - what to do if you encounter issues or have questions.</li>
-</ol>
-
 There are instructions for Win10 and Mac/Linux operating systems.
 
 Text written in <span title="I have some extra information"><i>italic</i></span> has some extra information if you hover
@@ -614,7 +603,7 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
 
 </details>
 
-## 5. RODA AIP creation & storage
+## 5. RODA AIP creation
 
 <details>
   <summary>Click to expand</summary>
@@ -886,7 +875,21 @@ Wait until all SIPs have loaded before going to the next step.</br>
 
 </details>
 
-## 6. Issues & questions
+## 6. RODA AIP storage
+
+<details>
+  <summary>Click to expand</summary>
+		
+</details>
+
+## 7. RODA AIP editing
+
+<details>
+  <summary>Click to expand</summary>
+	
+</details>
+
+## 8. Issues & questions
 
 All issues can be reported in the <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/issues">SCALA
     GitHub repository</a>. Please check if the same issue was already reported before creating a new issue.
