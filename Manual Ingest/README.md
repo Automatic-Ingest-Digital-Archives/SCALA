@@ -116,189 +116,26 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 ##
 <details><summary><b>RODA-In SIP creation</b></summary>
 
-### a. RODA-In installation & configuration
+#### RODA-In installation & configuration
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Install & start RODA-In</li>
-                </ul>
-            </td>
-            <td colspan=2>Follow the <a href="https://rodain.roda-community.org/">installation guide</a>.</br>Start
-                RODA-In.<br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Configure RODA-In to use the SCALA metadata template</li>
-                </ul>
-            </td>
-            <td colspan=2>Open the configuration folder.</br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture6.png"></br><a
-                    href="https://drive.google.com/drive/folders/1PTWH4zf_BDFZ4FjzZVVD_6BreUhwFLZb?usp=sharing">Download</a> the
-                “scala.xml.hbs” and “config.properties” files.<br>
-                <ol>
-                    <li>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</li>
-                    <li>Overwrite the config file in “\roda-in” with the “config.properties” file.</li>
-                    <ol><img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture7.png">
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task||
+|----|---------|
+|Install & start RODA-In|Follow the <a href="https://rodain.roda-community.org/">installation guide</a>.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">|
+|Configure RODA-In to use the SCALA metadata template|Open the configuration folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture6.png"></br><a href="https://drive.google.com/drive/folders/1PTWH4zf_BDFZ4FjzZVVD_6BreUhwFLZb?usp=sharing">Download</a> the “scala.xml.hbs” and “config.properties” files.<br>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</br>Overwrite the config file in “\roda-in” with the “config.properties” file.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture7.png">|
 
-### b. Using RODA-In
+#### Using RODA-In
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li><span title="Bear in mind that Roda-in deletes empty folders without a log. If you need a work around for this issue, see other pre-ingest steps “Create a filelist and filetree for each SIP”."><i>Load your TS in RODA-In</i></span></li>
-                </ul>
-            </td>
-            <td colspan=2>Choose the working folder in your file system. This will serve as the root of your
-                project.<br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture8.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Create a new classification scheme</li>
-                </ul>
-            </td>
-            <td colspan=2>Click to create a new classification scheme.</br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture9.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Add the TS to the IP panel</li>
-                </ul>
-            </td>
-            <td colspan=2>Select the root folder of your TS.</br>
-                Add this folder to the IP panel by clicking “Associate” or by dragging it to the IP panel.</br>
-                You can also choose to select and add folders/files individually.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture10.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li><span title="This will determine how (S)IPs will be associated with eachother (e.g. are two IPs siblings or parent-child)."><i>Select an association method</i></span></li>
-                </ul>
-            </td>
-            <td colspan=2>Choose the association method <span title="We may explore other SIP/AIP association methods in the future."><i>“One information package
-                        for each selected files or folders”</i></span>.</br>
-                Click on the button “Continue”.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture11.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Add descriptive metadata</li>
-                </ul>
-            </td>
-            <td colspan=2><b>Option 1:</b> Create new metadata from a template.</br>
-                Select option 1.</br>
-                Select the descriptive metadata standard/type of your choice.</br>
-                Click “Continue”.</br></br>
-                <b>Option 2:</b> Load metadata from a single file.</br>
-                Select option 2.</br>
-                Select and add the descriptive metadata file.</br>
-                Select the descriptive metadata standard/type of your file.</br>
-                Click “Continue”.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture12.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Edit descriptive metadata [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>Make changes to the metadata file using the tool.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture13.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Add more representations of the data [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>Click “Add representation”.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture14.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Add documentation [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>Click on “Documentation”.</br>
-                Drop files or folders from your file explorer to add documentation.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture15.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Create SIP(s)</li>
-                </ul>
-            </td>
-            <td colspan=2>Click “Create SIP(s)”.
-                </br><img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture16.png"></br>
-                On the popup screen, select the following options:</br>
-                <ol>
-                    <li>Export all items - toggle this off if you only want to create a SIP from the currently selected
-                        IP. Toggle on if you want to create SIPs for all IPs in the IP (middle) panel. Toggle off by
-                        default.</li>
-                    <li>Include hierarchy - toggle on to keep relationships between SIPs in their METS (e.g. siblings,
-                        parent-child). Toggle on by default.</li>
-                    <li>Create inventory report - toggle on to make a list of all items contained per SIP. Toggle off by
-                        default.</li>
-                    <li>Output directory - select where the SIP(s) will be saved.</li>
-                    <li>SIP format - select E-ARK2.</li>
-                    <li>SIP names - select Title + ID. This will render the SIP(s) easy to work with later on.</li>
-		    <li>Newer versions of RODA-In also require you to add a submitter name and a submitter ID. Simply enter your name; if you don't have an ID from your organization, just enter your name again in the ID field.</li>
-                </ol>
-                Click “Start” to create the SIP(s).</br>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture17.png">
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task||
+|----|---------|
+|<span title="Bear in mind that Roda-in deletes empty folders without a log. If you need a work around for this issue, see other pre-ingest steps “Create a filelist and filetree for each SIP”."><i>Load your TS in RODA-In</i></span>|Choose the working folder in your file system. This will serve as the root of your project.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture8.png">|
+|Create a new classification scheme|Click to create a new classification scheme.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture9.png">|
+|Add the TS to the IP panel|Select the root folder of your TS.</br>Add this folder to the IP panel by clicking “Associate” or by dragging it to the IP panel.</br>You can also choose to select and add folders/files individually.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture10.png">|
+|<span title="This will determine how (S)IPs will be associated with eachother (e.g. are two IPs siblings or parent-child)."><i>Select an association method</i></span>|Choose the association method <span title="We may explore other SIP/AIP association methods in the future."><i>“One information package for each selected files or folders”</i></span>.</br>Click on the button “Continue”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture11.png">|
+|Add descriptive metadata|Option 1: Create new metadata from a template.</br>Select option 1.</br>Select the descriptive metadata standard/type of your choice.</br>Click “Continue”.</br></br>Option 2: Load metadata from a single file.</br>Select option 2.</br>Select and add the descriptive metadata file.</br>Select the descriptive metadata standard/type of your file.</br>Click “Continue”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture12.png">|
+|Edit descriptive metadata [optional]|Make changes to the metadata file using the tool.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture13.png">|
+|Add more representations of the data [optional]|Click “Add representation”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture14.png">|
+|Add documentation [optional]|Click on “Documentation”.</br>Drop files or folders from your file explorer to add documentation.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture15.png">|
+|Create SIP(s)|Click “Create SIP(s)”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture16.png"></br>On the popup screen, select the following options:</br>Export all items - toggle this off if you only want to create a SIP from the currently selected IP. Toggle on if you want to create SIPs for all IPs in the IP (middle) panel. Toggle off by default.</br>Include hierarchy - toggle on to keep relationships between SIPs in their METS (e.g. siblings, parent-child). Toggle on by default.</br>Create inventory report - toggle on to make a list of all items contained per SIP. Toggle off by default.</br>Output directory - select where the SIP(s) will be saved.</br>SIP format - select E-ARK2.</br>SIP names - select Title + ID. This will render the SIP(s) easy to work with later on.</br>Newer versions of RODA-In also require you to add a submitter name and a submitter ID. Simply enter your name; if you don't have an ID from your organization, just enter your name again in the ID field.</br>Click “Start” to create the SIP(s).</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture17.png">|
 
 </details>
 
