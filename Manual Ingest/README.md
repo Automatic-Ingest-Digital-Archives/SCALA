@@ -1,5 +1,8 @@
 # SCALA ingest manual
-> The SCALA way to create and store SIPs and AIPs
+> Create, store and edit your IPs.
+
+##
+<details><summary><b>Introduction</b></summary>
 
 This manual provides step-by-step instructions for getting your archival data into an AIP.
 
@@ -74,10 +77,10 @@ There are instructions for Win10 and Mac/Linux operating systems.
 Text written in <span title="I have some extra information"><i>italic</i></span> has some extra information if you hover
 over it.
 
-## 1. Using a terminal
+</details>
 
-<details>
-  <summary>Click to expand</summary>
+##
+<details><summary><b>Using a terminal</b></summary>
 
 Some tasks are best performed by running a script in a terminal. A terminal is a program where you can write
 instructions for your computer to execute. Computers normally come with a terminal program installed by default. On
@@ -133,10 +136,8 @@ Now, whenever you are requested to “Open a terminal and run ``` some script ``
 
 </details>
 
-## 2. Testing best practices
-
-<details>
-  <summary>Click to expand</summary>
+##
+<details><summary><b>Testing best practices</b></summary>
 
 If you are using this manual for testing purposes, please consider these best practices.
 
@@ -185,10 +186,8 @@ If you are using this manual for testing purposes, please consider these best pr
 
 </details>
 
-## 3. Archival data preparation
-
-<details>
-  <summary>Click to expand</summary>
+##
+<details><summary><b>Archival data preparation</b></summary>
 
 ### a. Create your TS
 
@@ -412,10 +411,8 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
 
 </details>
 
-## 4. <span title="Roda-in is a tool designed to create Submission Information Packages (SIP) ready to be submitted to an Open Archival Information System (OAIS). The tool creates SIPs from files and folders available on the local file system."><i>RODA-In</i></span> SIP creation
-
-<details>
-  <summary>Click to expand</summary>
+##
+<details><summary><b>RODA-In SIP creation</b></summary>
 
 ### a. RODA-In installation & configuration
 
@@ -603,10 +600,8 @@ Make sure to only execute this step after Create a filelist and filetree [recomm
 
 </details>
 
-## 5. RODA AIP creation
-
-<details>
-  <summary>Click to expand</summary>
+##
+<details><summary><b>RODA AIP creation</b></summary>
 
 ### a. RODA account
 
@@ -875,6 +870,7 @@ Wait until all SIPs have loaded before going to the next step.</br>
 
 </details>
 
+##
 <details><summary><b>RODA AIP storage</b></summary>
 	
 |  |  |
@@ -885,6 +881,7 @@ Wait until all SIPs have loaded before going to the next step.</br>
 		
 </details>
 
+##
 <details><summary><b>RODA AIP editing</b></summary>
 
 |  |  |
@@ -898,9 +895,12 @@ Wait until all SIPs have loaded before going to the next step.</br>
 	
 </details>
 
-## 8. Issues & questions
+##
+<details><summary><b>Issues & questions</b></summary>
 
 All issues can be reported in the <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/issues">SCALA
     GitHub repository</a>. Please check if the same issue was already reported before creating a new issue.
 
 Alternatively, you can contact jelle.kleevens@vai.be to report the issue or for any other questions.
+
+</details>
