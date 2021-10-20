@@ -4,74 +4,17 @@
 <details><summary><b>Introduction</b></summary>
 
 This manual provides step-by-step instructions for getting your archival data into an AIP.
+	
+|Definition||
+|----|----|
+|TS|Transfer Set.</br>Folder containing all archival materials that are to be converted to an AIP.|
+|SIP|Submission Information Package.</br>An E-ARK conform set of files that is offered to the e-depot.</br>A content producer creates one SIP from one TS.|
+|AIP|Archival Information Package.</br>An E-ARK conform structure that stores the files in the SIP in the e-depot.|
+|RODA-In|SIP creation software by KEEP SOLUTIONS.|
+|RODA|AIP (re)ingestion browser tool by KEEP SOLUTIONS.|
+|meemoo|Long term archival storage provider.|
 
-We use the following definitions:
-
-<table>
-    <thead>
-        <tr>
-            <th>Definition</th>
-            <th>Explanation</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>TS</td>
-            <td>
-                <ul>
-                    <li>Transfer Set.</li>
-                    <li>Folder containing all archival materials that are to be converted to an AIP.</br>
-		</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>SIP</td>
-            <td>
-                <ul>
-                    <li>Submission Information Package.</li>
-                    <li>An E-ARK conform set of files that is offered to the e-depot.</li>
-                    <li>A content producer creates one SIP from one TS.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>AIP</td>
-            <td>
-                <ul>
-                    <li>Archival Information Package.</li>
-                    <li>An E-ARK conform structure that stores the files in the SIP in the e-depot.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>RODA-In</td>
-            <td>
-                <ul>
-                    <li>SIP creation software by KEEP SOLUTIONS.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>RODA</td>
-            <td>
-                <ul>
-                    <li>AIP (re)ingestion browser tool by KEEP SOLUTIONS.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>meemoo</td>
-            <td>
-                <ul>
-                    <li>Long term archival storage provider.</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-There are instructions for Win10 and Mac/Linux operating systems.
+There are instructions for Win10, Mac and Linux operating systems.
 
 Text written in <span title="I have some extra information"><i>italic</i></span> has some extra information if you hover
 over it.
@@ -90,46 +33,10 @@ Windows the program is “PowerShell” and on Mac/Linux it is usually “Bash�
 There are always two tasks involved when using a terminal for a SCALA ingest task. (1) Open the terminal in the root
 folder of your TS and (2) copy-paste the script in the terminal and press “Enter” to run it.
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Open terminal at <i><span title="Depending on the script you wish to execute, Root Folder can be either the parent folder containing all of 1 TS. Or it can be the parent folder containing multiple TS' in a separate folder each.">root folder</span></i></li>
-                </ul>
-            </td>
-            <td><b> Option 1 </b> </br> Navigate to the root folder in File Explorer. </br> Shift + right click the
-                folder. </br> Click “Open PowerShell window here”. </br> <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture2.png"></br></br>
-                <b> Option 2 </b> </br> Open the Windows PowerShell app. </br> Navigate to the root folder in
-                PowerShell.
-            </td>
-            <td><b> Option 1 </b> </br> Navigate to the root folder in Finder. </br> Right click the folder. </br> Click
-                “Services > New Terminal at Folder”. </br> <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture3.png">
-                </br></br> <b> Option 2 </b> </br> Open the Terminal app. </br> Navigate to the root folder in the
-                Terminal.</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li> Paste and run script </li>
-                </ul>
-            </td>
-            <td>Copy the script you have to run. </br> Paste the script in PowerShell. </br> Click “Enter” to run the
-                script.</td>
-            <td>Copy the script you have to run. </br> Paste the script in Bash. </br> Click “Enter” to run the script.
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task|Win10|Mac/Linux|
+|----|-----|---------|
+|Open terminal at <i><span title="Depending on the script you wish to execute, Root Folder can be either the parent folder containing all of 1 TS. Or it can be the parent folder containing multiple TS' in a separate folder each.">root folder</span></i>|<b> Option 1 </b> </br> Navigate to the root folder in File Explorer. </br> Shift + right click the folder. </br> Click “Open PowerShell window here”. </br> <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture2.png"></br></br><b> Option 2 </b> </br> Open the Windows PowerShell app. </br> Navigate to the root folder in PowerShell.|<b> Option 1 </b> </br> Navigate to the root folder in Finder. </br> Right click the folder. </br> Click “Services > New Terminal at Folder”. </br> <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture3.png"></br></br> <b> Option 2 </b> </br> Open the Terminal app. </br> Navigate to the root folder in theTerminal.|
+|Paste and run script|Copy the script you have to run. </br> Paste the script in PowerShell. </br> Click “Enter” to run the script.|Copy the script you have to run. </br> Paste the script in Bash. </br> Click “Enter” to run the script.|
 
 Now, whenever you are requested to “Open a terminal and run ``` some script ```”, you can execute both tasks above.
 
@@ -139,173 +46,48 @@ Now, whenever you are requested to “Open a terminal and run ``` some script ``
 <details><summary><b>Testing best practices</b></summary>
 
 If you are using this manual for testing purposes, please consider these best practices.
+	
+|Task||
+|----|-----|
+|Keep test materials on an external harddrive|Get an external hard drive. </br> Move testing TS’ to the hard drive.|
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Keep test materials on an external harddrive</li>
-                </ul>
-            </td>
-            <td colspan=2>Get an external hard drive. </br> Move testing TS’ to the hard drive.</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li><span title="These tools are preferred over the default file transfer tools of Win10 and Mac. They are fast and give clear error messages."><i>Install dedicated file management software to transfer files from your external hard drive to your computer</i></span></li>
-                </ul>
-            </td>
-            <td>One option is to download and install <a href="https://www.ghisler.com/download.htm">Total
-                    Commander</a>. </br></td>
-            <td>One option is to download and install <a href="https://doublecmd.sourceforge.io/">Double Commander</a>.
-            </td>
-        </tr>
-	<tr>
-            <td>
-                <ul>
-                    <li>Show hidden files and file extensions</li>
-                </ul>
-            </td>
-            <td colspan=2>In your file management and browsing software, check the boxes to view all files and extensions.</br>
-	<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_2.png">
-		    </br>
-  <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_3.png">
-	</td>
-        </tr>
-    </tbody>
-</table>
+|Task|Win10|Mac/Linux|
+|----|-----|---------|
+|<span title="These tools are preferred over the default file transfer tools of Win10 and Mac. They are fast and give clear error messages."><i>Install dedicated file management software to transfer files from your external hard drive to your computer</i></span>|One option is to download and install <a href="https://www.ghisler.com/download.htm">Total Commander</a>.|One option is to download and install <a href="https://doublecmd.sourceforge.io/">Double Commander</a>.|
+
+|Task||
+|----|-----|
+|Show hidden files and file extensions|In your file management and browsing software, check the boxes to view all files and extensions.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_2.png"></br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_3.png">|
 
 </details>
 
 ##
 <details><summary><b>Archival data preparation</b></summary>
 
-### a. Create your TS
+#### Create your TS
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Create your TS</li>
-                </ul>
-            </td>
-            <td colspan=2>Create a working folder (with a unique id) with your essence or data that needs to be
-                transformed in a SIP. The folder contains the original files and files already migrated before
-                ingestion.</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Create and add a descriptive metadata file to your TS [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>Create a metadata XML-file which follows the instructions at Add descriptive metadata.</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Create and add additional unstructured metadata [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>Create a folder called “_submissionDocumentation” in the root of the TS.</br>
-                <span title="E.g. file format identification files, file lists, etc."><i>Add additional unstructured metadata accompanying the content files</i></span>.
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task||
+|----|-----|
+|Create your TS|Create a working folder (with a unique id) with your essence or data that needs to be transformed in a SIP. The folder contains the original files and files already migrated before ingestion.|
+|Create and add a descriptive metadata file to your TS [optional]|Create a metadata XML-file which follows the instructions at Add descriptive metadata.|
+|Create and add additional unstructured metadata [optional]|Create a folder called “_submissionDocumentation” in the root of the TS.</br><span title="E.g. file format identification files, file lists, etc."><i>Add additional unstructured metadata accompanying the content files</i></span>|
 
-### b. Extra <span title="With RODA-In, you can create basic SIPs for ingest into the SCALA repository. All Roda-In does is to create a descriptive metadata file with a METS-file, preserving fixity. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations."><i>data preparation tasks</i></span>
+#### Extra <span title="With RODA-In, you can create basic SIPs for ingest into the SCALA repository. All Roda-In does is to create a descriptive metadata file with a METS-file, preserving fixity. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations."><i>data preparation tasks</i></span>
 
 Here are optional but recommended tasks to execute before submitting a TS to RODA-In. Please execute your chosen tasks
 in the order presented.
 
-#### i. Unpack zipped files <span title="The SCALA digital repository does not unpack container files or zipped files, due to multiple possible issues. zip-files in the SIP will be zip-files in the AIP. If you want to unpack all ZIP-files you can do this before. However, be aware that this always requires some human control."><i>[optional]</i></span>
+|Task|Win10|Mac/Linux|
+|----|-----|---------|
+|Unpack zipped files <span title="The SCALA digital repository does not unpack container files or zipped files, due to multiple possible issues. zip-files in the SIP will be zip-files in the AIP. If you want to unpack all ZIP-files you can do this before. However, be aware that this always requires some human control."><i>[optional]</i></span>|Open a terminal and run:</br><code>Expand-Archive -Path ".\*.zip"</code>,</br>where * is the name of the zip file.|Open a terminal and run:</br><code>unzip "*.zip" && ls -l</code>,</br>where * is the name of the zip file.|
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Unpack zipped files</li>
-                </ul>
-            </td>
-            <td>Open a terminal and run:</br><code>Expand-Archive -Path ".\*.zip"</code>,</br>where * is the name of the
-                zip file.</td>
-            <td>Open a terminal and run:</br><code>unzip "*.zip" && ls -l</code>,</br>where * is the name of the zip
-                file.</td>
-        </tr>
-    </tbody>
-</table>
+|Task|Win10|
+|----|-----|
+|Trim whitespace from filenames in Windows [optional]|<span title="Trailing and leading whitespace in filenames causes RODA-In to crash in Windows. Might be automated at some point."><i>Manually trim whitespace from filenames.</i></span>|
 
-#### ii. Trim whitespace from filenames in Windows [optional]
-
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Remove backup files</li>
-                </ul>
-            </td>
-            <td><span title="Trailing and leading whitespace in filenames causes RODA-In to crash in Windows. Might be automated at some point."><i>Manually trim whitespace from filenames.</i></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-#### iii. Remove backup files [optional]
-
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Remove backup files</li>
-                </ul>
-            </td>
-            <td colspan=2><span title="Might be automated at some point."><i>Manually remove backup files.</i></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-#### iv. Create a filelist and filetree <span title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>
+|Task||
+|----|-----|
+|Remove backup files [optional]|<span title="Might be automated at some point."><i>Manually remove backup files.</i></span>|
 
 A filelist is a text file containing all folders and files in your TS. A filetree contains the same information in a
 more human readable form.
@@ -314,99 +96,20 @@ more human readable form.
 
 If you are on Mac or Linux, you have to install the “tree” app. Windows has it installed by default.
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Install the “tree” app</li>
-                </ul>
-            </td>
-            <td></td>
-            <td>Install on Mac</br>Open a terminal and run:</br><code>brew install tree</code></br></br>Install on
-                Linux</br>Open a terminal and run:</br><code>sudo apt update && sudo apt-get install tree</td>
-        </tr>
-    </tbody>
-</table>
+|Task|Mac/Linux|
+|----|---------|
+|Install the “tree” app|Install on Mac</br>Open a terminal and run:</br><code>brew install tree</code></br></br>Install on Linux</br>Open a terminal and run:</br><code>sudo apt update && sudo apt-get install tree|
 
 <span title="We may add more options for creating filelists/filetrees at a later stage: Create filelist using Treesize; Create filelist using Python os.module; + filelist / treetool in Bitcurator. Partners can add their own preferred methods. You can also create a filelist of the whole archive and include this in the documentation folder."><i>You can create a filelist and filetree for the root folder you are in using option 1. Alternatively, if you want to create filelists and filetrees for many TS’ at once, please follow option 2.</i></span>
+	
+|Task|Win10|Mac/Linux|
+|----|-----|---------|
+|Option 1: create a filelist and filetree for the current TS <span title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>|Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_powershell_option1.ps1">this script.</a>|On Linux, open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_linux_bash_option1.txt">this script.</a></br></br>On Mac, open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_mac_bash_option1.txt">this script.</a>|
+|Option 2: create a filelist and filetree for each TS in the current root folder <span title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>|Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_powershell_option2.ps1">this script.</a>|On Linux, open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_linux_bash_option2.txt">this script.</a></br></br>On Mac, open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_mac_bash_option2.txt">this script.</a>|
 
-<b>Option 1:</b> create a filelist and filetree for the current TS.
-
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><ul><li>Create a filelist and filetree for the current TS</li></ul></td>
-            <td>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_powershell_option1.ps1">this script.</a></td>
-            <td><b>On Linux:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_linux_bash_option1.txt">this script.</a></br></br>
-<b>On Mac:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_mac_bash_option1.txt">this script.</a></td>
-        </tr>
-    </tbody>
-</table>
-
-<b>Option 2:</b> create a filelist and filetree for a list of TS’ in the current root folder. Therefore, open a terminal
-in the root folder containing all your TS’ in separate folders.
-
-<table>
-   <thead>
-      <tr>
-         <th>Task</th>
-         <th>Win10</th>
-         <th>Mac/Linux</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>
-            <ul>
-               <li>Create a filelist and filetree for each TS in the current folder</li>
-            </ul>
-         </td>
-         <td>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_powershell_option2.ps1">this script.</a></td>
-            <td><b>On Linux:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_linux_bash_option2.txt">this script.</a></br></br>
-<b>On Mac:</b></br>Open a terminal and run <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Scripts/create_filetree_filelist_mac_bash_option2.txt">this script.</a></td>
-      </tr>
-   </tbody>
-</table>
-
-#### v. Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>
-
-Make sure to only execute this step after Create a filelist and filetree [recommended].
-
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Delete system files</li>
-                </ul>
-            </td>
-            <td colspan=2><span title="Automatic procedure will be added."><i>Manually delete system files.</i></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task||
+|----|---------|
+|Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>|Make sure to only execute this step after Create a filelist and filetree [recommended].</br>Manually delete system files.|
 
 </details>
 
