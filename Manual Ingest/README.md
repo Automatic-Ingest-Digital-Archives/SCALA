@@ -1,7 +1,6 @@
-# SCALA ingest manual
-> Create, store and edit your IPs.
+# SCALA IP ingest manual
 
-##
+###
 <details><summary><b>Introduction</b></summary>
 
 This manual provides step-by-step instructions for getting your archival data into an AIP.
