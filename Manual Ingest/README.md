@@ -273,7 +273,29 @@ in the order presented.
     </tbody>
 </table>
 
-#### ii. Remove backup files [optional]
+#### ii. Trim whitespace from filenames in Windows [optional]
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Win10</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>Remove backup files</li>
+                </ul>
+            </td>
+            <td><span title="Trailing and leading whitespace in filenames causes RODA-In to crash in Windows. Might be automated at some point."><i>Manually trim whitespace from filenames.</i></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+#### iii. Remove backup files [optional]
 
 <table>
     <thead>
@@ -296,7 +318,7 @@ in the order presented.
     </tbody>
 </table>
 
-#### iii. Create a filelist and filetree <span title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>
+#### iv. Create a filelist and filetree <span title="It's always handy to create a filelist about all the files in a SIP or in an archive. You can use this as an authoritative list of all the material received + as an inventory for researchers. This step is also recommended because Roda-in deletes without a log all empty folders. You should be able to restore the original file structure based on the filelist. Make sure the filelist lists files, folders and eventually symbolic links (hyperlinks to files stored elsewhere)."><i>[recommended]</i></span>
 
 A filelist is a text file containing all folders and files in your TS. A filetree contains the same information in a
 more human readable form.
@@ -374,7 +396,7 @@ in the root folder containing all your TS’ in separate folders.
    </tbody>
 </table>
 
-#### iv. Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>
+#### v. Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>
 
 Make sure to only execute this step after Create a filelist and filetree [recommended].
 
