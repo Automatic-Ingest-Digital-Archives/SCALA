@@ -901,6 +901,19 @@ Wait until all SIPs have loaded before going to the next step.</br>
 </details>
 
 ##
+<details><summary><b>RODA AIP searching</b></summary>
+
+|  |  |
+| ----------- | ----------- |
+| Catalogue | ![image](https://user-images.githubusercontent.com/87436774/138086822-128b2adc-c401-483c-a3bc-7180655b9415.png)|
+| Assessment tab | ![image](https://user-images.githubusercontent.com/87436774/138086883-73410974-fccd-4df9-8ff0-19dfb341c96f.png)|
+| Search facets | ![image](https://user-images.githubusercontent.com/87436774/138086934-89630095-3e7c-4363-a1c9-801ed48cc13a.png)|
+| Search field | ![image](https://user-images.githubusercontent.com/87436774/138086973-c0cb4230-cce4-493b-a074-efe077477438.png)|
+| Advanced search field | ![image](https://user-images.githubusercontent.com/87436774/138087110-fea88151-0a69-4704-874c-e0607ceb4759.png)|
+	
+</details>
+
+##
 <details><summary><b>Issues & questions</b></summary>
 
 All issues can be reported in the <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/issues">SCALA
