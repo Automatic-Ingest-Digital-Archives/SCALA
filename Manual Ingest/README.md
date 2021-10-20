@@ -875,17 +875,26 @@ Wait until all SIPs have loaded before going to the next step.</br>
 
 </details>
 
-## 6. RODA AIP storage
-
-<details>
-  <summary>Click to expand</summary>
+<details><summary><b>RODA AIP storage</b></summary>
+	
+|  |  |
+| ----------- | ----------- |
+| Store AIP on meemoo | <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/meemoo.png">|
+| Prune AIP in RODA||
+| Restore pruned AIP representations from meemoo to in RODA||
 		
 </details>
 
-## 7. RODA AIP editing
+<details><summary><b>RODA AIP editing</b></summary>
 
-<details>
-  <summary>Click to expand</summary>
+|  |  |
+| ----------- | ----------- |
+| Start new process on IP | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/conversion%20plugin%201.png)|
+| File conversion | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/conversion%20plugin%202.png)|
+| Start new process on representation | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%201.png)|
+| Create new representation manually ||
+| Create new representation automatically after running plugin | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%202.png)</br>Deselect "Create dissemination".|
+| Set status of representation ||
 	
 </details>
 
