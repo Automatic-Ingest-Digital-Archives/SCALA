@@ -868,6 +868,10 @@ Wait until all SIPs have loaded before going to the next step.</br>
     </tbody>
 </table>
 
+|  |  |
+| ----------- | ----------- |
+| AIP assessment | ![image](https://user-images.githubusercontent.com/87436774/138085894-e06e3476-a3d7-4d9a-8eea-e122262d366f.png)</br>Assessment is the process of determining whether records and other materials have permanent (archival) value. Assessment may be done at the collection, creator, series, file, or item level.|
+
 </details>
 
 ##
@@ -875,9 +879,10 @@ Wait until all SIPs have loaded before going to the next step.</br>
 	
 |  |  |
 | ----------- | ----------- |
-| Store AIP on meemoo | <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/meemoo.png">|
-| Prune AIP in RODA||
-| Restore pruned AIP representations from meemoo to in RODA||
+| Store AIP on meemoo | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/meemoo.png)|
+| Check AIP synchronization status |![image](https://user-images.githubusercontent.com/87436774/138085154-5db47ed5-c4f0-4396-99d7-8d5a180b0225.png)|
+| Prune AIP in RODA|![image](https://user-images.githubusercontent.com/87436774/138085338-43ad9e04-92d5-424b-90fc-f5ef338734ce.png)|
+| Restore pruned AIP representations from meemoo to in RODA|![image](https://user-images.githubusercontent.com/87436774/138085445-8f54ec7f-75f2-4563-bd16-19c03fc360da.png)|
 		
 </details>
 
@@ -891,7 +896,7 @@ Wait until all SIPs have loaded before going to the next step.</br>
 | Start new process on representation | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%201.png)|
 | Create new representation manually ||
 | Create new representation automatically after running plugin | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%202.png)</br>Deselect "Create dissemination".|
-| Set status of representation ||
+| Set status of representation | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%203.png)</br> ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%204.png)|
 	
 </details>
 
