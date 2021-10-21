@@ -70,7 +70,7 @@ If you are using this manual for testing purposes, please consider these best pr
 |----|-----|
 |Create your TS|Create a working folder (with a unique id) with your essence or data that needs to be transformed in a SIP. The folder contains the original files and files already migrated before ingestion.|
 |Create and add a descriptive metadata file to your TS [optional]|Create a metadata XML-file which follows the instructions at Add descriptive metadata.|
-|Create and add additional unstructured metadata [optional]|Create a folder called “_submissionDocumentation” in the root of the TS.</br><span title="E.g. file format identification files, file lists, etc."><i>Add additional unstructured metadata accompanying the content files</i></span>|
+|Create and add additional non-xml metadata [optional]|Create a folder called “_submissionDocumentation” in the root of the TS.</br><span title="E.g. file format identification files, file lists, etc."><i>Add additional non-xml metadata accompanying the content files</i></span>|
 
 #### Extra <span title="With RODA-In, you can create basic SIPs for ingest into the SCALA repository. All Roda-In does is to create a descriptive metadata file with a METS-file, preserving fixity. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations."><i>data preparation tasks</i></span>
 
