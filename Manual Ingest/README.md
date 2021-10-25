@@ -142,284 +142,50 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 </details>
 
 ##
-<details><summary><b>RODA AIP creation</b></summary>
+<details><summary><b>RODA account, FTP client and meemoo connection</b></summary>
 
-### a. RODA account
-
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Request a RODA account</li>
-                </ul>
-            </td>
-            <td colspan=2>Ask your organization’s admin to create an account for you.</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Log into RODA</li>
-                </ul>
-            </td>
-            <td colspan=2>Log into <a href="https://scala.meemoo.be/#login/welcome">RODA</a> using your username and
-                password.</td>
-        </tr>
-    </tbody>
-</table>
-
-### b. Install an FTP client and connect to meemoo
+|Task||
+|----|-----|
+|Request a RODA account|Ask your organization’s admin to create an account for you.|
+|Log into RODA|Log into <a href="https://scala.meemoo.be/#login/welcome">RODA</a> using your username and password.|
 
 The File Transfer Protocol (FTP) is a standard communication protocol used for the transfer of files between computers.
 This is better suited to transfer large SIPs to RODA instead of using their website.
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Download and install an FTP client</li>
-                </ul>
-            </td>
-            <td>You can choose whichever client you wish. Here is one option:</br>
-                <a href="https://winscp.net/eng/download.php">Download WinSCP</a>.</br>
-                Install WinSCP.
-            </td>
-            <td>You can choose whichever client you wish. Here is one option:</br>
-                <a href="https://filezilla-project.org/download.php?platform=osx">Download FileZilla</a>.</br>
-                Install FileZilla.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Connect to RODA on meemoo via FTP</li>
-                </ul>
-            </td>
-            <td colspan=2>Create a <a href="https://accounts-qas.meemoo.be/pwm/public/ForgottenPassword">meemoo user
-                    account</a>.</br>
-                Open your FTP client.</br>
-                Use settings:
-                <ul>
-                    <li>File protocol: SFTP</li>
-                    <li>Host name: scala-sftp.meemoo.be</li>
-                    <li>Port number: 22</li>
-                    <li>User name: [your meemoo username]</li>
-                    <li>Password: [your meemoo password]</li>
-                </ul>
-                Login and connect to the server.</br>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture18.png">
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task|Win10|Mac/Linux|
+|----|-----|---------|
+|Download and install an FTP client|You can choose whichever client you wish. Here is one option:</br><a href="https://winscp.net/eng/download.php">Download WinSCP</a>.</br>Install WinSCP.|You can choose whichever client you wish. Here is one option:</br><a href="https://filezilla-project.org/download.php?platform=osx">Download FileZilla</a>.</br>Install FileZilla.|
 
-### c. Using RODA
+|Task||
+|----|-----|
+|Connect to RODA on meemoo via FTP|Create a <a href="https://accounts-qas.meemoo.be/pwm/public/ForgottenPassword">meemoo user account</a>.</br>Open your FTP client.</br>Use settings:</br>* File protocol: SFTP</br>* Host name: scala-sftp.meemoo.be</br>* Port number: 22</br>* User name: [your meemoo username]</br>* Password: [your meemoo password]</br></br>Login and connect to the server.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture18.png">|
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Upload SIPs</li>
-                </ul>
-            </td>
-            <td colspan=2><b>Option 1 (preferred):</b> Upload SIPs via your FTP client.</br>
-                Follow the guidelines in <a
-                    href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Dropfolder%20-%20User%20guide.pdf">this
-                    user guide</a>.</br></br>Here is a short version:</br>
-1. Create a .ready file locally on your computer.</br>
-Call the file ".ready". You might have to use your FTP program or a terminal to create this special file. If you have issues creating this file, please contact jelle.kleevens@vai.be.</br>
-<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_4.png"></br>
-2. Create a job folder for your SIPs on the server.</br>
-On the RODA/meemoo server side of your FTP program, navigate to the "incoming" folder. Then navigate to the folder of your institution/company (if there is no such folder, just remain in the "incoming" folder).</br>
-Create a new "job" folder. Give it any name you want. This folder will contain all SIPs to be uploaded in this job.</br>
-<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_6.png"></br>
-Then navigate into this new job folder.</br>
-<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_7.png"></br>
-3. Load your SIPs into the job folder.</br>
-Wait until all SIPs have loaded before going to the next step.</br>
-<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_8.png"></br>
-4. Drag the .ready file into the job folder.</br>
-<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_9.png"></br>
-                After they are uploaded, access SIPs via the RODA website.</br></br>
-                <span title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option 2:</b> Upload SIPs via the RODA website.</i></span>
-                <ol>
-                    <li>On the “Ingest” dropdown menu, click on “Transfer”.</li>
-                    <li>On the transfer page, click on the three dots. Then select “Upload”.</br>
-                        <img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture20.png">
-                    </li>
-                    <li>Choose the SIPs you want to upload.</li>
-                    <li>Click “Done”. Your SIPs will now be uploaded.</br>
-                        <img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture21.png">
-                    </li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Select SIPs for processing [only in case of option 2: Upload SIPs via the RODA website]</li>
-                </ul>
-            </td>
-            <td colspan=2>Go to the transfer page.
-                <ol>
-                    <li>Select the SIPs to process into AIPs.</li>
-                    <li>Click the three dots.</li>
-                    <li>Click “Start new process”.</li>
-                </ol>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture22.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Select and execute the ingest workflow process [only in case of option 2: Upload SIPs via the
-                        RODA website]</li>
-                </ul>
-            </td>
-            <td colspan=2>On the “New process” page:
-                <ol>
-                    <li>Select “Default ingest workflow (2.0).</li>
-                    <li>Select “E-ARK SIP 2 (1.0).</li>
-                    <li>Optionally, scroll down and select which plugins should be activated during the ingest workflow.
-                    </li>
-                    <li>Click “Create”.</li>
-                </ol>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture23.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Monitor the status of the ingest workflow process</li>
-                </ul>
-            </td>
-            <td colspan=2>
-                <ol>
-                    <li>Go to the “Process” page.</li>
-                    <li>Check the status of the ingest process.</li>
-                </ol>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture24.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Edit the AIPs [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>
-                <ol>
-                    <li>Click on the process to consult the results. You can check the status of all the AIPs from the
-                        process.</br>
-                        <img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture25.png">
-                    </li>
-                    <li>Click “Created Packages”. You will now go to an AIP inspection page.</br>
-                        <img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture26.png">
-                    </li>
-                    <li>Inspect the description XML. Editing is possible.</li>
-                    <li>Scroll down.</li>
-                    <li>Inspect the representations. Editing is possible. Starting processes on file level is possible
-                        as well.</br>
-                        <img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture27.png"></br>
-                        <img
-                            src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture28.png">
-                    </li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Start a new ingest process on the AIPs [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>Click “Start new process”.</br>
-                Select plugins you wish to run in a new process on the AIPs.</br>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture29.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li><span title="To be added"><i>Assess the AIP and send to meemoo storage</i></span></li>
-                </ul>
-            </td>
-            <td colspan=2>
-            </td>
-        </tr>
-    </tbody>
-</table>
+</details>
 
-### d. RODA catalogue
+###
+<details><summary><b>RODA AIP creation & assessment</b></summary>
 
-<table>
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Win10</th>
-            <th>Mac/Linux</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Consult RODA catalogue [optional]</li>
-                </ul>
-            </td>
-            <td colspan=2>The catalogue is the inventory of all items or records found in the repository. This includes
-                AIPs.</br>
-                <img
-                    src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture30.png">
-            </td>
-        </tr>
-    </tbody>
-</table>
+|Task||
+|----|-----|
+|Upload SIPs|<b>Option 1 (preferred):</b> Upload SIPs via your FTP client.</br>Follow the guidelines in <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Dropfolder%20-%20User%20guide.pdf">this user guide</a>.</br></br>Here is a short version:</br>1. Create a .ready file locally on your computer.</br>Call the file ".ready". You might have to use your FTP program or a terminal to create this special file. If you have issues creating this file, please contact jelle.kleevens@vai.be.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_4.png"></br>2. Create a job folder for your SIPs on the server.</br>On the RODA/meemoo server side of your FTP program, navigate to the "incoming" folder. Then navigate to the folder of your institution/company (if there is no such folder, just remain in the "incoming" folder).</br>Create a new "job" folder. Give it any name you want. This folder will contain all SIPs to be uploaded in this job.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_6.png"></br>Then navigate into this new job folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_7.png"></br>3. Load your SIPs into the job folder.</br>Wait until all SIPs have loaded before going to the next step.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_8.png"></br>4. Drag the .ready file into the job folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_9.png"></br>After they are uploaded, access SIPs via the RODA website.</br></br><span title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option 2:</b> Upload SIPs via the RODA website.</i></span></br>* On the “Ingest” dropdown menu, click on “Transfer”.</br>* On the transfer page, click on the three dots. Then select “Upload”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture20.png"></br>* Choose the SIPs you want to upload.</br>* Click “Done”. Your SIPs will now be uploaded.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture21.png">|
+|Select SIPs for processing [only in case of option 2: Upload SIPs via the RODA website]|Go to the transfer page.</br>* Select the SIPs to process into AIPs.</br>* Click the three dots.</br>* Click “Start new process”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture22.png">|
+|Select and execute the ingest workflow process [only in case of option 2: Upload SIPs via the RODA website]|On the “New process” page:</br>* Select “Default ingest workflow (2.0).</br>* Select “E-ARK SIP 2 (1.0).</br>* Optionally, scroll down and select which plugins should be activated during the ingest workflow.</br>* Click “Create”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture23.png">|
+|Monitor the status of the ingest workflow process|Go to the “Process” page.</br>Check the status of the ingest process.</br> <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture24.png">|
+|Edit the AIPs [optional]|Click on the process to consult the results. You can check the status of all the AIPs from the process.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture25.png"></br>* Click “Created Packages”. You will now go to an AIP inspection page.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture26.png"></br>* Inspect the description XML. Editing is possible.</br>* Scroll down.</br>* Inspect the representations. Editing is possible. Starting processes on file level is possible as well.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture27.png"></br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture28.png">|
+|Start a new ingest process on the AIPs [optional]|Click “Start new process”.</br>Select plugins you wish to run in a new process on the AIPs.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture29.png">|
+|<span title="To be added"><i>Assess the AIP and send to meemoo storage</i></span>||
 
-|  |  |
-| ----------- | ----------- |
-| AIP assessment | ![image](https://user-images.githubusercontent.com/87436774/138085894-e06e3476-a3d7-4d9a-8eea-e122262d366f.png)</br>Assessment is the process of determining whether records and other materials have permanent (archival) value. Assessment may be done at the collection, creator, series, file, or item level.|
+|Task||
+|----|-----|
+|AIP assessment|![image](https://user-images.githubusercontent.com/87436774/138085894-e06e3476-a3d7-4d9a-8eea-e122262d366f.png)</br>Assessment is the process of determining whether records and other materials have permanent (archival) value. Assessment may be done at the collection, creator, series, file, or item level.|
 
 </details>
 
 ###
 <details><summary><b>RODA AIP storage</b></summary>
 	
-|  |  |
-| ----------- | ----------- |
+|Task||
+|----|-----|
 | Store AIP on meemoo | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/meemoo.png)|
 | Check AIP synchronization status |![image](https://user-images.githubusercontent.com/87436774/138085154-5db47ed5-c4f0-4396-99d7-8d5a180b0225.png)|
 | Prune AIP in RODA|![image](https://user-images.githubusercontent.com/87436774/138085338-43ad9e04-92d5-424b-90fc-f5ef338734ce.png)|
@@ -430,8 +196,8 @@ Wait until all SIPs have loaded before going to the next step.</br>
 ###
 <details><summary><b>RODA AIP editing</b></summary>
 
-|  |  |
-| ----------- | ----------- |
+|Task||
+|----|-----|
 | Start new process on IP | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/conversion%20plugin%201.png)|
 | File conversion | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/conversion%20plugin%202.png)|
 | Start new process on representation | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/representation%201.png)|
@@ -444,8 +210,8 @@ Wait until all SIPs have loaded before going to the next step.</br>
 ###
 <details><summary><b>RODA AIP searching</b></summary>
 
-|  |  |
-| ----------- | ----------- |
+|Task||
+|----|-----|
 | Catalogue | ![image](https://user-images.githubusercontent.com/87436774/138086822-128b2adc-c401-483c-a3bc-7180655b9415.png)|
 | Assessment tab | ![image](https://user-images.githubusercontent.com/87436774/138086883-73410974-fccd-4df9-8ff0-19dfb341c96f.png)|
 | Search facets | ![image](https://user-images.githubusercontent.com/87436774/138086934-89630095-3e7c-4363-a1c9-801ed48cc13a.png)|
