@@ -116,16 +116,17 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 </details>
 
 ##
-<details><summary><b>RODA-In SIP creation</b></summary>
-
-#### RODA-In installation & configuration
+<details><summary><b>RODA-In installation & configuration</b></summary>
 
 |Task||
 |----|---------|
-|Install & start RODA-In|Follow the <a href="https://rodain.roda-community.org/">installation guide</a>.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">|
+|Install & start RODA-In|Download RODA-In 2.3.1 <a href="https://github.com/keeps/roda-in/releases/tag/2.3.1">here</a> and install it.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">|
 |Configure RODA-In to use the SCALA metadata template|Open the configuration folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture6.png"></br><a href="https://drive.google.com/drive/folders/1PTWH4zf_BDFZ4FjzZVVD_6BreUhwFLZb?usp=sharing">Download</a> the “scala.xml.hbs” and “config.properties” files.<br>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</br>Overwrite the config file in “\roda-in” with the “config.properties” file.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture7.png">|
 
-#### Using RODA-In
+</details>
+
+###
+<details><summary><b>RODA-In SIP creation</b></summary>
 
 |Task||
 |----|---------|
@@ -137,7 +138,7 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 |Edit descriptive metadata [optional]|Make changes to the metadata file using the tool.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture13.png">|
 |Add more representations of the data [optional]|Click “Add representation”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture14.png">|
 |Add documentation [optional]|Click on “Documentation”.</br>Drop files or folders from your file explorer to add documentation.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture15.png">|
-|Create SIP(s)|Click “Create SIP(s)”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture16.png"></br>On the popup screen, select the following options:</br>Export all items - toggle this off if you only want to create a SIP from the currently selected IP. Toggle on if you want to create SIPs for all IPs in the IP (middle) panel. Toggle off by default.</br>Include hierarchy - toggle on to keep relationships between SIPs in their METS (e.g. siblings, parent-child). Toggle on by default.</br>Create inventory report - toggle on to make a list of all items contained per SIP. Toggle off by default.</br>Output directory - select where the SIP(s) will be saved.</br>SIP format - select E-ARK2.</br>SIP names - select Title + ID. This will render the SIP(s) easy to work with later on.</br>Newer versions of RODA-In also require you to add a submitter name and a submitter ID. Simply enter your name; if you don't have an ID from your organization, just enter your name again in the ID field.</br>Click “Start” to create the SIP(s).</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture17.png">|
+|Create SIP(s)|Click “Create SIP(s)”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture16.png"></br>On the popup screen, select the following options:</br>1. Export all items - toggle this off if you only want to create a SIP from the currently selected IP. Toggle on if you want to create SIPs for all IPs in the IP (middle) panel. Toggle off by default.</br>2. Include hierarchy - toggle on to keep relationships between SIPs in their METS (e.g. siblings, parent-child). Toggle on by default.</br>3. Create inventory report - toggle on to make a list of all items contained per SIP. Toggle off by default.</br>4. Output directory - select where the SIP(s) will be saved.</br>5. SIP format - select E-ARK2.</br>6. SIP names - select Title + ID. This will render the SIP(s) easy to work with later on.</br>Newer versions of RODA-In also require you to add a submitter name and a submitter ID. Simply enter your name; if you don't have an ID from your organization, just enter your name again in the ID field.</br>Click “Start” to create the SIP(s).</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture17.png">|
 
 </details>
 
@@ -148,7 +149,9 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 |----|-----|
 |Request a RODA account|Ask your organization’s admin to create an account for you.|
 |Log into RODA|Log into <a href="https://scala.meemoo.be/#login/welcome">RODA</a> using your username and password.|
-
+	
+Your organization's administrator can add you to the ingest-user account group. Then you should receive email confirmation for each finished ingest job.
+	
 The File Transfer Protocol (FTP) is a standard communication protocol used for the transfer of files between computers.
 This is better suited to transfer large SIPs to RODA instead of using their website.
 
@@ -167,13 +170,12 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
 
 |Task||
 |----|-----|
-|Upload SIPs|<b>Option 1 (preferred):</b> Upload SIPs via your FTP client.</br>Follow the guidelines in <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Dropfolder%20-%20User%20guide.pdf">this user guide</a>.</br></br>Here is a short version:</br>1. Create a .ready file locally on your computer.</br>Call the file ".ready". You might have to use your FTP program or a terminal to create this special file. If you have issues creating this file, please contact jelle.kleevens@vai.be.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_4.png"></br>2. Create a job folder for your SIPs on the server.</br>On the RODA/meemoo server side of your FTP program, navigate to the "incoming" folder. Then navigate to the folder of your institution/company (if there is no such folder, just remain in the "incoming" folder).</br>Create a new "job" folder. Give it any name you want. This folder will contain all SIPs to be uploaded in this job.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_6.png"></br>Then navigate into this new job folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_7.png"></br>3. Load your SIPs into the job folder.</br>Wait until all SIPs have loaded before going to the next step.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_8.png"></br>4. Drag the .ready file into the job folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_9.png"></br>After they are uploaded, access SIPs via the RODA website.</br></br><span title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option 2:</b> Upload SIPs via the RODA website.</i></span></br>* On the “Ingest” dropdown menu, click on “Transfer”.</br>* On the transfer page, click on the three dots. Then select “Upload”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture20.png"></br>* Choose the SIPs you want to upload.</br>* Click “Done”. Your SIPs will now be uploaded.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture21.png">|
-|Select SIPs for processing [only in case of option 2: Upload SIPs via the RODA website]|Go to the transfer page.</br>* Select the SIPs to process into AIPs.</br>* Click the three dots.</br>* Click “Start new process”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture22.png">|
-|Select and execute the ingest workflow process [only in case of option 2: Upload SIPs via the RODA website]|On the “New process” page:</br>* Select “Default ingest workflow (2.0).</br>* Select “E-ARK SIP 2 (1.0).</br>* Optionally, scroll down and select which plugins should be activated during the ingest workflow.</br>* Click “Create”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture23.png">|
-|Monitor the status of the ingest workflow process|Go to the “Process” page.</br>Check the status of the ingest process.</br> <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture24.png">|
-|Edit the AIPs [optional]|Click on the process to consult the results. You can check the status of all the AIPs from the process.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture25.png"></br>* Click “Created Packages”. You will now go to an AIP inspection page.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture26.png"></br>* Inspect the description XML. Editing is possible.</br>* Scroll down.</br>* Inspect the representations. Editing is possible. Starting processes on file level is possible as well.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture27.png"></br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture28.png">|
+|Upload SIPs|<b>Option 1 (preferred):</b> Upload SIPs via your FTP client.</br>Follow the guidelines in <a href="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Dropfolder%20-%20User%20guide.pdf">this user guide</a>.</br></br>Here is a short version:</br>1. Create a .ready file locally on your computer.</br>Call the file ".ready". You might have to use your FTP program or a terminal to create this special file. If you have issues creating this file, please contact jelle.kleevens@vai.be.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_4.png"></br>2. Create a job folder for your SIPs on the server.</br>On the RODA/meemoo server side of your FTP program, navigate to the "incoming" folder. Then navigate to the folder of your institution/company (if there is no such folder, just remain in the "incoming" folder).</br>Create a new "job" folder. Give it any name you want. This folder will contain all SIPs to be uploaded in this job.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_6.png"></br>Then navigate into this new job folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_7.png"></br>3. Load your SIPs into the job folder.</br>Wait until all SIPs have loaded before going to the next step.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_8.png"></br>4. Drag the .ready file into the job folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Screenshot_9.png"></br>After they are uploaded, access SIPs via the RODA website.</br></br><span title="There is a limit to the size of allowed information packages when choosing this option."><i><b>Option 2:</b> Upload SIPs via the RODA website.</i></span></br>1. On the “Ingest” dropdown menu, click on “Transfer”.</br>2. On the transfer page, click on the three dots. Then select “Upload”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture20.png"></br>3. Choose the SIPs you want to upload.</br>4. Click “Done”. Your SIPs will now be uploaded.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture21.png">|
+|Select SIPs for processing [only in case of option 2: Upload SIPs via the RODA website]|Go to the transfer page.</br>1. Select the SIPs to process into AIPs.</br>2. Click the three dots.</br>3. Click “Start new process”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture22.png">|
+|Select and execute the ingest workflow process [only in case of option 2: Upload SIPs via the RODA website]|On the “New process” page:</br>1. Select “AIDA ingest workflow (X)".</br>2. Select “E-ARK SIP 2 (1.0).</br>3. Optionally, scroll down and select which plugins should be activated during the ingest workflow.</br>4. Click “Create”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture23.png">|
+|Monitor the status of the ingest workflow process|1. Go to the “Process” page.</br>2. Check the status of the ingest process.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture24.png">|
+|Edit the AIPs [optional]|Click on the process to consult the results. You can check the status of all the AIPs from the process.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture25.png"></br>1. Click “Created Packages”. You will now go to an AIP inspection page.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture26.png"></br>2. Inspect the description XML. Editing is possible.</br>3. Scroll down.</br>4. Inspect the representations. Editing is possible. Starting processes on file level is possible as well.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture27.png"></br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture28.png">|
 |Start a new ingest process on the AIPs [optional]|Click “Start new process”.</br>Select plugins you wish to run in a new process on the AIPs.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture29.png">|
-|<span title="To be added"><i>Assess the AIP and send to meemoo storage</i></span>||
 
 |Task||
 |----|-----|
@@ -223,6 +225,16 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
 ###
 <details><summary><b>RODA AIP plugins</b></summary>
 	
+</details>
+
+
+##
+<details><summary><b>View AIPs on meemoo</b></summary>
+
+|Task||
+|----|-----|
+|Log into meemoo QAS|[Meemoo QAS site](https://archief-qas.viaa.be/).</br>Username and password are the same as for the meemoo FTP server login.|
+
 </details>
 
 ##
