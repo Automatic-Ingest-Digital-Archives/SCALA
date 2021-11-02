@@ -1,0 +1,8 @@
+#1. Rename dirs
+IFS=''
+find ~+ -type d -name "*[[:space:]]" -print > whitespace_dirs.txt
+while read line; do cd $line; mv $line $(echo $line | xargs); done < whitespace_dirs.txt
+#2. Rename files
+IFS=''
+find ~+ -type f -name "*.*[[:space:]]" -print > whitespace_files.txt
+while read line; do cd "$(dirname "$line")"; filename=$(basename "$line"); mv $filename $(echo $filename | xargs); done < whitespace_files.txt
