@@ -1,6 +1,6 @@
-{{~field name="ScalaID"					order="10" auto-generate="id" labeli18n="crosswalks.dissemination.html.ead.reference.ScalaID" label="{\"en\": \"ScalaID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid[@label='ScalaID']/string()"~}}
-{{~field name="LocalID"					order="20" type="text" labeli18n="crosswalks.dissemination.html.ead.reference.LocalID" label="{\"en\": \"LocalID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid[@label='LocalID']/string()"~}}
-{{~field name="level" 					order="25" type="text" value="collection" label="{\"i18n\": \"crosswalks.dissemination.html.ead.level\", \"en\": \"Description level\"}" xpath="//*:archdesc/@level/string()" ~}}
+{{~field name="scalaID"					order="10" auto-generate="id" labeli18n="crosswalks.dissemination.html.ead.reference.scalaID" label="{\"en\": \"scalaID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid[@label='scalaID']/string()"~}}
+{{~field name="localID"					order="20" type="text" labeli18n="crosswalks.dissemination.html.ead.reference.localID" label="{\"en\": \"localID\"}" xpath="/*:ead/*:archdesc/*:did/*:unitid[@label='localID']/string()"~}}
+{{~field name="level" 					order="25" type="list" value="collection" options="[\"fonds\",\"class\",\"collection\",\"recordgrp\",\"subgrp\",\"subfonds\",\"series\",\"subseries\",\"file\",\"item\"]" optionsLabels="{\"fonds\": {\"en\":\"Fonds\", \"pt\":\"Fundo\"},\"class\": {\"en\":\"Class\", \"pt\":\"Classe\"},\"collection\": {\"en\":\"Collection\", \"pt\":\"Coleção\"},\"recordgrp\": {\"en\":\"Record group\", \"pt\":\"Grupo de registos\"},\"subgrp\": {\"en\":\"Subgroup\", \"pt\":\"Subgrupo\"},\"subfonds\": {\"en\":\"Subfonds\", \"pt\":\"Subfundo\"},\"series\": {\"en\":\"Series\", \"pt\":\"Série\"},\"subseries\": {\"en\":\"Subseries\", \"pt\":\"Subsérie\"},\"file\": {\"en\":\"File\", \"pt\":\"Documento composto\"},\"item\": {\"en\":\"Item\", \"pt\":\"Documento simples\"}}" optionsLabelI18nKeyPrefix="crosswalks.dissemination.html.ead.level" optionsLabelI18nKeyPrefix="crosswalks.dissemination.html.ead.level" auto-generate="level" label="{\"i18n\": \"crosswalks.dissemination.html.ead.level\", \"en\": \"Description level\", \"pt\": \"Nível descritivo\"}" xpath="//*:archdesc/@level/string()" ~}}
 {{~field name="otherlevel" 				hidden="true" order="90" labeli18n="crosswalks.dissemination.html.ead.otherlevel" label="{\"en\": \"Other level\"}" xpath="/*:ead/*:archdesc/@otherlevel/string()"~}}
 {{~field name="title"       			order="30" auto-generate='title' labeli18n="crosswalks.dissemination.html.ead.title" label="{\"en\": \"Title\"}" xpath="/*:ead/*:archdesc/*:did/*:unittitle/string()"~}}
 {{~field name="dates"   				order="60" type="text" label="{\"i18n\": \"crosswalks.dissemination.html.ead.unitdate\", \"en\": \"Date(s)\"}" xpath="/*:ead/*:archdesc/*:did/*:unitdate/string()"~}}
@@ -32,13 +32,14 @@
 			{{~/if~}}
 		</profiledesc>
 	</eadheader>
-  <archdesc level="collection">
+  <archdesc {{#if level}}level='{{level}}'{{else}}level='collection'{{/if}} {{#if otherlevel}}otherlevel="{{otherlevel}}"{{/if}}>
     <did>
     	{{~#if title~}}
       	<unittitle {{#if titleType}}type="{{titleType}}"{{/if}}>{{title}}</unittitle>
       	{{~/if~}}
+		    <unitid label="scalaID">{{scalaID}}</unitid>
       	{{~#ifCond "||" countryCode repositoryCode id~}}
-      	<unitid label="LocalID"{{#if countryCode}}countrycode="{{countryCode}}"{{/if}} {{#if repositoryCode}}repositorycode="{{repositoryCode}}"{{/if}}>{{LocalID}}</unitid>
+      	<unitid label="localID"{{#if countryCode}}countrycode="{{countryCode}}"{{/if}} {{#if repositoryCode}}repositorycode="{{repositoryCode}}"{{/if}}>{{localID}}</unitid>
       	{{~/ifCond~}}
 		{{~#if dateInitial~}}
 			{{~#if dateFinal~}}
