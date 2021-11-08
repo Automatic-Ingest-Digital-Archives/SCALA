@@ -99,11 +99,13 @@
         <name>{{creator}}</name>
       </origination>
       {{~/if~}}
-      {{~#if producer~}} 
       <origination label='producer'>
-        <name>AIDA</name>
+	{{~#if producer~}} 
+        <name>{{producer}}</name>
+	{{else}}
+	<name>AIDA</name>
+	{{~/if~}}
       </origination>
-      {{~/if~}}
       {{~#if materialspec~}} 
       <materialspec>{{materialspec}}</materialspec>
       {{~/if~}}
