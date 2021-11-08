@@ -41,9 +41,6 @@ for record in records:
     did = ET.SubElement(archdesc, "did")
     unittitle = ET.SubElement(did, "unittitle")
     unittitle.text = record["unitTitle"]
-    unitid1 = ET.SubElement(did, "unitid")
-    unitid1.set("label", "scalaUUID")
-    unitid1.text = "uuid-" + str(uuid.uuid4()) #record["scalaID"]
     unitid2 = ET.SubElement(did, "unitid")
     unitid2.set("repositorycode", record["repositoryCode"])
     unitid2.set("label", "localID")
