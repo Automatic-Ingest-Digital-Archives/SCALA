@@ -190,7 +190,7 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
 |----|-----|
 | Store AIP on meemoo | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/meemoo.png)|
 | Check AIP synchronization status |![image](https://user-images.githubusercontent.com/87436774/138085154-5db47ed5-c4f0-4396-99d7-8d5a180b0225.png)|
-| Prune AIP in RODA|![image](https://user-images.githubusercontent.com/87436774/138085338-43ad9e04-92d5-424b-90fc-f5ef338734ce.png)|
+| Prune AIP in RODA|Pruning an AIP includes removing PREMIS files and other technical metadata. This results in pruned AIPs having less information for reporting. Therefore, pruning should generally not be done.</br>![image](https://user-images.githubusercontent.com/87436774/138085338-43ad9e04-92d5-424b-90fc-f5ef338734ce.png)|
 | Restore pruned AIP representations from meemoo to in RODA|![image](https://user-images.githubusercontent.com/87436774/138085445-8f54ec7f-75f2-4563-bd16-19c03fc360da.png)|
 		
 </details>
