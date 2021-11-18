@@ -6,18 +6,14 @@ from xmlgen_file import createXmlString
 from pathlib import Path
 
 """ sys.argv[0] = script name
-    sys.argv[1] = source dir
+    sys.argv[1] = source dir = dir containing Transfer Sets
     sys.argv[2] = output dir
     sys.argv[3] = xml description metadata output dir
 """
 
-# rootDir = sys.argv[1]
-# outputDir = sys.argv[2]
-# xmlOutputDir = sys.argv[3]
-
-rootDir = r"C:\Users\VAIJelleKleevens\Downloads\VoorbeeldSIP"
-outputDir = r"C:\Users\VAIJelleKleevens\OneDrive - Vlaams Architectuurinstituut vzw\Bureaublad\testoutput"
-xmlOutputDir = r"C:\Users\VAIJelleKleevens\OneDrive - Vlaams Architectuurinstituut vzw\Bureaublad\xmltestoutput"
+rootDir = sys.argv[1]
+outputDir = sys.argv[2]
+xmlOutputDir = sys.argv[3]
 
 for transferSet in next(os.walk(rootDir))[1]:
     """0. Create Transfer Set dir in outputDir."""
