@@ -21,10 +21,9 @@ def createXmlString (path, filename):
     did = ET.SubElement(archdesc, "did")
     unittitle = ET.SubElement(did, "unittitle")
     unittitle.text = filename
-    note = ET.SubElement(did, "note")
-    note.set("type", "generalNote")
-    p = ET.SubElement(note, "p")
-    p.text = path
+    unitIdOriginalFilepath = ET.SubElement(did, "unitid")
+    unitIdOriginalFilepath.set("label", "original_filepath")
+    unitIdOriginalFilepath.text = path
 
     xml = ET.tostring(root, encoding="UTF-8", xml_declaration=True).decode("UTF-8")
     return xml
