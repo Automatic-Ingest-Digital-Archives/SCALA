@@ -7,3 +7,8 @@ while read line; do cd $line; mv $line $(echo $line | xargs); done < whitespace_
 IFS=''
 find ~+ -type f -name "*.*[[:space:]]" -print > whitespace_files.txt
 while read line; do cd "$(dirname "$line")"; filename=$(basename "$line"); mv $filename $(echo $filename | xargs); done < whitespace_files.txt
+
+#3. Rename files with trailing dot(s)
+IFS=''
+find ~+ -type f -name "*." > dots_files.txt
+while read line; do cd "$(dirname "$line")"; filename=$(basename "$line"); mv $filename $(echo "${filename%%+(.)}"); done < dots_files.txt
