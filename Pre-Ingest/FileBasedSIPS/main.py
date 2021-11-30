@@ -26,8 +26,8 @@ for d, _dirs, files in os.walk(rootDir):
     for f in files:
         """1. Prepare variables + make new folder in tsOutputDir."""
         relDir = os.path.relpath(d, rootDir)
-        filename = os.path.splitext(f)[0]
-        fileSipTargetDirName = f"{filename}-{str(uuid.uuid4())}"
+        filenameWithExtension = os.path.basename(f)
+        fileSipTargetDirName = f"{filenameWithExtension}-{str(uuid.uuid4())}"
         fileSipTargetDir = os.path.join(tsOutputDir, fileSipTargetDirName)
         Path(fileSipTargetDir).mkdir(parents=True, exist_ok=True)
 
@@ -42,7 +42,7 @@ for d, _dirs, files in os.walk(rootDir):
 
         """3. Make description xml and put in xmlOutputDir."""
         relFilePath = os.path.join(relDir, f).replace("\\", "/")
-        xml = createXmlString(relFilePath, filename)
+        xml = createXmlString(relFilePath, filenameWithExtension)
         xmlSavePath = os.path.join(xmlOutputDir, f"{fileSipTargetDirName}.xml")
         try:
             with open(xmlSavePath, 'w', encoding='UTF-8') as file:
