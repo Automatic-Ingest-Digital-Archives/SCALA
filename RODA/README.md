@@ -1,14 +1,14 @@
-## Roda is a browser tool where you can upload SIPs and transform them to AIPs.
+## RODA is a browser tool where you can upload SIPs and transform them to AIPs.
 
 ###
-<details><summary><b>To use Roda</b></summary>
+<details><summary><b>To use RODA</b></summary>
   
 1. Go to https://roda-community.org/#welcome.
   
 </details>
 
 ##
-<details><summary><b>To use Roda</b></summary>
+<details><summary><b>RODA API documentation</b></summary>
   
 [AIP documentation](https://demo.roda-community.org/api-docs/).
   
