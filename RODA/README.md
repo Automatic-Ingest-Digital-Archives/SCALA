@@ -10,7 +10,7 @@
 ##
 <details><summary><b>RODA API documentation</b></summary>
   
-[AIP documentation](https://demo.roda-community.org/api-docs/).
+[API documentation](https://demo.roda-community.org/api-docs/).
   
 </details>
 
