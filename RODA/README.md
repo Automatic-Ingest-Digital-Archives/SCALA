@@ -8,6 +8,13 @@
 </details>
 
 ##
+<details><summary><b>To use Roda</b></summary>
+  
+[AIP documentation](https://demo.roda-community.org/api-docs/).
+  
+</details>
+
+##
 <details><summary><b>Siegfried configuration</b></summary>
 
 We normally use the Siegfried REST API, as the command bootstrap time per file is huge. We do an /identify/%s?base64=true&format=json and will keep the original Siegfried information under the representation other metadata. From it, we take the mime type, pronom, and format name and version if of the most prominent match. We currently don't use the basis, warning or other matches to record them in PREMIS.
@@ -242,9 +249,25 @@ Other configurations available for other lists that present AIPs either than the
 </details>
 
 ##
+<details><summary><b>Repository classification scheme</b></summary>
+  
+To use the classification scheme, go to RODA menu Ingest>Pre-ingest and download the classification scheme. Then you can for example load it into RODA-in, and then you can drag'n'drop SIPs to a specific node under your organization.
+  
+</details>
+
+##
 <details><summary><b>Commercial plugins</b></summary>
   
 Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/RODA%20plugins.pdf).
+  
+</details>
+
+##
+<details><summary><b>AIP pruning</b></summary>
+
+Pruning is the process of removing all representations from an AIP. The aim is to save storage space while still leaving searchable metadata. Later one can unprune an AIP to restore all representations.
+
+However, in RODA, pruning also removes representation level PREMIS files and other technical metadata. This results in pruned AIPs having less information for reporting. Therefore, pruning in RODA should generally not be done.
   
 </details>
 
