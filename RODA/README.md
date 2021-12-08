@@ -345,3 +345,22 @@ sidecar:
 ```
   
 </details>
+
+##
+<details><summary><b>Meemoo AIP querying</b></summary>
+  
+Querying the meemoo API for AIPs is based on the key dc_identifier_localidsScalaID. There are two versions of the API (v1 and v2).
+  
+v1</br>
+General information about searching items using search fields with REST API v1: https://archief-qas.viaa.be/mediahaven-rest-api/#mediahaven-rest-api-manual-search-for-media-objects-search-on-data-within-specific-fields.</br>
+GET call: https://archief-qas.viaa.be/mediahaven-rest-api/resources/media/?q=%2B(dc_identifier_localidsScalaID:"{scala-id}")</br>
+Example: https://archief-qas.viaa.be/mediahaven-rest-api/resources/media/?q=%2B(dc_identifier_localidsScalaID:"uuid-fd82992d-169f-44ed-9139-6e1ad4f9e40a")</br>
+
+v2</br>
+General information about searching items using search fields with REST API v2: https://archief-qas.viaa.be/mediahaven-rest-api/v2/api-docs/index.html#mediahaven-rest-api-manual-search-for-records-search-on-data-within-specific-fields.</br>
+GET call: https://archief-qas.viaa.be/mediahaven-rest-api/v2/records?q=%2B(dc_identifier_localidsScalaID:"{scala-id}")</br>
+Example: https://archief-qas.viaa.be/mediahaven-rest-api/v2/records?q=%2B(dc_identifier_localidsScalaID:"uuid-fd82992d-169f-44ed-9139-6e1ad4f9e40a")</br>
+
+General info about the REST API: https://developer.meemoo.be/docs/development/#rest-api.
+  
+</details>
