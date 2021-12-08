@@ -256,6 +256,18 @@ To use the classification scheme, go to RODA menu Ingest>Pre-ingest and download
 </details>
 
 ##
+<details><summary><b>Activating full-text search</b></summary>
+  
+You need to activate the full-text by running the full-text plugin, either on ingest or afterwards (e.g. restore from meemoo). The plugin is called "Feature extraction (Apache Tika)" and runs Apache Tika to perform, optionally:
+
+* Feature extraction: Perform feature extraction from files. This will extract properties such as number of pages, width, height, colour space, etc.
+* Full text extraction: Extracts full text from document/textual files. Extracted text is used to perform full-text searching on the catalogue.
+
+Please note that extracting full text will require much more index size capabilities.
+  
+</details>
+
+##
 <details><summary><b>Commercial plugins</b></summary>
   
 Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/RODA%20plugins.pdf).
