@@ -286,6 +286,6 @@ However, in RODA, pruning also removes representation level PREMIS files and oth
 ##
 <details><summary><b>Meemoo tape deletion</b></summary>
   
-The current strategy is to archive all AIP versions on meemoo. These versions should be documented in the meemoo sidecar xml. RODA will always restore the latest version from meemoo. It is up to meemoo to develop a way to delete obsolete AIP versions later on.
+The current strategy is to archive all AIP versions on meemoo. These versions should be documented in the meemoo sidecar xml. RODA will always restore the latest version from meemoo. Obsolete versions are not deleted; it is up to meemoo to develop a way to delete obsolete AIP versions later on.
   
 </details>
