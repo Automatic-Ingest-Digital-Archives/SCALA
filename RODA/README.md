@@ -284,8 +284,60 @@ However, in RODA, pruning also removes representation level PREMIS files and oth
 </details>
 
 ##
-<details><summary><b>Meemoo tape deletion</b></summary>
+<details><summary><b>Orphaned IPs</b></summary>
+
+If a child IP (IP with reference to a parent IP) is accepted in the catalogue, but its parent is not (or not yet), it will be an orphan IP. Orphaned IPs appear under a ghost node in the organization repository.
+  
+![image](https://user-images.githubusercontent.com/87436774/145191783-931fe3d9-ccd2-42fe-83f9-eb5d3c990c49.png)
+
+It is currently unclear who you can easily search/retrieve all orphaned IPs.
+  
+</details>
+
+##
+<details><summary><b>IP meemoo status data</b></summary>
+  
+RODA keeps track of the following data about IPs in regards to their status on meemoo.
+
+![image](https://user-images.githubusercontent.com/87436774/145192766-db9de476-1742-4c56-8866-029c5f809476.png)
+  
+1. AIP Version - The version of the IP at meemoo.
+2. Identifier - The organization's identifier in the meemoo repository.
+3. Synchronization AIP Status (On RODA)
+4. Last synchronization date into Meemoo (datetime stamp)
+5. Pruned (Yes / No)
+6. Archive status (None / On disk)
+7. Automatically submitted after ingestion (Yes / No)
+  
+</details>
+  
+##
+<details><summary><b>Archiving on meemoo</b></summary>
   
 The current strategy is to archive all AIP versions on meemoo. These versions should be documented in the meemoo sidecar xml. RODA will always restore the latest version from meemoo. Obsolete versions are not deleted; it is up to meemoo to develop a way to delete obsolete AIP versions later on.
+
+When archiving to meemoo, a sidecar xml is generated and passed to meemoo for cross platform linking of the IP. Example sidecar xml generated when archiving AIP on meemoo:
+  
+```xml
+AIP successfully preserved in MEEMOO
+The following representations were removed from the AIP: 
+rep1
+
+sidecar:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VIAA>
+    <aip_version>1</aip_version>
+    <md5>BB096878ED1F765088A85D23C587B482</md5>
+    <dc_contributors/>
+    <dcterms_created>2021-11-22T14:41:46Z</dcterms_created>
+    <dc_creators/>
+    <dc_identifier_localid>a7cb55ff-f8de-47ea-9a9f-6d14705d3b97</dc_identifier_localid>
+    <dc_identifier_localids>
+        <ScalaID>uuid-16c59bcd-b0c7-492f-9c18-89e83ba48604</ScalaID>
+    </dc_identifier_localids>
+    <CP_id>OR-jq0st8z</CP_id>
+    <dc_titles/>
+</VIAA>
+```
   
 </details>
