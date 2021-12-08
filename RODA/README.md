@@ -45,6 +45,10 @@ Example:
 ##
 <details><summary><b>Unoconv configuration</b></summary>
   
+By default, unoconv will pick files with the selected file name extension OR MIME types OR PRONOM IDs.
+  
+For additional formats (not in default configuration), you can add them via extension and it will still select the file even if the file does not have that extension if there is a mapping between the extension and the pronom identifier and the file without extension is identified with that pronom identifier.
+  
 The starting configuration for the unoconv plugin is:
   
 ```properties
@@ -59,11 +63,7 @@ core.tools.unoconvconvert.inputFormatMimetypes = image/gif image/tiff image/png 
 core.tools.unoconvconvert.inputFormatPronoms = x-fmt/111 fmt/101 x-fmt/394  
 ```
   
-By default, unoconv will pick files with the selected file name extension OR MIME types OR PRONOM IDs.
-  
-For additional formats (not in default configuration), you can add them via extension and it will still select the file even if the file does not have that extension if there is a mapping between the extension and the pronom identifier and the file without extension is identified with that pronom identifier.
-  
-Current mappings between MIME types and extension and PRONOM identifiers and extensions for unoconv are:
+You can use the mapped values to specify which filetype you want to convert to which filetype. Current mappings between MIME types and extension and PRONOM identifiers and extensions for unoconv are:
   
 ```properties
 ##########################################################################
@@ -150,6 +150,10 @@ If there are mappings missing between certain extension(s) and PRONOM identifier
 
 ##
 <details><summary><b>Metadata format configuration</b></summary>
+
+RODA supports any descriptive metadata format (i.e. Descriptive Information as stated in the OAIS) as long as it represented by an XML file. If you have a descriptive metadata format that is not based on XML (e.g. CSV, JSON, MARC21, etc.), you will have to convert it to XML before you can use in RODA. Several tools exist on the Web that allow you to convert most data formats into XML.
+
+Once you have your metadata in XML you are ready to package it into a Submission Information Package (SIP) and ingest it on the repository. Alternatively, you may want to create a metadata file directly on the repository by using the functionality provided by the Catalogue. When the metadata format is new to RODA, the repository will do its best to support without the need to do any reconfiguration of system.
   
 [Main documentation](https://scala.meemoo.be/#theme/Metadata_Formats.md).
   
