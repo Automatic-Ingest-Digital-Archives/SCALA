@@ -349,7 +349,7 @@ sidecar:
 ##
 <details><summary><b>Meemoo AIP querying</b></summary>
   
-Querying the meemoo API for AIPs is based on the key dc_identifier_localidsScalaID. There are two versions of the API (v1 and v2).
+Querying the meemoo API for AIPs is based on the key dc_identifier_localidsScalaID. There are two versions of the API (v1 and v2). Make sure you are logged into the meemoo qas.
   
 v1</br>
 General information about searching items using search fields with REST API v1: https://archief-qas.viaa.be/mediahaven-rest-api/#mediahaven-rest-api-manual-search-for-media-objects-search-on-data-within-specific-fields.</br>
