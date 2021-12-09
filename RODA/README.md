@@ -299,6 +299,31 @@ It is currently unclear who you can easily search/retrieve all orphaned IPs.
 </details>
 
 ##
+<details><summary><b>Internal actions</b></summary>
+  
+Internal actions are complex tasks performed by the repository as background jobs that enhance the user experience by not blocking the user interface during long lasting operations. Examples of such operations are: moving AIPs, reindexing parts of the repository, or deleting a large number of files. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
+
+Job example:
+  
+![image](https://user-images.githubusercontent.com/87436774/145371252-1d7524a7-38be-4ead-a3d1-c4b2d5e1ea76.png)
+  
+</details>
+
+##
+<details><summary><b>Preservation actions</b></summary>
+  
+Preservation actions are tasks performed on the contents of the repository that aim to enhance the accessibility of archived files or to mitigate digital preservation risks. Within RODA, preservation actions are handled by a job execution module. The job execution module allows the repository manager to run actions over a given set of data (AIPs, representations or files). Preservation actions include format conversions, checksum verifications, reporting (e.g. to automatically send SIP acceptance/rejection emails), virus checks, etc. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
+  
+Report export example:
+  
+| id | jobId | jobName | sourceObjectId | sourceObjectOriginalName | sourceObjectLabel | sourceObjectClass | sourceObjectOriginalIds | outcomeObjectId | outcomeObjectLabel | outcomeObjectClass | outcomeObjectState | title | dateCreated | dateUpdated | completionPercentage | stepsCompleted | totalSteps | plugin | pluginName | pluginVersion | pluginState | pluginDetails | htmlPluginDetails | successfulPlugins | unsuccessfulPlugins | reports |
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|----|-----|-----|-------|-------|---|--|-----|--------|------|------------|----|
+| c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-40bdb2ff-f314-3178-87c2-35005e9b6137-40bdb2ff-f314-3178-87c2-35005e9b6137 | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5 | Office documents conversion (unoconv) (7.0.4.2) | 40bdb2ff-f314-3178-87c2-35005e9b6137 |                          | PV INSCH.DOC                        | org.roda.core.data.v2.ip.File | []                      | 40bdb2ff-f314-3178-87c2-35005e9b6137 |                    | org.roda.core.data.v2.ip.DIP | ACTIVE             | Office documents conversion (unoconv) | Tue Nov 23 16:37:05 UTC 2021 | Tue Nov 23 16:37:05 UTC 2021 | 100                  | 1              | 1          | org.roda.core.plugins.external.UnoconvConvertPlugin | Office documents conversion (unoconv) | 7.0.4.2       | SUCCESS     | This file was ignored. | FALSE             | []                | []                  | [Report   [id=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-40bdb2ff-f314-3178-87c2-35005e9b6137-40bdb2ff-f314-3178-87c2-35005e9b6137,   jobId=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5,   sourceObjectId=40bdb2ff-f314-3178-87c2-35005e9b6137,   sourceObjectClass=org.roda.core.data.v2.ip.File, sourceObjectOriginalIds=[],   outcomeObjectId=40bdb2ff-f314-3178-87c2-35005e9b6137,   outcomeObjectClass=org.roda.core.data.v2.ip.DIP, outcomeObjectState=ACTIVE,   title=Office documents conversion (unoconv), dateCreated=Tue Nov 23 16:37:05   UTC 2021, dateUpdated=Tue Nov 23 16:37:05 UTC 2021, completionPercentage=0,   stepsCompleted=0, totalSteps=1,   plugin=org.roda.core.plugins.external.UnoconvConvertPlugin, pluginName=Office   documents conversion (unoconv), pluginVersion=7.0.4.2, pluginState=SUCCESS,   pluginIsMandatory=true, pluginDetails=This file was ignored.,   htmlPluginDetails=false, reports=[]]] |
+| c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-56fa195f-fc2a-39a6-b113-45eebd46c72f-56fa195f-fc2a-39a6-b113-45eebd46c72f | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5 | Office documents conversion (unoconv) (7.0.4.2) | 56fa195f-fc2a-39a6-b113-45eebd46c72f |                          | PV_INSCH.DOC                        | org.roda.core.data.v2.ip.File | []                      | 56fa195f-fc2a-39a6-b113-45eebd46c72f |                    | org.roda.core.data.v2.ip.DIP | ACTIVE             | Office documents conversion (unoconv) | Tue Nov 23 16:37:05 UTC 2021 | Tue Nov 23 16:37:05 UTC 2021 | 100                  | 1              | 1          | org.roda.core.plugins.external.UnoconvConvertPlugin | Office documents conversion (unoconv) | 7.0.4.2       | SUCCESS     | This file was ignored. | FALSE             | []                | []                  | [Report   [id=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-56fa195f-fc2a-39a6-b113-45eebd46c72f-56fa195f-fc2a-39a6-b113-45eebd46c72f,   jobId=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5,   sourceObjectId=56fa195f-fc2a-39a6-b113-45eebd46c72f,   sourceObjectClass=org.roda.core.data.v2.ip.File, sourceObjectOriginalIds=[],   outcomeObjectId=56fa195f-fc2a-39a6-b113-45eebd46c72f,   outcomeObjectClass=org.roda.core.data.v2.ip.DIP, outcomeObjectState=ACTIVE,   title=Office documents conversion (unoconv), dateCreated=Tue Nov 23 16:37:05   UTC 2021, dateUpdated=Tue Nov 23 16:37:05 UTC 2021, completionPercentage=0,   stepsCompleted=0, totalSteps=1,   plugin=org.roda.core.plugins.external.UnoconvConvertPlugin, pluginName=Office   documents conversion (unoconv), pluginVersion=7.0.4.2, pluginState=SUCCESS,   pluginIsMandatory=true, pluginDetails=This file was ignored.,   htmlPluginDetails=false, reports=[]]] |
+  
+</details>
+
+##
 <details><summary><b>IP meemoo status data</b></summary>
   
 RODA keeps track of the following data about IPs in regards to their status on meemoo.
