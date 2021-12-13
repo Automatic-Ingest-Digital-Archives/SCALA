@@ -72,6 +72,8 @@ If you are using this manual for testing purposes, please consider these best pr
 |Create and add a descriptive metadata file to your TS [optional]|Create a metadata XML-file which follows the instructions at Add descriptive metadata.|
 |Create and add additional non-xml metadata [optional]|Create a folder called “_submissionDocumentation” in the root of the TS.</br><span title="E.g. file format identification files, file lists, etc."><i>Add additional non-xml metadata accompanying the content files</i></span>|
 
+Advise: export niche formats / system dependant formats (e.g. google docs / google slides) to generic ones if possible. They need to be exported from that system using the most adequate formats, which may be complex on its own depending on if you want trueness to the original aspect (where you might use PDF to ensure fonts and layout are preserved) or you want reusability (where you might use Microsoft Office and/or OpenOffice formats to ensure files are editable). Also, you could download the same information in several formats and add all to the same SIP as alternative representations.
+
 #### Extra <span title="With RODA-In, you can create basic SIPs for ingest into the SCALA repository. All Roda-In does is to create a descriptive metadata file with a METS-file, preserving fixity. You might want to do other steps before ingest. We give a short overview of these with the different options about the way with which you can achieve this. Bear in mind integrated pre-ingest tools like RMtool exist for more intensive pre-ingest operations."><i>data preparation tasks</i></span>
 
 Here are optional but recommended tasks to execute before submitting a TS to RODA-In. Please execute your chosen tasks
