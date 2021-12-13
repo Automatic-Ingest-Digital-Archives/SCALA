@@ -322,6 +322,10 @@ Report example:
   
 Preservation actions are tasks performed on the contents of the repository that aim to enhance the accessibility of archived files or to mitigate digital preservation risks. Within RODA, preservation actions are handled by a job execution module. The job execution module allows the repository manager to run actions over a given set of data (AIPs, representations or files). Preservation actions include format conversions, checksum verifications, reporting (e.g. to automatically send SIP acceptance/rejection emails), virus checks, etc. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
   
+- Some actions are presented as preservation actions although they are not strictly for preservation, like re-index actions, and these do not create a preservation event.
+- Other actions, which might be construed as preservation actions, or at least accessory to preservation actions, like the inventory report, also do not create preservation events.
+- Mainly, we create preservation events for actions that change the data (like conversions that create representations) or for actions that enrich the metadata (like generation of fixity information and file format identification) or for actions that validate the data (fixity checks, file format validation).
+  
 Report export example:
   
 | id | jobId | jobName | sourceObjectId | sourceObjectOriginalName | sourceObjectLabel | sourceObjectClass | sourceObjectOriginalIds | outcomeObjectId | outcomeObjectLabel | outcomeObjectClass | outcomeObjectState | title | dateCreated | dateUpdated | completionPercentage | stepsCompleted | totalSteps | plugin | pluginName | pluginVersion | pluginState | pluginDetails | htmlPluginDetails | successfulPlugins | unsuccessfulPlugins | reports |
