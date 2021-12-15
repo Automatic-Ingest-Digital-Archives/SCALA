@@ -24,6 +24,25 @@ def createXmlString (path, filename):
     unitIdOriginalFilepath = ET.SubElement(did, "unitid")
     unitIdOriginalFilepath.set("label", "original_filepath")
     unitIdOriginalFilepath.text = path
+    
+    unitLocalId = ET.SubElement(did, "unitid")
+    unitLocalId.set("label", "localId")
+    unitLocalId.text = "YOLO" #TODO SET correct Local ID
+
+    creator = ET.SubElement(did, "origination")
+    creator.set("label", "creator")
+    creator.text = "Christiaan Kieckens" #TODO make variable
+
+    producer = ET.SubElement(did, "origination")
+    producer.set("label", "producer")
+    producer.text = "AIDA" #TODO make variable
+
+    repository = ET.SubElement(did, "repository")
+    corpname = ET.SubElement(repository, "corpname")
+    corpname.text = "VAi" #TODO make variable
+
+    scopeContent = ET.SubElement(did, "scopecontent")
+    scopeContent.text = "Niet raadpleegbaar." #TODO make variable
 
     xml = ET.tostring(root, encoding="UTF-8", xml_declaration=True).decode("UTF-8")
     return xml
