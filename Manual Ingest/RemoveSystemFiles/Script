@@ -1,3 +1,4 @@
 readarray -t blacklisted < ./Blacklist.txt
 for n in ${blacklisted[@]};do find . -name "${n}" -type f -delete; done
 find . -name "\$I30" -type f -delete
+find . -type d -name ".@__thumb" -delete
