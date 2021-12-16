@@ -417,7 +417,7 @@ URL: https://scala.meemoo.be/solr/#/.
   
 Documentation: https://solr.apache.org/guide/7_7/index.html.
   
-KEEP training Solr use cases: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Training%20Solr%20use%20cases.pdf.
+KEEP training Solr use cases and exercises: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Training%20Solr%20use%20cases.pdf.
   
 KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Solr%20exercises%20answers.txt.
 
