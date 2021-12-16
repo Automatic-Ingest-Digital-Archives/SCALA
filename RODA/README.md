@@ -409,3 +409,16 @@ Example: https://archief-qas.viaa.be/mediahaven-rest-api/v2/records?q=%2B(dc_ide
 General info about the REST API: https://developer.meemoo.be/docs/development/#rest-api.
   
 </details>
+
+##
+<details><summary><b>Solr querying</b></summary>
+  
+URL: https://scala.meemoo.be/solr/#/.
+  
+Documentation: https://solr.apache.org/guide/7_7/index.html.
+  
+KEEP training Solr use cases: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Training%20Solr%20use%20cases.pdf.
+  
+KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Solr%20exercises%20answers.txt.
+
+</details>
