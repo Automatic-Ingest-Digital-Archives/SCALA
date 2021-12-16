@@ -279,6 +279,14 @@ Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archiv
 </details>
 
 ##
+<details><summary><b>METS</b></summary>
+  
+Parent AIPs are referenced in a structMap element in the METS.
+![image](https://user-images.githubusercontent.com/87436774/146341721-1cc44b69-88f6-40aa-9d02-c2a08a929107.png)
+  
+</details>
+
+##
 <details><summary><b>AIP pruning</b></summary>
 
 Pruning is the process of removing all representations from an AIP. The aim is to save storage space while still leaving searchable metadata. Later one can unprune an AIP to restore all representations.
