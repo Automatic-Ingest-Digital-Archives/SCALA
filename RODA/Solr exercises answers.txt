@@ -1,0 +1,52 @@
+1- AIP
+1 *:jkleevens
+2 *:* meemoo_sync_aip_status_txt
+3 meemoo_prune_txt:true --> 13
+4 id:80ed7f6f-5e56-4c91-a9bd-5458e13154b3, title
+5 parentId:de9eaa85-edb2-4bb3-aaca-cb3ec84a6e3f
+ --> 5199
+6 "OTHER",66752,"MIXED",22
+7 "ACTIVE",66582 
+8 "aeef3d7b-d4d0-44a6-b4f9-57c1aee320fb",25634
+9 "true",66554
+10 createdOn:["2021-12-01T00:00:00Z" TO "2021-12-31T23:59:59Z"]
+11 createdOn:["2021-11-10T00:00:00Z" TO NOW]
+12 updatedOn:"2021-12-08T15:32:24Z"
+
+2- File
+1 size:[9000 TO *]
+2 size:[19968 TO 20000] --> 789
+3 size:{19968 TO 20000} --> 17
+4 formatDesignation:"Portable Network Graphics 1.0" --> 403
+5 ...
+6 ...
+7 "image/jpeg",88491 
+8 originalName:*Heylighen* --> 6e299869-c6a5-4a6b-8b50-d47bbe4f582e
+
+3- Representation
+1 id:rep2
+2 original
+3 "ORIGINAL",66556,"INGESTED",1,"PRESERVATION",1
+4 "MIXED",66567
+5 createdOn:["2021-10-01T00:00:00Z" TO "2021-10-31T23:59:59Z"]
+6 updatedOn:["2021-12-16T00:00:00Z" TO NOW]
+
+4- PreservationEvent
+1 id:"urn:roda:premis:event:76efb77d-1a80-4a1a-bc74-1b3906ef4b05"
+2 eventType
+3 "message digest calculation",66756
+4 "PARTIAL_SUCCESS",24008
+5 linkingAgentIdentifier:"{\"type\":\"URN\",\"value\":\"urn:roda:premis:agent:ingest-OR-w66976m\",\"roles\":[]}"
+6 linkingOutcomeObjectIdentifier:"‘{\"type\":\"URN\",\"value\":\"urn:roda:aip:00e3894e-ff3f-4cad-8ce9-afed74e50ca8\",\"roles\":[\"outcome\"]}"
+
+5- AIP
+1 meemoo_prune_txt:true AND parentId:ed3964e1-d8a7-4786-a594-8f87c08a90f5
+2 NOT descriptiveMetadataId:*meemoo.xml*, -descriptiveMetadataId:*meemoo.xml*
+
+6- File
+1 formatDesignation_txt:*Word* AND size:[50000 TO *]
+2 fileFormat_txt:(pdf +X)
+
+7- PreservationEvent
+1 eventOutcome:(SUCCESS OR PARTIAL_SUCCESS)
+2 eventOutcome:FAILURE AND eventType:"format identification"
