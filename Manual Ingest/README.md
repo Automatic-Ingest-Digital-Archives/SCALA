@@ -163,7 +163,7 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
 
 |Task||
 |----|-----|
-|Connect to RODA on meemoo via FTP|Create a <a href="https://accounts-qas.meemoo.be/pwm/public/ForgottenPassword">meemoo user account</a>.</br>Open your FTP client.</br>Use settings:</br>* File protocol: SFTP</br>* Host name: scala-sftp.meemoo.be</br>* Port number: 22</br>* User name: [your meemoo username]</br>* Password: [your meemoo password]</br></br>Login and connect to the server.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture18.png">|
+|Connect to RODA on meemoo via FTP|Create a <a href="https://accounts-qas.meemoo.be/pwm/public/ForgottenPassword">meemoo user account</a>.</br>Open your FTP client.</br>Use settings:</br>* File protocol: SFTP</br>* Host name: 193.190.71.178 OR scala-sftp.meemoo.be</br>* Port number: 22</br>* User name: [your meemoo username]</br>* Password: [your meemoo password]</br></br>Login and connect to the server.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture18.png">|
 
 </details>
 
