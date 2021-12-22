@@ -1,11 +1,12 @@
 import xml.etree.ElementTree as ET
+import uuid
 
 schemaName = "ead"
 namespaces = {"xmlns": "urn:isbn:1-931666-22-9", "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
               "xsi:schemaLocation": "urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd"}
 fileName = "description.xml"
 
-def createXmlString (path, filename):
+def createXmlString (path, filename, parentIpName):
     root = ET.Element(schemaName, **namespaces)
 
     eadheader = ET.SubElement(root, "eadheader")
@@ -27,7 +28,7 @@ def createXmlString (path, filename):
     
     unitLocalId = ET.SubElement(did, "unitid")
     unitLocalId.set("label", "localId")
-    unitLocalId.text = "YOLO" #TODO SET correct Local ID
+    unitLocalId.text = f"{parentIpName}-{str(uuid.uuid4())}"
 
     creator = ET.SubElement(did, "origination")
     creator.set("label", "creator")
