@@ -42,7 +42,7 @@ for d, _dirs, files in os.walk(rootDir):
 
         """3. Make description xml and put in xmlOutputDir."""
         relFilePath = os.path.join(relDir, f).replace("\\", "/")
-        xml = createXmlString(relFilePath, filenameWithExtension)
+        xml = createXmlString(relFilePath, filenameWithExtension, tsFolderName)
         xmlSavePath = os.path.join(xmlOutputDir, f"{fileSipTargetDirName}.xml")
         try:
             with open(xmlSavePath, 'w', encoding='UTF-8') as file:
