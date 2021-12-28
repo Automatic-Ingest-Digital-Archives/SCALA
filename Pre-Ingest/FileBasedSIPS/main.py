@@ -24,7 +24,7 @@ deleteOriginal = sys.argv[4].lower() == "true"
 
 for transferSet in next(os.walk(rootDir))[1]:
     """0. Create Transfer Set dir in outputDir."""
-    print(transferSet)
+    print(f"Now handeling: {transferSet}")
     tsOutputDir = os.path.join(outputDir, transferSet)
     Path(tsOutputDir).mkdir(parents=True, exist_ok=True)
     transferSetDir = os.path.join(rootDir, transferSet)
