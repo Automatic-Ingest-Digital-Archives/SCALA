@@ -184,6 +184,13 @@ Other configurations available for other lists that present AIPs either than the
 </details>
 
 ##
+<details><summary><b>Restart failed/interrupted ingest processes</b></summary>
+  
+You can go to Ingest > Transfer and search for the content you have uploaded. Then choose "Select all pages" and then "Start new process". There you need to select the same ingest parameters, including Parent node, OR identifier and ingest finished email notification.
+  
+</details>
+
+##
 <details><summary><b>User permissions</b></summary>
 
 #### Top level repository permissions
