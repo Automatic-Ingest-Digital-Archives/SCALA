@@ -122,7 +122,7 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 
 |Task||
 |----|---------|
-|Install & start RODA-In|Download RODA-In 2.3.1 <a href="https://github.com/keeps/roda-in/releases/tag/2.3.1">here</a> and install it.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">|
+|Install & start RODA-In|Download RODA-In 2.4.2 <a href="https://github.com/keeps/roda-in/releases/tag/2.4.2">here</a> and install it.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture5.png">|
 |Configure RODA-In to use the SCALA metadata template|Open the configuration folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture6.png"></br><a href="https://drive.google.com/drive/folders/1PTWH4zf_BDFZ4FjzZVVD_6BreUhwFLZb?usp=sharing">Download</a> the “scala.xml.hbs” and “config.properties” files.<br>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</br>Overwrite the config file in “\roda-in” with the “config.properties” file.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/Pictures/Picture7.png">|
 
 </details>
