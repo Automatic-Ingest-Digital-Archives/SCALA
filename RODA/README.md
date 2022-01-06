@@ -370,7 +370,7 @@ RODA keeps track of the following data about IPs in regards to their status on m
 ##
 <details><summary><b>Archiving on meemoo</b></summary>
   
-Meemoo keeps its own version of documentation for the project on https://meemoo.atlassian.net/wiki/spaces/SRP/overview?homepageId=3171909795
+Meemoo keeps its own version of documentation for the project on https://meemoo.atlassian.net/wiki/spaces/SRP/overview?homepageId=3171909795.
   
 The current strategy is to archive all AIP versions on meemoo. These versions should be documented in the meemoo sidecar xml. RODA will always restore the latest version from meemoo. Obsolete versions are not deleted; it is up to meemoo to develop a way to delete obsolete AIP versions later on.
 
@@ -397,6 +397,8 @@ sidecar:
     <dc_titles/>
 </VIAA>
 ```
+  
+The AIP version is decided by RODA and is also sent with the AIP metadata to meemoo.
   
 </details>
 
