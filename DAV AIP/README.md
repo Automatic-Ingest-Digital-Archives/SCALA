@@ -1,7 +1,45 @@
+## Example and discussion of a DAV AIP METS.xml
+
+###
+<details><summary><b>metsHdr</b></summary>
+  
+![image](https://user-images.githubusercontent.com/87436774/148406033-72d7dccc-d73e-4695-929a-041711722582.png)
+
+Discussion:
+      
+- No required agent "SUBMITTER" registered (ROLE="OTHER" OTHERROLE="SUBMITTER" TYPE="INDIVIDUAL").
+  
+</details>
+
+###
+<details><summary><b>dmdSec</b></summary>
+      
+![image](https://user-images.githubusercontent.com/87436774/148405992-e1f3e8f9-08fb-49da-9ea9-ce4bea4b539b.png)
+      
+![image](https://user-images.githubusercontent.com/87436774/148406199-d7e5ca85-8f8c-41d0-8b71-f06f11e018c8.png)
+
+![image](https://user-images.githubusercontent.com/87436774/148406272-a79ca10d-645f-4647-a575-cef14fbe5ff3.png)
+
+![image](https://user-images.githubusercontent.com/87436774/148406316-df946f8e-318b-426b-9dff-c2a6a07dbd0b.png)
+
+![image](https://user-images.githubusercontent.com/87436774/148406394-9781c817-2a35-442a-a16b-a8fd01afd6a3.png)
+
+![image](https://user-images.githubusercontent.com/87436774/148406476-75c3ff40-751e-4c13-9bd9-57881eb48440.png)
+
+![image](https://user-images.githubusercontent.com/87436774/148406534-6e0f1911-72bc-4618-8be3-bc97b60ba7a7.png)
+
+![image](https://user-images.githubusercontent.com/87436774/148406633-a781b70d-d7be-4dca-a812-7a9bd7b453c6.png)
+
+Discussion:
+      
+- There is a dmdSec for each document or representation. There is a corresponding amdSec for each dmdSec, containing all PREMIS events for that file.
+
+  
+</details>
+
 metsHdr
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?><mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis.xsd">
 <mets:metsHdr CREATEDATE="2020-09-25T09:49:49Z" ID="MEDIAHAVEN_40f077a14cb442e983af6e86ade04d2f0260fdbd657d41239106982f74089baa6d7cb9f3a4084bd981bb59ca785fb56f" LASTMODDATE="2021-09-02T20:10:54.044000Z">
       <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
          <mets:name>MEDIAHAVEN</mets:name>
@@ -12,8 +50,7 @@ metsHdr
       <mets:agent ROLE="IPOWNER" TYPE="ORGANIZATION">
          <mets:name>afb</mets:name>
       </mets:agent>
-   </mets:metsHdr>
-</mets:mets>
+</mets:metsHdr>
 ```
 
 dmdSec (excerpt)
