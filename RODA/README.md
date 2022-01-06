@@ -402,135 +402,135 @@ Example of metadata in meemoo Mediahaven. It contains information from the sidec
   
 ```json
 {
-mediaObjectId: "20b725eda374408cb149ef3f7725f8c7e05d11a6d42c4e24816c7b8ff3fcc94e",
-fragmentId: "20b725eda374408cb149ef3f7725f8c7e05d11a6d42c4e24816c7b8ff3fcc94e7926bd8f40884530867f17606f7d29d1",
-externalId: "qs348gfs3v",
-title: "qs348gfs3v",
-description: "",
-date: "2021:11:22 15:42:09",
-previewImagePath: "https://mheuropehot.blob.core.windows.net/mediahaven-saas-browse-main/no-preview.png",
-thumbnailImagePath: "https://mheuropehot.blob.core.windows.net/mediahaven-saas-browse-main/no-preview.png",
-videoPath: "",
-originalFileName: "qs348gfs3v.zip",
-width: 0,
-height: 0,
-keywords: [ ],
-type: "Document",
-authors: [ ],
-lastModifiedDate: "2021-11-22T14:42:23Z",
-archiveDate: "2021-11-22T14:42:20Z",
-exportable: true,
-editable: true,
-deletable: false,
-isPublic: false,
-ingestSpaceId: "",
-isInIngestSpace: false,
-status: "FINISHED",
-browseStatus: "no_browse",
-originalStatus: "completed",
-archiveStatus: "on_disk",
-workflow: "borndigital",
-mdProperties: [
-{
-value: [
-{
-value: "uuid-16c59bcd-b0c7-492f-9c18-89e83ba48604",
-attribute: "ScalaID",
-dottedKey: null
-}
-],
-attribute: "dc_identifier_localids",
-dottedKey: null
-},
-{
-value: "2021-11-22T14:41:46Z",
-attribute: "dcterms_created",
-dottedKey: null
-},
-{
-subKey: "multiselect",
-value: [
-{
-value: "VIAA-ONDERWIJS",
-attribute: "multiselect",
-dottedKey: null
-},
-{
-value: "VIAA-ONDERZOEK",
-attribute: "multiselect",
-dottedKey: null
-},
-{
-value: "VIAA-INTRA_CP-CONTENT",
-attribute: "multiselect",
-dottedKey: null
-},
-{
-value: "VIAA-INTRA_CP-METADATA-ALL",
-attribute: "multiselect",
-dottedKey: null
-},
-{
-value: "VIAA-PUBLIEK-METADATA-LTD",
-attribute: "multiselect",
-dottedKey: null
-}
-],
-attribute: "dc_rights_licenses",
-dottedKey: null
-},
-{
-value: "a7cb55ff-f8de-47ea-9a9f-6d14705d3b97.zip",
-attribute: "dc_source",
-dottedKey: null
-},
-{
-value: "qs348gfs3v",
-attribute: "PID",
-dottedKey: null
-},
-{
-value: "1",
-attribute: "aip_version",
-dottedKey: null
-},
-{
-value: "apa",
-attribute: "CP",
-dottedKey: null
-},
-{
-value: "2021:11:22 15:42:09",
-attribute: "CreationDate",
-dottedKey: null
-},
-{
-value: "OR-jq0st8z",
-attribute: "CP_id",
-dottedKey: null
-},
-{
-value: "a7cb55ff-f8de-47ea-9a9f-6d14705d3b97",
-attribute: "dc_identifier_localid",
-dottedKey: null
-},
-{
-value: "© apa",
-attribute: "RightsOwner",
-dottedKey: null
-},
-{
-value: "BB096878ED1F765088A85D23C587B482",
-attribute: "md5_viaa",
-dottedKey: null
-},
-{
-value: "borndigital",
-attribute: "sp_name",
-dottedKey: null
-}
-],
-relations: { }
+	"mediaObjectId": "20b725eda374408cb149ef3f7725f8c7e05d11a6d42c4e24816c7b8ff3fcc94e",
+	"fragmentId": "20b725eda374408cb149ef3f7725f8c7e05d11a6d42c4e24816c7b8ff3fcc94e7926bd8f40884530867f17606f7d29d1",
+	"externalId": "qs348gfs3v",
+	"title": "qs348gfs3v",
+	"description": "",
+	"date": "2021:11:22 15:42:09",
+	"previewImagePath": "https://mheuropehot.blob.core.windows.net/mediahaven-saas-browse-main/no-preview.png",
+	"thumbnailImagePath": "https://mheuropehot.blob.core.windows.net/mediahaven-saas-browse-main/no-preview.png",
+	"videoPath": "",
+	"originalFileName": "qs348gfs3v.zip",
+	"width": 0,
+	"height": 0,
+	"keywords": [],
+	"type": "Document",
+	"authors": [],
+	"lastModifiedDate": "2021-11-22T14:42:23Z",
+	"archiveDate": "2021-11-22T14:42:20Z",
+	"exportable": true,
+	"editable": true,
+	"deletable": false,
+	"isPublic": false,
+	"ingestSpaceId": "",
+	"isInIngestSpace": false,
+	"status": "FINISHED",
+	"browseStatus": "no_browse",
+	"originalStatus": "completed",
+	"archiveStatus": "on_disk",
+	"workflow": "borndigital",
+	"mdProperties": [
+		{
+			"value": [
+				{
+					"value": "uuid-16c59bcd-b0c7-492f-9c18-89e83ba48604",
+					"attribute": "ScalaID",
+					"dottedKey": null
+				}
+			],
+			"attribute": "dc_identifier_localids",
+			"dottedKey": null
+		},
+		{
+			"value": "2021-11-22T14:41:46Z",
+			"attribute": "dcterms_created",
+			"dottedKey": null
+		},
+		{
+			"subKey": "multiselect",
+			"value": [
+				{
+					"value": "VIAA-ONDERWIJS",
+					"attribute": "multiselect",
+					"dottedKey": null
+				},
+				{
+					"value": "VIAA-ONDERZOEK",
+					"attribute": "multiselect",
+					"dottedKey": null
+				},
+				{
+					"value": "VIAA-INTRA_CP-CONTENT",
+					"attribute": "multiselect",
+					"dottedKey": null
+				},
+				{
+					"value": "VIAA-INTRA_CP-METADATA-ALL",
+					"attribute": "multiselect",
+					"dottedKey": null
+				},
+				{
+					"value": "VIAA-PUBLIEK-METADATA-LTD",
+					"attribute": "multiselect",
+					"dottedKey": null
+				}
+			],
+			"attribute": "dc_rights_licenses",
+			"dottedKey": null
+		},
+		{
+			"value": "a7cb55ff-f8de-47ea-9a9f-6d14705d3b97.zip",
+			"attribute": "dc_source",
+			"dottedKey": null
+		},
+		{
+			"value": "qs348gfs3v",
+			"attribute": "PID",
+			"dottedKey": null
+		},
+		{
+			"value": "1",
+			"attribute": "aip_version",
+			"dottedKey": null
+		},
+		{
+			"value": "apa",
+			"attribute": "CP",
+			"dottedKey": null
+		},
+		{
+			"value": "2021:11:22 15:42:09",
+			"attribute": "CreationDate",
+			"dottedKey": null
+		},
+		{
+			"value": "OR-jq0st8z",
+			"attribute": "CP_id",
+			"dottedKey": null
+		},
+		{
+			"value": "a7cb55ff-f8de-47ea-9a9f-6d14705d3b97",
+			"attribute": "dc_identifier_localid",
+			"dottedKey": null
+		},
+		{
+			"value": "© apa",
+			"attribute": "RightsOwner",
+			"dottedKey": null
+		},
+		{
+			"value": "BB096878ED1F765088A85D23C587B482",
+			"attribute": "md5_viaa",
+			"dottedKey": null
+		},
+		{
+			"value": "borndigital",
+			"attribute": "sp_name",
+			"dottedKey": null
+		}
+	],
+	"relations": {}
 }
 ```
   
