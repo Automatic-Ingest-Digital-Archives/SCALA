@@ -5,9 +5,7 @@
   
 ![image](https://user-images.githubusercontent.com/87436774/148406033-72d7dccc-d73e-4695-929a-041711722582.png)
 
-Discussion:
-      
-- No required agent "SUBMITTER" registered (ROLE="OTHER" OTHERROLE="SUBMITTER" TYPE="INDIVIDUAL").
+- No E-ARK required agent "SUBMITTER" registered (ROLE="OTHER" OTHERROLE="SUBMITTER" TYPE="INDIVIDUAL").
   
 </details>
 
