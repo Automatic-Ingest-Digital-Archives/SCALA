@@ -279,6 +279,15 @@ Please note that extracting full text will require much more index size capabili
 </details>
 
 ##
+<details><summary><b>AIDA default ingest workflow</b></summary>
+  
+The AIDA ingest workflow (1.0) runs the following plugins in order:
+	
+![image](https://user-images.githubusercontent.com/87436774/148739625-e2563688-5a28-4e7b-a7a5-9ffb5a5d7131.png)
+
+</details>
+
+##
 <details><summary><b>Mandatory vs. optional ingest plugins</b></summary>
   
 Mandatory plugins have to run and if they fail they will stop fail the ingestion. Optional plugins will not fail ingestion if they fail.
