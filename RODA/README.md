@@ -317,8 +317,10 @@ Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archiv
 </details>
 
 ##
-<details><summary><b>METS</b></summary>
-  
+<details><summary><b>RODA METS</b></summary>
+
+The RODA METS is described in more detail [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/RODA/AIP%20Interpretation%20Manual).
+	
 Parent AIPs are referenced in a structMap element in the METS. It is a little different from [E-ARK's proposition](https://earkaip.dilcis.eu/#childaipreferencesparentaip).
 ![image](https://user-images.githubusercontent.com/87436774/146341721-1cc44b69-88f6-40aa-9d02-c2a08a929107.png)
   
