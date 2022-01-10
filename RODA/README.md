@@ -587,6 +587,63 @@ General info about the REST API: https://developer.meemoo.be/docs/development/#r
 </details>
 
 ##
+<details><summary><b>MAM access rights information</b></summary>
+  
+Accessibility is defined in the following boolean fields. The default settings are:
+
+```json
+"exportable": true,
+"editable": true,
+"deletable": false,
+"isPublic": false
+```
+	
+Additionally, the AIPs fall under meemoo’s licensing framework. These are stored in the mdProperties’ dc_rights_licenses field. The default settings are:
+
+```json
+{
+	"subKey": "multiselect",
+	"value": [
+		{
+			"value": "VIAA-ONDERWIJS",
+			"attribute": "multiselect",
+			"dottedKey": null
+		},
+		{
+			"value": "VIAA-ONDERZOEK",
+			"attribute": "multiselect",
+			"dottedKey": null
+		},
+		{
+			"value": "VIAA-INTRA_CP-CONTENT",
+			"attribute": "multiselect",
+			"dottedKey": null
+		},
+		{
+			"value": "VIAA-INTRA_CP-METADATA-ALL",
+			"attribute": "multiselect",
+			"dottedKey": null
+		},
+		{
+			"value": "VIAA-PUBLIEK-METADATA-LTD",
+			"attribute": "multiselect",
+			"dottedKey": null
+		}
+	],
+	"attribute": "dc_rights_licenses",
+	"dottedKey": null
+}
+```
+
+However, all settings in meemoo should be implementations of the original Access Rights Information stored in the partner’s Archive Management Systems. In case of an exit-scenario, the meemoo MAM access metadata SHOULD NOT be essential.
+
+AIDA will probably always opt for keeping access rights information outside the AIP-package, since this information is prone to change and since it is not essential for safeguarding the AIP’s authenticity, integrity, useability and findability.
+
+If however integration of Access Rights Information would be necessary within the AIP-package, this can be done by using PREMIS rights information or by adding a descriptive metadata file containing the access rights information. It is up to each partner to foresee a mapping from its conventions to the general AIDA convention. However, this general AIDA convention will  only be established when necessary. Therefore, it is highly recommended that an AIDA partner uses established practices in the archival world, like PREMIS rights, EAD or RiC-CM.
+  
+</details>
+
+##
 <details><summary><b>Solr querying</b></summary>
   
 URL: https://scala.meemoo.be/solr/#/.
