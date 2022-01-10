@@ -279,6 +279,28 @@ Please note that extracting full text will require much more index size capabili
 </details>
 
 ##
+<details><summary><b>Mandatory vs. optional ingest plugins</b></summary>
+  
+Mandatory plugins have to run and if they fail they will stop fail the ingestion. Optional plugins will not fail ingestion if they fail.
+	
+For AIDA ingest workflow (1.0) the plugin optionality is as follows:
+	
+| Plugin                                          | Optionality |
+|-------------------------------------------------|-------------|
+| E-ARK SIP 2                                     | Mandatory   |
+| Remove unwanted files                           | Optional    |
+| AIP Virus check                                 | Optional    |
+| Metadata validation                             | Mandatory   |
+| Fixity information computation                  | Mandatory   |
+| File format identification (Siegfried)          | Optional    |
+| Verify user authorization                       | Mandatory   |
+| Disposal schedule association via disposal rule | Optional    |
+| Meemoo descriptive metadata                     | Mandatory   |
+| Auto accept                                     | Mandatory   |
+
+</details>
+
+##
 <details><summary><b>Commercial plugins</b></summary>
   
 Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/RODA%20plugins.pdf).
