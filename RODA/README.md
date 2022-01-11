@@ -392,7 +392,7 @@ RODA keeps track of the following data about IPs in regards to their status on m
   
 1. AIP Version - The version of the IP at meemoo.
 2. Identifier - The organization's identifier in the meemoo repository.
-3. Synchronization AIP Status (On RODA)
+3. Synchronization AIP Status (On RODA / On meemoo)
 4. Last synchronization date into Meemoo (datetime stamp)
 5. Pruned (Yes / No)
 6. Archive status (None / On disk)
