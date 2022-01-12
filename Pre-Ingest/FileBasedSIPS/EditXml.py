@@ -30,5 +30,6 @@ def updateXml(originalXml):
 
 for _rootDirs, _dirs, files in os.walk(rootDir):
     for f in files:
+        print(f)
         filePath = os.path.join(rootDir, f)
         updateXml(filePath)
