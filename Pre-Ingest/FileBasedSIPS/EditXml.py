@@ -8,6 +8,7 @@ import os
 
 rootDir = sys.argv[1]
 # rootDir = r"C:\Users\VAIJelleKleevens\OneDrive - Vlaams Architectuurinstituut vzw\Bureaublad\unzipeditrezip\zips"
+prefixMap = {"ns0": "urn:isbn:1-931666-22-9"}
 
 def updateXml(originalXml):
     try:
@@ -23,11 +24,11 @@ def updateXml(originalXml):
             p = ET.SubElement(scopeContent, "p")
             p.text = text
             
-        scopeContents = root.findall(".//{ns0}scopecontent")
+        scopeContents = root.findall(".//ns0:scopecontent", prefixMap)
         for scopeContent in scopeContents:
             text = scopeContent.text
             scopeContent.text = ""
-            p = ET.SubElement(scopeContent, "{ns0}p")
+            p = ET.SubElement(scopeContent, "ns0:p")
             p.text = text
 
         """"""
