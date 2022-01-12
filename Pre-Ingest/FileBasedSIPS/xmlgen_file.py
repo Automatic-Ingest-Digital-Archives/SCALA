@@ -43,7 +43,8 @@ def createXmlString (path, filename, parentIpName):
     corpname.text = "VAi" #TODO make variable
 
     scopeContent = ET.SubElement(did, "scopecontent")
-    scopeContent.text = "Niet raadpleegbaar." #TODO make variable
+    p = ET.SubElement(scopeContent, "p")
+    p.text = "Niet raadpleegbaar." #TODO make variable
 
     xml = ET.tostring(root, encoding="UTF-8", xml_declaration=True).decode("UTF-8")
     return xml
