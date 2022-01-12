@@ -25,7 +25,7 @@ def updateXml(originalXml):
     """"""
 
     xmlstr = ET.tostring(root, encoding="UTF-8", xml_declaration=True).decode("UTF-8")
-    with open(originalXml, 'w') as f:
+    with open(originalXml, 'w', encoding="UTF-8") as f:
         f.write(xmlstr)
 
 for _rootDirs, _dirs, files in os.walk(rootDir):
