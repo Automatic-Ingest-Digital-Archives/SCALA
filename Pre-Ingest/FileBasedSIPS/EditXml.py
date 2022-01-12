@@ -22,11 +22,11 @@ def updateXml(originalXml):
         p = ET.SubElement(scopeContent, "p")
         p.text = text
         
-    scopeContents = root.findall(".//ns0:scopecontent")
+    scopeContents = root.findall(".//{ns0}scopecontent")
     for scopeContent in scopeContents:
         text = scopeContent.text
         scopeContent.text = ""
-        p = ET.SubElement(scopeContent, "ns0:p")
+        p = ET.SubElement(scopeContent, "{ns0}p")
         p.text = text
 
     """"""
