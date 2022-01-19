@@ -42,7 +42,7 @@ def createXmlString (path, filename, parentIpName):
     corpname = ET.SubElement(repository, "corpname")
     corpname.text = "VAi" #TODO make variable
 
-    scopeContent = ET.SubElement(did, "scopecontent")
+    scopeContent = ET.SubElement(archdesc, "scopecontent")
     p = ET.SubElement(scopeContent, "p")
     p.text = "Niet raadpleegbaar." #TODO make variable
 
