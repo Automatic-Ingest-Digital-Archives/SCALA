@@ -1,5 +1,5 @@
 from lxml import etree
 
 def isValidXml(xmlString, xmlSchema):
-    doc = etree.parse(xmlString)
+    doc = etree.XML(xmlString.encode())
     return xmlSchema.validate(doc)
