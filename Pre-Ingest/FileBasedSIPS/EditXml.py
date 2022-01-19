@@ -24,7 +24,7 @@ def updateXml(originalXml):
             p = ET.SubElement(scopeContent, "p")
             p.text = text
             
-        scopeContents = root.findall(".//{ns0}scopecontent", prefixMap)
+        scopeContents = root.findall(".//ns0:scopecontent", prefixMap)
         for scopeContent in scopeContents:
             text = scopeContent.text
             scopeContent.text = ""
