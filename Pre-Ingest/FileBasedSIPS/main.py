@@ -58,7 +58,7 @@ for transferSet in next(os.walk(rootDir))[1]:
             """3. Make description xml and put in xmlOutputDir."""
             relFilePath = os.path.join(relDir, f).replace("\\", "/")
             xml = createXmlString(relFilePath, filenameWithExtension, tsFolderName)
-            if (isValidXml(xml, xmlschema):
+            if (isValidXml(xml, xmlschema)):
                 xmlSavePath = os.path.join(xmlOutputDir, f"{fileSipTargetDirName}.xml")
                 try:
                     with open(xmlSavePath, 'w', encoding='UTF-8') as file:
@@ -66,4 +66,4 @@ for transferSet in next(os.walk(rootDir))[1]:
                 except Exception as Argument:
                     print(Argument)
             else:
-                print("XML failed validation against schema.")
+                print(f"XML failed validation against schema: {schemaLink}.")
