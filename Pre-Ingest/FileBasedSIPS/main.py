@@ -3,7 +3,9 @@ import os
 import shutil
 import uuid
 from xmlgen_file import createXmlString
+from xmlValidator import isValidXml
 from pathlib import Path
+import requests
 
 """ sys.argv[0] = script name
     sys.argv[1] = source dir (dir containing transfer sets)
@@ -21,6 +23,11 @@ deleteOriginal = sys.argv[4].lower() == "true"
 # outputDir = r"C:\Users\VAIJelleKleevens\OneDrive - Vlaams Architectuurinstituut vzw\Bureaublad\testoutput"
 # xmlOutputDir = r"C:\Users\VAIJelleKleevens\OneDrive - Vlaams Architectuurinstituut vzw\Bureaublad\xmltestoutput"
 # deleteOriginal = False
+
+schemaLink = "http://www.loc.gov/ead/ead.xsd"
+response = requests.get(schemaLink)
+xmlschema_doc = etree.fromstring(bytes(response.text, encoding='utf-8'))
+xmlschema = etree.XMLSchema(xmlschema_doc)
 
 for transferSet in next(os.walk(rootDir))[1]:
     """0. Create Transfer Set dir in outputDir."""
@@ -51,9 +58,12 @@ for transferSet in next(os.walk(rootDir))[1]:
             """3. Make description xml and put in xmlOutputDir."""
             relFilePath = os.path.join(relDir, f).replace("\\", "/")
             xml = createXmlString(relFilePath, filenameWithExtension, tsFolderName)
-            xmlSavePath = os.path.join(xmlOutputDir, f"{fileSipTargetDirName}.xml")
-            try:
-                with open(xmlSavePath, 'w', encoding='UTF-8') as file:
-                    file.write(xml)
-            except Exception as Argument:
-                print(Argument)
+            if (isValidXml(xml, xmlschema):
+                xmlSavePath = os.path.join(xmlOutputDir, f"{fileSipTargetDirName}.xml")
+                try:
+                    with open(xmlSavePath, 'w', encoding='UTF-8') as file:
+                        file.write(xml)
+                except Exception as Argument:
+                    print(Argument)
+            else:
+                print("XML failed validation against schema.")
