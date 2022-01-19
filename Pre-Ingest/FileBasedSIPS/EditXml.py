@@ -17,19 +17,15 @@ def updateXml(originalXml):
 
         """Tree changes here:"""
         
-        scopeContents = root.findall(".//scopecontent")
-        for scopeContent in scopeContents:
-            text = scopeContent.text
-            scopeContent.text = ""
-            p = ET.SubElement(scopeContent, "p")
-            p.text = text
-            
-        scopeContents = root.findall(".//ns0:scopecontent", prefixMap)
-        for scopeContent in scopeContents:
-            text = scopeContent.text
-            scopeContent.text = ""
-            p = ET.SubElement(scopeContent, "ns0:p")
-            p.text = text
+        archdesc = root.findall(".//ns0:archdesc", prefixMap)[0]
+        did = archdesc.findall(".//ns0:did", prefixMap)[0]
+        oldScopeContent = root.findall(".//ns0:scopecontent", prefixMap)[0]
+
+        scopeContent = ET.SubElement(archdesc, "ns0:scopecontent")
+        p = ET.SubElement(scopeContent, "ns0:p")
+        p.text = oldScopeContent.findall("ns0:p", prefixMap)[0].text
+
+        did.remove(oldScopeContent)
 
         """"""
 
