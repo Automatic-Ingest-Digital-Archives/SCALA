@@ -44,7 +44,7 @@ for record in records:
     unittitle.text = record["unitTitle"]
     unitid2 = ET.SubElement(did, "unitid")
     unitid2.set("repositorycode", record["repositoryCode"])
-    unitid2.set("label", "localID")
+    unitid2.set("label", "localId")
     unitid2.text = record["localID"]
     unitdate = ET.SubElement(did, "unitdate")
     unitdate.text = record["unitDate"]
