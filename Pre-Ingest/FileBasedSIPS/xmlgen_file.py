@@ -32,11 +32,13 @@ def createXmlString (path, filename, parentIpName):
 
     creator = ET.SubElement(did, "origination")
     creator.set("label", "creator")
-    creator.text = "Christiaan Kieckens" #TODO make variable
+    name1 = ET.SubElement(creator, "name")
+    name1.text = "Christiaan Kieckens" #TODO make variable
 
     producer = ET.SubElement(did, "origination")
     producer.set("label", "producer")
-    producer.text = "AIDA" #TODO make variable
+    name2 = ET.SubElement(producer, "name")
+    name2.text = "AIDA" #TODO make variable
 
     repository = ET.SubElement(did, "repository")
     corpname = ET.SubElement(repository, "corpname")
