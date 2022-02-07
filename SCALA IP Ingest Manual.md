@@ -1,4 +1,4 @@
-# SCALA IP ingest manual
+# SCALA IP Ingest Manual
 
 ###
 <details><summary><b>Introduction</b></summary>
