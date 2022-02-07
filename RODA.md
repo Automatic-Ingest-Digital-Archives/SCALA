@@ -312,14 +312,14 @@ For AIDA ingest workflow (1.0) the plugin optionality is as follows:
 ##
 <details><summary><b>Commercial plugins</b></summary>
   
-Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/RODA%20plugins.pdf).
+Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/RODA%20plugins.pdf).
   
 </details>
 
 ##
 <details><summary><b>RODA METS</b></summary>
 
-The RODA METS is described in more detail [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/RODA/AIP%20Interpretation%20Manual).
+The RODA METS is described in more detail [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/AIP%20Interpretation%20Manual.md).
 	
 Parent AIPs are referenced in a structMap element in the METS. It is a little different from [E-ARK's proposition](https://earkaip.dilcis.eu/#childaipreferencesparentaip).
 ![image](https://user-images.githubusercontent.com/87436774/146341721-1cc44b69-88f6-40aa-9d02-c2a08a929107.png)
@@ -652,8 +652,8 @@ URL: https://scala.meemoo.be/solr/#/.
   
 Documentation: https://solr.apache.org/guide/7_7/index.html.
   
-KEEP training Solr use cases and exercises: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Training%20Solr%20use%20cases.pdf.
+KEEP training Solr use cases and exercises: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/Training%20Solr%20use%20cases.pdf.
   
-KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/Solr%20exercises%20answers.txt.
+KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/Solr%20exercises%20answers.txt.
 
 </details>
