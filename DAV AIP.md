@@ -1,4 +1,4 @@
-## Example and discussion of a DAV AIP METS.xml
+## DAV AIP Structure
 
 ###
 <details><summary><b>metsHdr</b></summary>
