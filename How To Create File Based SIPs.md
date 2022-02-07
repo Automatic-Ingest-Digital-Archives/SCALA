@@ -1,4 +1,4 @@
-## How to create filebased SIPs
+# How To Create File Based SIPs
 
 Use the scripts to do the following:
 
