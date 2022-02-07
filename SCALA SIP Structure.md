@@ -3,7 +3,7 @@
 A SCALA/RODA SIP has the following general folder structure:
 
 ```
-AIP
+SIP
 ├───documentation
 ├───metadata
 │   └───descriptive
