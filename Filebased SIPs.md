@@ -1,4 +1,4 @@
-## How to create filebased SIPs using Python
+## How to create filebased SIPs
 
 Use the scripts to do the following:
 
