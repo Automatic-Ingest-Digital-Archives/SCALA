@@ -1,7 +1,7 @@
 # SCALA
 
 * __SCALA IP Ingestion__
-  - [SCALA IP Ingest Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20IP%20Ingest%20Manual.md)
+  - [SCALA IP Ingestion Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20IP%20Ingestion%20Manual.md)
   - [Descriptive Metadata Requirements](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md)
 * __RODA__
   - [RODA Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Manual.md)
@@ -12,4 +12,4 @@
   - [SCALA SIP Structure](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20SIP%20Structure.md)
   - [SCALA AIP Structure](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20AIP%20Structure.md)
   - [DAV AIP Structure](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/DAV%20AIP%20Structure.md)
-  - [How To Create Filebased SIPs](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/How%20to%20create%20filebased%20SIPs.md)
+  - [How To Create File Based SIPs](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/How%20To%20Create%20File%20Based%20SIPs.md)
