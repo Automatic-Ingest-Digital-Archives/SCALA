@@ -1002,7 +1002,7 @@ The representation folder structure is copied. Then for each data file an Apache
   
 The representation folder structure is copied. Then for each pdf file a VeraPDF HTML file is made.
   
-[Example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA/AIP%20Interpretation%20Manual/VeraPDF_Example_Output.pdf.html)
+[Example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/VeraPDF_Example_Output.pdf.html)
    
 </details>
 
