@@ -17,7 +17,7 @@ __Optional fields are:__
 
 - ead/archdesc/did/accessrestrict/p
 
-Example of a correct xml:
+__Example of a correct xml:__
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
