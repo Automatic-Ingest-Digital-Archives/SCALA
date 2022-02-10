@@ -1,4 +1,4 @@
-# RODA Manual Ingestion Usings HTTPS
+# RODA Manual Ingestion Via HTTPS
 
 ## Summary
 
