@@ -1,8 +1,195 @@
 # RODA Administrative Manual
 
-## Plugin Documentation
+[RODA](https://roda-community.org/#welcome) is a browser tool where you can upload SIPs and transform them to AIPs.
+
+## Plugins
+
+###
+<details><summary><b>Siegfried configuration</b></summary>
+
+We normally use the Siegfried REST API, as the command bootstrap time per file is huge. We do an /identify/%s?base64=true&format=json and will keep the original Siegfried information under the representation other metadata. From it, we take the mime type, pronom, and format name and version if of the most prominent match. We currently don't use the basis, warning or other matches to record them in PREMIS.
+
+Example:
+```
+{
+  "filename": "/roda/data/storage/aip/3b6aeb0d-4c01-4c9b-a4fe-7541660dc8d5/representations/5c75eb81-84e4-498a-93a2-4551c25f6a3b/data/DILCISBOARD_E-ARK_AIP_1_0.pdf",
+  "filesize": 2547324,
+  "modified": "2021-09-14T03:20:22Z",
+  "errors": "",
+  "matches": [
+    {
+      "ns": "pronom",
+      "id": "fmt/95",
+      "format": "Acrobat PDF/A - Portable Document Format",
+      "version": "1a",
+      "mime": "application/pdf",
+      "basis": "extension match pdf; byte match at [[0 8] [2461063 44] [2461112 69]]",
+      "warning": ""
+    }
+  ]
+}
+```
+
+</details>
+
+###
+<details><summary><b>Unoconv configuration</b></summary>
+  
+By default, unoconv will pick files with the selected file name extension OR MIME types OR PRONOM IDs.
+  
+For additional formats (not in default configuration), you can add them via extension and it will still select the file even if the file does not have that extension if there is a mapping between the extension and the pronom identifier and the file without extension is identified with that pronom identifier.
+  
+The starting configuration for the unoconv plugin is:
+  
+```properties
+##########################################################################
+# Conversion plugins' supported INPUT formats (whitelist)
+#
+# If a conversion plugin does not specify its supported input formats
+# it will accept all the formats provided via the UI
+##########################################################################
+core.tools.unoconvconvert.inputFormatExtensions = txt doc xls ppt html odt ods odp odg docx xlsx pptx csv xml png jpg jpeg wpd
+core.tools.unoconvconvert.inputFormatMimetypes = image/gif image/tiff image/png image/jpeg text/plain text/csv text/html application/xml text/xml application/msword application/vnd.ms-excel   application/vnd.openxmlformats-officedocument.spreadsheetml.sheet application/vnd.ms-powerpoint application/vnd.openxmlformats-officedocument.presentationml.presentation application/vnd.oasis.opendocument.text application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.graphics application/vnd.openxmlformats-officedocument.wordprocessingml.document application/vnd.openxmlformats-officedocument.spreadsheetml.sheet application/vnd.openxmlformats-officedocument.presentationml.presentation application/vnd.wordperfect
+core.tools.unoconvconvert.inputFormatPronoms = x-fmt/111 fmt/101 x-fmt/394  
+```
+  
+You can use the mapped values to specify which filetype you want to convert to which filetype. Current mappings between MIME types and extension and PRONOM identifiers and extensions for unoconv are:
+  
+```properties
+##########################################################################
+# Mappings between PRONOM Ids and file format extensions
+#
+# For each Pronom ID used in this file, a mapping line should be provided.
+# This helps the conversion applications to better specify its input and
+# output formats
+##########################################################################
+core.tools.pronom.fmt/14 = pdf
+core.tools.pronom.fmt/15 = pdf
+core.tools.pronom.fmt/16 = pdf
+core.tools.pronom.fmt/17 = pdf
+core.tools.pronom.fmt/18 = pdf
+core.tools.pronom.fmt/19 = pdf
+core.tools.pronom.fmt/20 = pdf
+core.tools.pronom.fmt/558 = pdf
+core.tools.pronom.fmt/559 = pdf
+core.tools.pronom.fmt/560 = pdf
+core.tools.pronom.fmt/561 = pdf
+core.tools.pronom.fmt/562 = pdf
+core.tools.pronom.fmt/563 = pdf
+core.tools.pronom.fmt/564 = pdf
+core.tools.pronom.fmt/565 = pdf
+core.tools.pronom.fmt/276 = pdf
+core.tools.pronom.fmt/95 = pdf
+core.tools.pronom.fmt/354 = pdf
+core.tools.pronom.fmt/476 = pdf
+core.tools.pronom.fmt/477 = pdf
+core.tools.pronom.fmt/478 = pdf
+core.tools.pronom.fmt/479 = pdf
+core.tools.pronom.fmt/480 = pdf
+core.tools.pronom.fmt/481 = pdf
+core.tools.pronom.fmt/493 = pdf
+core.tools.pronom.fmt/144 = pdf
+core.tools.pronom.fmt/145 = pdf
+core.tools.pronom.fmt/146 = pdf
+core.tools.pronom.fmt/147 = pdf
+core.tools.pronom.fmt/148 = pdf
+core.tools.pronom.fmt/157 = pdf
+core.tools.pronom.fmt/158 = pdf
+core.tools.pronom.fmt/488 = pdf
+core.tools.pronom.fmt/489 = pdf
+core.tools.pronom.fmt/490 = pdf
+core.tools.pronom.fmt/491 = pdf
+core.tools.pronom.fmt/492 = pdf
+
+core.tools.pronom.fmt/101 = xml
+core.tools.pronom.x-fmt/111 = txt
+core.tools.pronom.x-fmt/394 = wpd
+
+
+##########################################################################
+# Mappings between Mimetypes and file format extensions
+#
+# For each mimetype used in this file, a mapping line should be provided.
+# This helps the conversion applications to better specify its input and
+# output formats
+##########################################################################
+core.tools.mimetype.application/pdf = pdf
+core.tools.mimetype.text/plain = txt
+core.tools.mimetype.application/msword = doc
+core.tools.mimetype.application/vnd.ms-excel = xls
+core.tools.mimetype.application/vnd.ms-powerpoint = ppt
+core.tools.mimetype.text/html = html
+core.tools.mimetype.application/vnd.oasis.opendocument.text = odt
+core.tools.mimetype.application/vnd.oasis.opendocument.spreadsheet = ods
+core.tools.mimetype.application/vnd.oasis.opendocument.presentation = odp
+core.tools.mimetype.application/vnd.oasis.opendocument.graphics = odg
+core.tools.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document = docx
+core.tools.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet = xlsx
+core.tools.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation = pptx
+core.tools.mimetype.application/rtf = rtf
+core.tools.mimetype.application/vnd.wordperfect = wpd
+core.tools.mimetype.image/gif = gif
+core.tools.mimetype.image/png = png
+core.tools.mimetype.image/tiff = tiff
+core.tools.mimetype.image/jpeg = jpeg
+```
+  
+If there are mappings missing between certain extension(s) and PRONOM identifiers and MIME type identifiers, you can choose to add them as a parameter.
+  
+</details>
+
+###
+<details><summary><b>Mandatory vs. optional ingest plugins</b></summary>
+  
+Mandatory plugins have to run and if they fail they will stop fail the ingestion. Optional plugins will not fail ingestion if they fail.
+	
+For AIDA ingest workflow (1.0) the plugin optionality is as follows:
+	
+| Plugin                                          | Optionality |
+|-------------------------------------------------|-------------|
+| E-ARK SIP 2                                     | Mandatory   |
+| Remove unwanted files                           | Optional    |
+| AIP Virus check                                 | Optional    |
+| Metadata validation                             | Mandatory   |
+| Fixity information computation                  | Mandatory   |
+| File format identification (Siegfried)          | Optional    |
+| Verify user authorization                       | Mandatory   |
+| Disposal schedule association via disposal rule | Optional    |
+| Meemoo descriptive metadata                     | Mandatory   |
+| Auto accept                                     | Mandatory   |
+
+</details>
+
+###
+<details><summary><b>Commercial plugins</b></summary>
+  
+Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/RODA%20plugins.pdf).
+  
+</details>
 
 ## Data Management
+
+###
+<details><summary><b>RODA API documentation</b></summary>
+  
+[API documentation](https://demo.roda-community.org/api-docs/).
+  
+</details>
+
+###
+<details><summary><b>Solr querying</b></summary>
+  
+URL: https://scala.meemoo.be/solr/#/.
+  
+Documentation: https://solr.apache.org/guide/7_7/index.html.
+  
+KEEP training Solr use cases and exercises: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/Training%20Solr%20use%20cases.pdf.
+  
+KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/Solr%20exercises%20answers.txt.
+
+</details>
+
+## Features
 
 ###
 <details><summary><b>RODA AIP storage</b></summary>
@@ -68,4 +255,99 @@
 | Submit AIP to Meemoo (1.0)| AIP submission plugin for MEEMOO integrated serviceCategories: Meemoo|
 | Verify user authorization (1.0) | Checks if the user has enough permissions to place the AIP under the desired node in the classification schemeCategories: validation |
 	
+</details>
+
+###
+<details><summary><b>Activating full-text search</b></summary>
+  
+You need to activate the full-text by running the full-text plugin, either on ingest or afterwards (e.g. restore from meemoo). The plugin is called "Feature extraction (Apache Tika)" and runs Apache Tika to perform, optionally:
+
+* Feature extraction: Perform feature extraction from files. This will extract properties such as number of pages, width, height, colour space, etc.
+* Full text extraction: Extracts full text from document/textual files. Extracted text is used to perform full-text searching on the catalogue.
+
+Please note that extracting full text will require much more index size capabilities.
+  
+</details>
+
+###
+<details><summary><b>AIDA default ingest workflow</b></summary>
+  
+The AIDA ingest workflow (1.0) runs the following plugins in order:
+	
+![image](https://user-images.githubusercontent.com/87436774/148739625-e2563688-5a28-4e7b-a7a5-9ffb5a5d7131.png)
+
+</details>
+
+###
+<details><summary><b>AIP pruning</b></summary>
+
+Pruning is the process of removing all representations from an AIP. The aim is to save storage space while still leaving searchable metadata. Later one can unprune an AIP to restore all representations.
+
+However, in RODA, pruning also removes representation level PREMIS files and other technical metadata. This results in pruned AIPs having less information for reporting. Therefore, pruning in RODA should generally not be done.
+  
+</details>
+
+###
+<details><summary><b>Orphaned IPs</b></summary>
+
+If a child IP (IP with reference to a parent IP) is accepted in the catalogue, but its parent is not (or not yet), it will be an orphan IP. Orphaned IPs appear under a ghost node in the organization repository.
+  
+![image](https://user-images.githubusercontent.com/87436774/145191783-931fe3d9-ccd2-42fe-83f9-eb5d3c990c49.png)
+
+It is currently unclear who you can easily search/retrieve all orphaned IPs.
+  
+</details>
+
+###
+<details><summary><b>Internal actions</b></summary>
+  
+Internal actions are complex tasks performed by the repository as background jobs that enhance the user experience by not blocking the user interface during long lasting operations. Examples of such operations are: moving AIPs, reindexing parts of the repository, or deleting a large number of files. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
+
+Job example:
+  
+![image](https://user-images.githubusercontent.com/87436774/145371252-1d7524a7-38be-4ead-a3d1-c4b2d5e1ea76.png)
+  
+Report example:
+  
+
+| id                                                                                                             | jobId                                | jobName       | sourceObjectId                       | sourceObjectOriginalName    | sourceObjectLabel            | sourceObjectClass | sourceObjectOriginalIds              | outcomeObjectId             | outcomeObjectLabel           | outcomeObjectClass | outcomeObjectState                 | title                        | dateCreated                  | dateUpdated | completionPercentage | stepsCompleted | totalSteps                                             | plugin                             | pluginName | pluginVersion | pluginState                                                                      | pluginDetails | htmlPluginDetails | successfulPlugins | unsuccessfulPlugins | reports |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------|---------------|--------------------------------------|-----------------------------|------------------------------|-------------------|--------------------------------------|-----------------------------|------------------------------|--------------------|------------------------------------|------------------------------|------------------------------|-------------|----------------------|----------------|--------------------------------------------------------|------------------------------------|------------|---------------|----------------------------------------------------------------------------------|---------------|-------------------|-------------------|--------|---------|
+| 189796fb-007a-465d-9ac3-723a73705036-c084632a-5e66-4ccd-a9be-6ab01cf5950e-c084632a-5e66-4ccd-a9be-6ab01cf5950e | 189796fb-007a-465d-9ac3-723a73705036 | AIP appraisal | c084632a-5e66-4ccd-a9be-6ab01cf5950e | ingenium18[047]05 (kopie) 2 | org.roda.core.data.v2.ip.AIP | []                | c084632a-5e66-4ccd-a9be-6ab01cf5950e | ingenium18[047]05 (kopie) 2 | org.roda.core.data.v2.ip.AIP | CREATED            | Update AIP permissions recursively | Wed Dec 08 07:59:22 UTC 2021 | Wed Dec 08 07:59:23 UTC 2021 | 100         | 1                    | 1              | org.roda.core.plugins.plugins.internal.AppraisalPlugin | Update AIP permissions recursively | 1.0        | SUCCESS       | The AIP 'c084632a-5e66-4ccd-a9be-6ab01cf5950e' was accepted into the repository. | FALSE         | []                | []                | [Report [id=189796fb-007a-465d-9ac3-723a73705036-c084632a-5e66-4ccd-a9be-6ab01cf5950e-c084632a-5e66-4ccd-a9be-6ab01cf5950e, jobId=189796fb-007a-465d-9ac3-723a73705036, sourceObjectId=c084632a-5e66-4ccd-a9be-6ab01cf5950e, sourceObjectClass=org.roda.core.data.v2.ip.AIP, sourceObjectOriginalIds=[], outcomeObjectId=c084632a-5e66-4ccd-a9be-6ab01cf5950e, outcomeObjectClass=org.roda.core.data.v2.ip.AIP, outcomeObjectState=CREATED, title=Update AIP permissions recursively, dateCreated=Wed Dec 08 07:59:22 UTC 2021, dateUpdated=Wed Dec 08 07:59:23 UTC 2021, completionPercentage=0, stepsCompleted=0, totalSteps=1, plugin=org.roda.core.plugins.plugins.internal.AppraisalPlugin, pluginName=Update AIP permissions recursively, pluginVersion=1.0, pluginState=SUCCESS, pluginIsMandatory=true, pluginDetails=The AIP 'c084632a-5e66-4ccd-a9be-6ab01cf5950e' was accepted into the repository., htmlPluginDetails=false, reports=[]]] |         |
+| 189796fb-007a-465d-9ac3-723a73705036-5590bdbf-332f-4965-8918-c77740d22459-5590bdbf-332f-4965-8918-c77740d22459 | 189796fb-007a-465d-9ac3-723a73705036 | AIP appraisal | 5590bdbf-332f-4965-8918-c77740d22459 | ingenium18[047]05 (kopie)   | org.roda.core.data.v2.ip.AIP | []                | 5590bdbf-332f-4965-8918-c77740d22459 | ingenium18[047]05 (kopie)   | org.roda.core.data.v2.ip.AIP | CREATED            | Update AIP permissions recursively | Wed Dec 08 07:59:22 UTC 2021 | Wed Dec 08 07:59:22 UTC 2021 | 100         | 1                    | 1              | org.roda.core.plugins.plugins.internal.AppraisalPlugin | Update AIP permissions recursively | 1.0        | SUCCESS       | The AIP '5590bdbf-332f-4965-8918-c77740d22459' was accepted into the repository. | FALSE         | []                | []                | [Report [id=189796fb-007a-465d-9ac3-723a73705036-5590bdbf-332f-4965-8918-c77740d22459-5590bdbf-332f-4965-8918-c77740d22459, jobId=189796fb-007a-465d-9ac3-723a73705036, sourceObjectId=5590bdbf-332f-4965-8918-c77740d22459, sourceObjectClass=org.roda.core.data.v2.ip.AIP, sourceObjectOriginalIds=[], outcomeObjectId=5590bdbf-332f-4965-8918-c77740d22459, outcomeObjectClass=org.roda.core.data.v2.ip.AIP, outcomeObjectState=CREATED, title=Update AIP permissions recursively, dateCreated=Wed Dec 08 07:59:22 UTC 2021, dateUpdated=Wed Dec 08 07:59:22 UTC 2021, completionPercentage=0, stepsCompleted=0, totalSteps=1, plugin=org.roda.core.plugins.plugins.internal.AppraisalPlugin, pluginName=Update AIP permissions recursively, pluginVersion=1.0, pluginState=SUCCESS, pluginIsMandatory=true, pluginDetails=The AIP '5590bdbf-332f-4965-8918-c77740d22459' was accepted into the repository., htmlPluginDetails=false, reports=[]]] |         |
+  
+</details>
+
+###
+<details><summary><b>Preservation actions</b></summary>
+  
+Preservation actions are tasks performed on the contents of the repository that aim to enhance the accessibility of archived files or to mitigate digital preservation risks. Within RODA, preservation actions are handled by a job execution module. The job execution module allows the repository manager to run actions over a given set of data (AIPs, representations or files). Preservation actions include format conversions, checksum verifications, reporting (e.g. to automatically send SIP acceptance/rejection emails), virus checks, etc. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
+  
+- Some actions are presented as preservation actions although they are not strictly for preservation, like re-index actions, and these do not create a preservation event.
+- Other actions, which might be construed as preservation actions, or at least accessory to preservation actions, like the inventory report, also do not create preservation events.
+- Mainly, we create preservation events for actions that change the data (like conversions that create representations) or for actions that enrich the metadata (like generation of fixity information and file format identification) or for actions that validate the data (fixity checks, file format validation).
+  
+Report export example:
+  
+| id | jobId | jobName | sourceObjectId | sourceObjectOriginalName | sourceObjectLabel | sourceObjectClass | sourceObjectOriginalIds | outcomeObjectId | outcomeObjectLabel | outcomeObjectClass | outcomeObjectState | title | dateCreated | dateUpdated | completionPercentage | stepsCompleted | totalSteps | plugin | pluginName | pluginVersion | pluginState | pluginDetails | htmlPluginDetails | successfulPlugins | unsuccessfulPlugins | reports |
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|----|-----|-----|-------|-------|---|--|-----|--------|------|------------|----|
+| c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-40bdb2ff-f314-3178-87c2-35005e9b6137-40bdb2ff-f314-3178-87c2-35005e9b6137 | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5 | Office documents conversion (unoconv) (7.0.4.2) | 40bdb2ff-f314-3178-87c2-35005e9b6137 |                          | PV INSCH.DOC                        | org.roda.core.data.v2.ip.File | []                      | 40bdb2ff-f314-3178-87c2-35005e9b6137 |                    | org.roda.core.data.v2.ip.DIP | ACTIVE             | Office documents conversion (unoconv) | Tue Nov 23 16:37:05 UTC 2021 | Tue Nov 23 16:37:05 UTC 2021 | 100                  | 1              | 1          | org.roda.core.plugins.external.UnoconvConvertPlugin | Office documents conversion (unoconv) | 7.0.4.2       | SUCCESS     | This file was ignored. | FALSE             | []                | []                  | [Report   [id=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-40bdb2ff-f314-3178-87c2-35005e9b6137-40bdb2ff-f314-3178-87c2-35005e9b6137,   jobId=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5,   sourceObjectId=40bdb2ff-f314-3178-87c2-35005e9b6137,   sourceObjectClass=org.roda.core.data.v2.ip.File, sourceObjectOriginalIds=[],   outcomeObjectId=40bdb2ff-f314-3178-87c2-35005e9b6137,   outcomeObjectClass=org.roda.core.data.v2.ip.DIP, outcomeObjectState=ACTIVE,   title=Office documents conversion (unoconv), dateCreated=Tue Nov 23 16:37:05   UTC 2021, dateUpdated=Tue Nov 23 16:37:05 UTC 2021, completionPercentage=0,   stepsCompleted=0, totalSteps=1,   plugin=org.roda.core.plugins.external.UnoconvConvertPlugin, pluginName=Office   documents conversion (unoconv), pluginVersion=7.0.4.2, pluginState=SUCCESS,   pluginIsMandatory=true, pluginDetails=This file was ignored.,   htmlPluginDetails=false, reports=[]]] |
+| c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-56fa195f-fc2a-39a6-b113-45eebd46c72f-56fa195f-fc2a-39a6-b113-45eebd46c72f | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5 | Office documents conversion (unoconv) (7.0.4.2) | 56fa195f-fc2a-39a6-b113-45eebd46c72f |                          | PV_INSCH.DOC                        | org.roda.core.data.v2.ip.File | []                      | 56fa195f-fc2a-39a6-b113-45eebd46c72f |                    | org.roda.core.data.v2.ip.DIP | ACTIVE             | Office documents conversion (unoconv) | Tue Nov 23 16:37:05 UTC 2021 | Tue Nov 23 16:37:05 UTC 2021 | 100                  | 1              | 1          | org.roda.core.plugins.external.UnoconvConvertPlugin | Office documents conversion (unoconv) | 7.0.4.2       | SUCCESS     | This file was ignored. | FALSE             | []                | []                  | [Report   [id=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-56fa195f-fc2a-39a6-b113-45eebd46c72f-56fa195f-fc2a-39a6-b113-45eebd46c72f,   jobId=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5,   sourceObjectId=56fa195f-fc2a-39a6-b113-45eebd46c72f,   sourceObjectClass=org.roda.core.data.v2.ip.File, sourceObjectOriginalIds=[],   outcomeObjectId=56fa195f-fc2a-39a6-b113-45eebd46c72f,   outcomeObjectClass=org.roda.core.data.v2.ip.DIP, outcomeObjectState=ACTIVE,   title=Office documents conversion (unoconv), dateCreated=Tue Nov 23 16:37:05   UTC 2021, dateUpdated=Tue Nov 23 16:37:05 UTC 2021, completionPercentage=0,   stepsCompleted=0, totalSteps=1,   plugin=org.roda.core.plugins.external.UnoconvConvertPlugin, pluginName=Office   documents conversion (unoconv), pluginVersion=7.0.4.2, pluginState=SUCCESS,   pluginIsMandatory=true, pluginDetails=This file was ignored.,   htmlPluginDetails=false, reports=[]]] |
+  
+</details>
+
+###
+<details><summary><b>IP meemoo status data</b></summary>
+  
+RODA keeps track of the following data about IPs in regards to their status on meemoo.
+
+![image](https://user-images.githubusercontent.com/87436774/145192766-db9de476-1742-4c56-8866-029c5f809476.png)
+  
+1. AIP Version - The version of the IP at meemoo.
+2. Identifier - The organization's identifier in the meemoo repository.
+3. Synchronization AIP Status (On RODA / On meemoo)
+4. Last synchronization date into Meemoo (datetime stamp)
+5. Pruned (Yes / No)
+6. Archive status (None / On disk)
+7. Automatically submitted after ingestion (Yes / No)
+  
 </details>
