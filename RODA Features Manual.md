@@ -1,4 +1,4 @@
-# RODA Manual
+# RODA Features Manual
 
 RODA is a browser tool where you can upload SIPs and transform them to AIPs.
 
