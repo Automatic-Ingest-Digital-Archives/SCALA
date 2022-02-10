@@ -86,7 +86,7 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 </details>
 
 ###
-<details><summary><b>RODA-In SIP creation</b></summary>
+<details><summary><b>RODA-In SIP creation and repository classification scheme</b></summary>
 
 Make sure you install and configure RODA-In according to the [RODA-In Installation & Configuration](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA-In%20Installation%20&%20Configuration.md) instructions.
 	
@@ -145,7 +145,7 @@ Alternatively, you can [upload and ingest SIPs via HTTPS](https://github.com/Aut
 
 |Task||
 |----|-----|
-|Restart failed/interrupted ingest processes|You can go to Ingest > Transfer and search for the content you have uploaded. Then choose "Select all pages" and then "Start new process". There you need to select the same ingest parameters, including Parent node, OR identifier and ingest finished email notification.|
+|Restart failed/interrupted ingest processes|In RODA, you can go to Ingest > Transfer and search for the content you have uploaded. Then choose "Select all pages" and then "Start new process". There you need to select the same ingest parameters, including Parent node, OR identifier and ingest finished email notification.|
 
 	
 </details>
