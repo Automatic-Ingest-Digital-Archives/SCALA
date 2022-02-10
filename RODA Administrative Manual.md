@@ -161,7 +161,50 @@ For AIDA ingest workflow (1.0) the plugin optionality is as follows:
 </details>
 
 ###
-<details><summary><b>Commercial plugins</b></summary>
+<details><summary><b>Remove unwanted files</b></summary>
+  
+The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
+	
+This plugin checks through predetermined rules, if the AIP has any unwanted files. The rules configuration is under config named ingest.ignore, and contains the following default ones:
+![image](https://user-images.githubusercontent.com/87436774/153424300-ee9b8ff0-424d-4aad-85bb-61f2eb470788.png)
+  
+</details>
+
+###
+<details><summary><b>Meemoo descriptive metadata</b></summary>
+  
+The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
+	
+This plugin creates a descriptive metadata with information for __Meemoo__ API integration. After the execution of this plugin the AIP has a new descriptive metadata file named meemoo.xml.
+![image](https://user-images.githubusercontent.com/87436774/153424457-2a30e994-4aaf-4854-8fcb-b1aab95f45cf.png)
+
+This plugin will create a descriptive metadata file with the information represented above, such as the auto submission flag, if the AIP is pruned or not, the initial synchronization AIP status **“on_roda”** and the notification email.
+  
+</details>
+
+###
+<details><summary><b>AIDA specific preservation actions</b></summary>
+	
+The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
+	
+The following additional plugins with preservation actions were added to the digital preservation repository solution for AIDA.
+	
+#### Create E-ARK AIP 2.0 manifest files (METS.xml)
+
+Plugin that generates E-ARK AIP 2.0 manifest files ("METS.xml") from existing AIP information in the storage layer. This plugin only works with filesystem as the storage service.
+	
+#### Image conversion (ImageMagick)
+
+ImageMagick is a tool that can read and write images in a variety of formats (over 200) including PNG, JPEG, JPEG-2000, GIF, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. ImageMagick can also be used to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colours, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves (e.g. set Command arguments to “ -resample 90” to resize the image to 90 dpi). The results of conversion will be placed on a new representation under the same Archival Information Package (AIP) where the files were originally found. A PREMIS event is also recorded after the task is run. For a full list of supported formats, please visit http://www.imagemagick.org/script/formats.php.
+	
+#### Office documents conversion (unoconv)
+	
+Converts office files using the “unoconv” (Universal Office Converter), which uses LibreOffice to convert Office files. The results of conversion will be placed on a new representation under the same Archival Information Package (AIP) where the files were originally found. A PREMIS event is also recorded after the task is run. “unoconv” is a tool that converts between any document format that OpenOffice understands. It uses OpenOffice's UNO bindings for non-interactive conversion of documents. Supported document formats include Open Document Format (odt), MS Word (doc), MS Office Open/MS OOXML (ooxml), Portable Document Format (pdf), HTML (html), XHTML (xhtml), RTF (rtf), Docbook (docbook), and more. The outcome of this task is the creation of a new OpenOffice (and thus unoconv) that supports various import and export formats. Not all formats that can be imported can be exported and vice versa. For a full list of supported formats, please visit - http://dag.wiee.rs/home-made/unoconv/.
+	
+</details>
+
+###
+<details><summary><b>All commercial plugins</b></summary>
   
 Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/RODA%20plugins.pdf).
   
@@ -412,5 +455,24 @@ After this process of restore is complete the plugin executes three additional p
 * Virus check Plugin
 
 This plugin like the submission plugin creates a preservention event of the type **“Transfer”** at the repository level.
+	
+</details>
+
+###
+<details><summary><b>Access features</b></summary>
+	
+The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
+	
+The advanced search and facets have been customized for this project, adding search for the following additional attributes:
+	
+* Meemoo AIP version
+* Meemoo Identifier
+* Meemoo Archive Status
+* Producer
+
+In terms of facets, the attributes added are the following:
+
+* Meemoo prune
+* Meemoo archive status
 	
 </details>
