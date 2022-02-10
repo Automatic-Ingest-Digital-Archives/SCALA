@@ -1,4 +1,4 @@
-# DAV AIP Structure
+# DAV AIP Example
 
 ###
 <details><summary><b>metsHdr</b></summary>
