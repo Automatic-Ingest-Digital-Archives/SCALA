@@ -351,3 +351,66 @@ RODA keeps track of the following data about IPs in regards to their status on m
 7. Automatically submitted after ingestion (Yes / No)
   
 </details>
+
+###
+<details><summary><b>Meemoo sync</b></summary>
+	
+The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
+  
+Operations relative to submitting or updating records into meemoo storage on E-ARK AIP 2.0.4 format, or to restore all records from AIPs archived in meemoo.
+	
+![image](https://user-images.githubusercontent.com/87436774/153422062-0bab245d-2419-4107-a995-4ebde604256a.png)
+
+This figure depicts all metadata changes during the tasks after the AIP ingest process. During the ingest process the meemoo descriptive metadata file is created. This file has the Synchronization AIP status with the value **“on_roda”**, during the submission to meemoo, if prune representations are activated, the meemoo metadata changes the Synchronization AIP status to **“on_meemoo”**, and add the submission date and prune date to the metadata file.
+	
+If prune representations are deactivated, the file only adds the submission date to the metadata file. When the status of the AIP is **“on_meemoo”** the Restore operation, as it can be seen above, changes the status again to **“on_roda”** and adds a restore date to the metadata file, and the prune flag is set to false, because the representations of the AIP are again available in RODA.
+	
+If the submission date of the AIP is after the last update date and the AIP has representations, we can prune the representations from RODA, which changes the metadata of the AIP to **“on_meemoo”**.
+	
+Preservation action should only be executed when the AIP is **“on_roda”**, as this is when the information is available. A preservation action might change the AIP, which should then be re-submitted to RODA.
+	
+#### Submit to meemoo
+	
+The first check when submitting the AIP to Meemoo is to check if the AIP has representations. If the AIP has representations the next step is check if it is possible to submit the AIP to meemoo, in this check it is verified if the AIP has already been submitted and if the AIP is still being processed by meemoo.
+	
+After checking that the AIP can be submitted, it is checked if it is possible to create the sidecar, for it to be possible it is necessary if the AIP metadata has the mandatory fields, being them:
+	
+* ead/archdesc/did/repository/corpname
+* ead/archdesc/did/unittitle
+* ead/archdesc/did/unitid@label='localId'
+* ead/archdesc/did/origination@label='creator'/name
+* ead/archdesc/did/origination@label='producer'/name
+	
+![image](https://user-images.githubusercontent.com/87436774/153422777-322dc4e8-d35f-4dd5-9c71-4c6a11e95a4a.png)
+
+The code above shows the meemoo sidecar and the rules to create the sidecar, as well as the mandatory fields described above.
+	
+After these verifications the “Create METS” plugin is run, this plugin will create or update the METS file in AIP making it according to the E-ARK AIP 2.0.4 specification. If the creation was successful the submission will continue, if the creation fails the submission also fails.
+	
+Like was explained above, initially the state is **"on_roda"** when AIP is submitted with the pruning option enabled the state is changed to **"on_meemoo"** because the AIP representations are removed from RODA. If the prune option is disabled, RODA keeps the AIP representations and for this reason the state remains **"on_roda"**. This plugin creates after submission a preservation event of the type **“Transfer”** at the repository level.
+	
+#### Prune
+	
+The Pruning Representations only can execute if the aip is already on meemoo and the last update date is lower than the submission date of the AIP. If passes this two conditions this plugin will check if the AIP has representations, if it has representations it removes these representations from the AIP and changes the meemoo metadata with the new state of the AIP which is pruned.
+![image](https://user-images.githubusercontent.com/87436774/153423290-2d65a613-12fa-4183-9164-6e859f76111b.png)
+
+Before the process of Prune, the tag **<prune>** on meemoo.xml file has the value false, the AIP synchronization status is **“on_roda”** and doesn't exist as a prune date tag as can be seen in code above. After that the value of the tag **<prune>** will be true, the synchronization AIP status changes to **“on_meemoo”** and is added to the meemoo.xml file the prune date of the AIP as can be seen in code below.
+![image](https://user-images.githubusercontent.com/87436774/153423497-502b5509-f0c0-4019-b3df-608c64a773bd.png)
+
+This plugin creates a preservation event of the type **“Destruction”** at the repository level.
+	
+#### Restore from meemoo
+	
+The Restore Pruned Representations plugin checks if the AIP is saved on Meemoo, if the AIP has been found it looks for the last version of it and starts the process of restoring the representations of the AIP. This process replaces the old AIP with the AIP with representations.
+	
+The initial state as explained above is **“on_meemoo”**, after the process of restoring the state is changed to **“on_roda”** and is added a restore date to the metadata file and the prune tag changes to false. This change occurs because the RODA has the AIP representations stored again in the system, and for this reason the state is **“on_roda”**.
+	
+After this process of restore is complete the plugin executes three additional plugins being them:
+
+* Fixity Check plugin
+* File Format Identification Plugin
+* Virus check Plugin
+
+This plugin like the submission plugin creates a preservention event of the type **“Transfer”** at the repository level.
+	
+</details>
