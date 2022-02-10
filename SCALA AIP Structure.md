@@ -136,6 +136,9 @@ Example METS:
     </structMap>
 </mets>	
 ```
+	
+Parent AIPs are referenced in a structMap element in the METS. It is a little different from [E-ARK's proposition](https://earkaip.dilcis.eu/#childaipreferencesparentaip).
+![image](https://user-images.githubusercontent.com/87436774/146341721-1cc44b69-88f6-40aa-9d02-c2a08a929107.png)
 
 </details>
 	
