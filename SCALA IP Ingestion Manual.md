@@ -1,7 +1,6 @@
 # SCALA IP Ingestion Manual
 
-###
-<details><summary><b>Introduction</b></summary>
+## Introduction
 
 This manual provides step-by-step instructions for getting your archival data into an AIP.
 	
@@ -19,49 +18,13 @@ There are instructions for Win10, Mac and Linux operating systems.
 Text written in <span title="I have some extra information"><i>italic</i></span> has some extra information if you hover
 over it.
 
-</details>
+[Instructions on how to use a terminal.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Using%20a%20terminal.md)
 
-##
-<details><summary><b>Using a terminal</b></summary>
+[Testing best practices.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Testing%20best%20practices.md)
 
-Some tasks are best performed by running a script in a terminal. A terminal is a program where you can write
-instructions for your computer to execute. Computers normally come with a terminal program installed by default. On
-Windows the program is “PowerShell” and on Mac/Linux it is usually “Bash”. A terminal looks something like this:
+## Pre-Ingestion
 
-<img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture1.png">
-
-There are always two tasks involved when using a terminal for a SCALA ingest task. (1) Open the terminal in the root
-folder of your TS and (2) copy-paste the script in the terminal and press “Enter” to run it.
-
-|Task|Win10|Mac/Linux|
-|----|-----|---------|
-|Open terminal at <i><span title="Depending on the script you wish to execute, Root Folder can be either the parent folder containing all of 1 TS. Or it can be the parent folder containing multiple TS' in a separate folder each.">root folder</span></i>|Navigate to the root folder in File Explorer. </br> Shift + right click the folder. </br> Click “Open PowerShell window here”. </br> <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture2.png"></br></br>OR open the Windows PowerShell app. </br> Navigate to the root folder in PowerShell.|Navigate to the root folder in Finder. </br> Right click the folder. </br> Click “Services > New Terminal at Folder”. </br> <img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture3.png"></br></br>OR open the Terminal app. </br> Navigate to the root folder in theTerminal.|
-|Paste and run script|Copy the script you have to run. </br> Paste the script in PowerShell. </br> Click “Enter” to run the script.|Copy the script you have to run. </br> Paste the script in Bash. </br> Click “Enter” to run the script.|
-
-Now, whenever you are requested to “Open a terminal and run ``` some script ```”, you can execute both tasks above.
-
-</details>
-
-##
-<details><summary><b>Testing best practices</b></summary>
-
-If you are using this manual for testing purposes, please consider these best practices.
-	
-|Task||
-|----|-----|
-|Keep test materials on an external harddrive|Get an external hard drive. </br> Move testing TS’ to the hard drive.|
-
-|Task|Win10|Mac/Linux|
-|----|-----|---------|
-|<span title="These tools are preferred over the default file transfer tools of Win10 and Mac. They are fast and give clear error messages."><i>Install dedicated file management software to transfer files from your external hard drive to your computer</i></span>|One option is to download and install <a href="https://www.ghisler.com/download.htm">Total Commander</a>.|One option is to download and install <a href="https://doublecmd.sourceforge.io/">Double Commander</a>.|
-
-|Task||
-|----|-----|
-|Show hidden files and file extensions|In your file management and browsing software, check the boxes to view all files and extensions.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Screenshot_2.png"></br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Screenshot_3.png">|
-
-</details>
-
-##
+###
 <details><summary><b>Archival data preparation</b></summary>
 
 #### Create your TS
@@ -120,26 +83,18 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 ##
 <details><summary><b>Descriptive Metadata Requirements</b></summary>
 
-Please find the requirements for descriptive metadata [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md).
+[Requirements for descriptive metadata.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md).
 
 </details>
-	
+
 ##
-<details><summary><b>RODA-In installation & configuration</b></summary>
-
-|Task||
-|----|---------|
-|Install & start RODA-In|Download RODA-In 2.4.2 <a href="https://github.com/keeps/roda-in/releases/tag/2.4.2">here</a> and install it.</br>Start RODA-In.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture5.png">|
-|Configure RODA-In to use the SCALA metadata template|Open the configuration folder.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture6.png"></br><a href="https://drive.google.com/drive/folders/1PTWH4zf_BDFZ4FjzZVVD_6BreUhwFLZb?usp=sharing">Download</a> the “scala.xml.hbs” and “config.properties” files.<br>Add the file “scala.xml.hbs” to the folder “\roda-in\templates”.</br>Overwrite the config file in “\roda-in” with the “config.properties” file.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture7.png">|
-
-</details>
-
-###
 <details><summary><b>RODA-In SIP creation</b></summary>
 
+Make sure you install and configure RODA-In according to the [RODA-In Installation & Configuration](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA-In%20Installation%20&%20Configuration.md) instructions.
+	
 |Task||
 |----|---------|
-|<span title="Bear in mind that Roda-in deletes empty folders without a log. If you need a work around for this issue, see other pre-ingest steps “Create a filelist and filetree for each SIP”."><i>Load your TS in RODA-In</i></span>|Choose the working folder in your file system. This will serve as the root of your project.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture8.png">|
+|<span title="Bear in mind that Roda-In deletes empty folders without a log. If you need a work around for this issue, see other pre-ingest steps “Create a filelist and filetree for each SIP”."><i>Load your TS in RODA-In</i></span>|Choose the working folder in your file system. This will serve as the root of your project.<br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture8.png">|
 |Create a new classification scheme|Click to create a new classification scheme.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture9.png">|
 |Add the TS to the IP panel|Select the root folder of your TS.</br>Add this folder to the IP panel by clicking “Associate” or by dragging it to the IP panel.</br>You can also choose to select and add folders/files individually.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture10.png">|
 |<span title="This will determine how (S)IPs will be associated with eachother (e.g. are two IPs siblings or parent-child)."><i>Select an association method</i></span>|Choose the association method <span title="We may explore other SIP/AIP association methods in the future."><i>“One information package for each selected files or folders”</i></span>.</br>Click on the button “Continue”.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture11.png">|
@@ -151,7 +106,9 @@ Please find the requirements for descriptive metadata [here](https://github.com/
 
 </details>
 
-##
+## Ingestion
+
+###
 <details><summary><b>RODA account, FTP client and meemoo connection</b></summary>
 
 |Task||
