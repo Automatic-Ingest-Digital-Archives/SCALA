@@ -4,7 +4,7 @@ Descriptive metadata must follow the EAD2002 structure.
 
 Furthermore, there are several fields required. If these required fields are missing from EAD, the AIP can not be submitted to meemoo. Note that these fields are case sensitive!
 
-Required fields for submitting to meemoo are:
+__Required fields for submitting to meemoo are:__
 
 - ead/archdesc/did/repository/corpname
 - ead/archdesc/did/unittitle
@@ -13,7 +13,7 @@ Required fields for submitting to meemoo are:
 - ead/archdesc/did/origination@label='creator'/name
 - ead/archdesc/did/origination@label='producer'/name
 
-Optional fields are:
+__Optional fields are:__
 
 - ead/archdesc/did/accessrestrict/p
 
