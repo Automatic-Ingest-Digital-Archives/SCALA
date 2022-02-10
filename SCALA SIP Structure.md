@@ -1,6 +1,6 @@
 # SCALA SIP Structure
 
-A SCALA/RODA SIP has the following general folder structure:
+A SCALA/RODA-In SIP has the following general folder structure:
 
 ```
 SIP
