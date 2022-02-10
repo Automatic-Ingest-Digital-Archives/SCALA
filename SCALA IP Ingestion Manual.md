@@ -81,7 +81,7 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 ###
 <details><summary><b>Descriptive Metadata Requirements</b></summary>
 
-[Requirements for descriptive metadata.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md).
+[Requirements for descriptive metadata.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md)
 
 </details>
 
