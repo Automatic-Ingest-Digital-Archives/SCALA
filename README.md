@@ -8,7 +8,8 @@
 * [RODA Administrative Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Administrative%20Manual.md)
 * [RODA Configuration Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Configuration%20Manual.md)
 * [RODA Manual Ingestion Via HTTPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Manual%20Ingestion%20Via%20HTTPS.md)
-* [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf)
+* [AIDA Administrative Operations Manual by KEEPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf)
+* [AIDA FTP Dropfolder User Guide by KEEPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Dropfolder%20-%20User%20guide.pdf)
 
 ## RODA-In
 * [RODA-In Installation & Configuration](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA-In%20Installation%20%26%20Configuration.md)
