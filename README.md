@@ -1,4 +1,10 @@
 # SCALA
+
+SCALA is a joint project of nine heritage institutions in Flanders and Brussels (AIDA), who are jointly designing a system for the long-term preservation of born-digital archives with cultural-historical value. SCALA is conceived as a proof of concept to test a pilot version of a digital archive depot (digital repository). This digital repository stores archives in generic digital archive containers (information packages) according to the OAIS model and the new European standard E-ARK. It is open source and is being developed by a third party IT vendor.
+
+SCALA is a pioneer in Flanders with the use of E-ARK and as a result organizes an E-ARK working group with external partners, with whom they want to arrive at a Flemish standard model for information packages. This model should promote sustainability, system independence and collaboration.
+
+To get familiar with and start using the pilot preservation system, please start by reading the SCALA IP Ingestion Manual.
    
 ## SCALA IP Ingestion
 * [SCALA IP Ingestion Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20IP%20Ingestion%20Manual.md)
