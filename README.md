@@ -16,7 +16,7 @@ To get familiar with and start using the pilot preservation system, please start
 * [RODA Manual Ingestion Via HTTPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Manual%20Ingestion%20Via%20HTTPS.md)
 * [AIDA Administrative Operations Manual by KEEPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf)
 * [AIDA FTP Dropfolder User Guide by KEEPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Dropfolder%20-%20User%20guide.pdf)
-* [RODA Required Setup For 150TB](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Required%20Setup%20For%20150%20TB.md)
+* [RODA Required Setup For 150TB Storage](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Required%20Setup%20For%20150TB%20Storage.md)
 
 ## RODA-In
 * [RODA-In Installation & Configuration](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA-In%20Installation%20%26%20Configuration.md)
