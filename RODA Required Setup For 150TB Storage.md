@@ -1,4 +1,4 @@
-# RODA Required Setup For 150TB
+# RODA Required Setup For 150TB Storage
 
 _Question: What RODA setup would allow us to archive and work with ~130TB of data?_
 
