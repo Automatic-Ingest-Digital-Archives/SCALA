@@ -1,6 +1,6 @@
 # RODA Required Setup For 150TB Storage
 
-_Question: What RODA setup would allow us to archive and work with ~130TB of data?_
+### _Question: What RODA setup would allow us to archive and work with ~130TB of data?_
 
 If the 130TB are composed of very large files, and therefore there are few files, you'd be able to cope with the current setup given that you upgrade de amount of storage (currently you have 3TB available).
 
@@ -10,7 +10,7 @@ Currently, you have about 31k files occupying around 500GB, for 130TB you would 
 
 > So, generally, for supporting 130TB I would recommend upgrading storage to 150 TB, indexing SSD to 500GB to 1TB, and double the available VM RAM (from 32GB to 64GB) so you could upgrade SOLR to 32 GB of dedicated RAM.
 
-_Question: Should everything be put on one system? How many cores are required per system? Seeing as the indexer possibly requires a lot of computing power._
+ ### _Question: Should everything be put on one system? How many cores are required per system? Seeing as the indexer possibly requires a lot of computing power._
 
 Using a single system would use resources more efficiently, as every institution would share resources. This is off-course a double-edged sword, as the behaviour of one institution can affect the resources available for another, and you would not be able to easily reserve resources or set quotes for resources.
 
@@ -18,7 +18,7 @@ The cores per system better correlate with the ingest throughput (and preservati
 
 > So, you should increase CPUs if you want to increase job parallelization.
  
-_Question: Is the 150TB storage needed for disk storage, or for the tape storage. Should there be any buffer space on the disk? If so, how much?_
+### _Question: Is the 150TB storage needed for disk storage, or for the tape storage. Should there be any buffer space on the disk? If so, how much?_
 
 > That all depends on the behaviour of your institutions, how much time their content takes to ingest, if the content is submitted sparsely or all at once, if ingest assessment is enabled, if they use the restore from meemoo function frequently and/or with a lot of content, if meemoo availability is better than what was observed during the pilot.
 
