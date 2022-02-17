@@ -145,7 +145,7 @@ Parent AIPs are referenced in a structMap element in the METS. It is a little di
 ##
 <details><summary><b>Descriptive metadata in AIP</b></summary>
 
-`description.xml` contains a minimal set of essential metadata to be archived within the AIP. SCALA departs from the assumption that an up to date and more elaborate version of the descriptive metadata is managed and stored within the partners' archives management system. The following EAD-sample gives an overview of all metadatafields. They can be automatically generated or must be provided using Roda-in.
+Description.xml (a.k.a. scala.xml) contains a minimal set of essential metadata to be archived within the AIP. SCALA departs from the assumption that an up to date and more elaborate version of the descriptive metadata is managed and stored within the partners' archives management system. The following EAD-sample gives an overview of all metadatafields. They can be automatically generated or must be provided using RODA-In.
   
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -192,6 +192,25 @@ Parent AIPs are referenced in a structMap element in the METS. It is a little di
     </archdesc>
 </ead>
 ```
+
+Meemoo.xml contains information about operations relative to submitting or updating records into meemoo storage on E-ARK AIP 2.0.4 format, or to restore all records from AIPs archived in meemoo.
+	
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <aipVersion>1</aipVersion>
+    <identifier>OR-jq0st8z</identifier>
+    <syncAIPStatus>on_roda</syncAIPStatus>
+    <submissionDate></submissionDate>
+    <restoreDate></restoreDate>
+    <prune>false</prune>
+    <pruneDate></pruneDate>
+    <archiveStatus></archiveStatus>
+    <autoSubmission>false</autoSubmission>
+    <notificationEmail>wim.lowet@vai.be, jelle.kleevens@vai.be</notificationEmail>
+</metadata>
+```
+	
 </details>
 
 ###
