@@ -14,11 +14,13 @@ _Question: Should everything be put on one system? How many cores are required p
 
 Using a single system would use resources more efficiently, as every institution would share resources. This is off-course a double-edged sword, as the behaviour of one institution can affect the resources available for another, and you would not be able to easily reserve resources or set quotes for resources.
 
-The cores per system better correlate with the ingest throughput (and preservation actions throughput), as ingest and other jobs will be parallelized into a thread pool with the number of threads equal to the number of available CPUs. So, you should increase CPUs if you want to increase job parallelization.
+The cores per system better correlate with the ingest throughput (and preservation actions throughput), as ingest and other jobs will be parallelized into a thread pool with the number of threads equal to the number of available CPUs.
+
+> So, you should increase CPUs if you want to increase job parallelization.
  
 _Question: Is the 150TB storage needed for disk storage, or for the tape storage. Should there be any buffer space on the disk? If so, how much?_
 
-That all depends on the behaviour of your institutions, how much time their content takes to ingest, if the content is submitted sparsely or all at once, if ingest assessment is enabled, if they use the restore from meemoo function frequently and/or with a lot of content, if meemoo availability is better than what was observed during the pilot.
+> That all depends on the behaviour of your institutions, how much time their content takes to ingest, if the content is submitted sparsely or all at once, if ingest assessment is enabled, if they use the restore from meemoo function frequently and/or with a lot of content, if meemoo availability is better than what was observed during the pilot.
 
 With 150TB on disk would allow to have all content (130TB) available in RODA at any point. If you limit the users to have their content in meemoo (tapes) but cannot restore it in RODA due to lack of disk space, then this would need to be managed with them.
 
