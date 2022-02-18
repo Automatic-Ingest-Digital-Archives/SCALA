@@ -1,5 +1,17 @@
 # RODA Required Setup For 150TB Storage
 
+### _Question: Which components are currently running on the server?_
+
+You currently have the following components:
+
+-	Docker 20.10.5
+-	Docker compose 1.25.0
+-	RODA 4.2.0
+-	Apache Solr 7.7.3
+-	Traefik 2.0.7
+
+Besides that you also have an SFTP server that was installed and is managed by Herwig. RODA component includes other sub-components, like Siegfried, ClamAV, and tools installed by the plugins.
+
 ### _Question: What RODA setup would allow us to archive and work with ~130TB of data?_
 
 If the 130TB are composed of very large files, and therefore there are few files, you'd be able to cope with the current setup given that you upgrade de amount of storage (currently you have 3TB available).
