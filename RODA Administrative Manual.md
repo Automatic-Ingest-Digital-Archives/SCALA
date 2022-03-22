@@ -476,3 +476,58 @@ In terms of facets, the attributes added are the following:
 * Meemoo archive status
 	
 </details>
+	
+## API examples
+
+## Change descriptive metadata
+Descriptive metadata can be changed by executing a PUT-request on the RODA API. You cannot change one metadata-element. You need to update a complete descriptive metadata file.
+
+Impact on the AIP:
+* The old metadata file is deleted and replaced with the new metadata file
+* An updateAIPDescriptiveMetadataFile log entry is created
+* NO preservation metadata are created --> This is bad and must be changed in future
+	
+Changing metadata files by API means that these won't go through a validation process! You need to know what you are doing. Always preserve an original copy of them.
+Do not really use this until an 'update' preservation event is being generated after changing descriptive metadata.
+	
+**method**
+
+```python
+import requests
+
+'''user input about the new metadata file'''
+metadata_file_name = 'scala_update.xml' # This does not affect name of the file in the AIP. This remains scala.xml 
+metadata_file_object = open(r'C:\Users\Wim Lo\Downloads\scala_update.xml','rb')
+content_type = 'text/xml' # optional (probably)
+
+'''user input about the AIP that is affected, that will be used in the request URL'''
+aip_id = "350e4deb-e9ad-46cd-8673-9aab6c5776b0"
+metadata_id = "scala.xml" # This will be unchanged after PUT-request
+metadataType = "EAD"
+metadataVersion = "2002"
+acceptFormat = 'json'
+
+'''Creation of all the request information for the API-call'''
+url_form = "https://scala.meemoo.be/api/v1/aips/{aip_id}/descriptive_metadata/{metadata_id}?metadataType={metadataType}&metadataVersion={metadataVersion}&acceptFormat={acceptFormat}"
+url = url_form.format(aip_id = aip_id, 
+                      metadata_id = metadata_id, 
+                      metadataType = metadataType, 
+                      metadataVersion = metadataVersion,
+                      acceptFormat = acceptFormat
+                     )
+# Roda's API only supports files sent in formData or a Multipart Encoded file
+# See: https://docs.python-requests.org/en/latest/user/quickstart/#post-a-multipart-encoded-file
+# See also second response in https://stackoverflow.com/questions/12385179/how-to-send-a-multipart-form-data-with-requests-in-python
+files = {'file': (metadata_file_name,metadata_file_object,content_type)}
+
+headers = {
+  'Authorization': 'Some Base 64 encoded credentials', #alternatively, use Requests' Auth parameter
+}
+
+'''Call to the API'''
+response = requests.request("PUT", url, headers=headers, files=files)
+
+print(response)
+print(response.text)
+```
+
