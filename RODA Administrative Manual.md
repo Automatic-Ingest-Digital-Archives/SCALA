@@ -479,7 +479,7 @@ In terms of facets, the attributes added are the following:
 	
 ## API examples
 
-## Change descriptive metadata
+### Change descriptive metadata
 Descriptive metadata can be changed by executing a PUT-request on the RODA API. You cannot change one metadata-element. You need to update a complete descriptive metadata file.
 
 Impact on the AIP:
