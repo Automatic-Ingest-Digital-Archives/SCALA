@@ -22,6 +22,6 @@
 
 ## AIP to MAM
 
-### Submitting AIPs from RODA to MAM
+### Submitting AIPs from RODA to MAM for permanent storage
 
 ### Retrieving AIPs from MAM to RODA for editing
