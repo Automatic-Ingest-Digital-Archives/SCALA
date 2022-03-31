@@ -4,9 +4,10 @@ SCALA is a joint project of nine heritage institutions in Flanders and Brussels 
 
 SCALA is a pioneer in Flanders with the use of E-ARK and as a result organizes an E-ARK working group with external partners, with whom they want to arrive at a Flemish standard model for information packages. This model should promote sustainability, system independence and collaboration.
 
-To get familiar with and start using the pilot preservation system, please start by reading the SCALA IP Ingestion Manual.
+To get familiar with the pilot preservation system, please start by reading the SCALA Workflow. Then to start using the system, consult the SCALA IP Ingestion Manual.
    
 ## SCALA IP Ingestion
+* [SCALA Workflow](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20Workflow.md)
 * [SCALA IP Ingestion Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20IP%20Ingestion%20Manual.md)
 * [Descriptive Metadata Requirements](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md)
 
