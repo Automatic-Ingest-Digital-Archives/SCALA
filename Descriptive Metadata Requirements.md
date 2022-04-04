@@ -42,7 +42,7 @@ __Example of a correct xml:__
 				<ns0:corpname>Vai</ns0:corpname>
 			</ns0:repository>
 			<ns0:origination label="creator">
-				<ns0:name>Vai</ns0:name>
+				<ns0:name>Christian Kieckens</ns0:name>
 			</ns0:origination>
 			<ns0:origination label="producer">
 				<ns0:name>SCALA</ns0:name>
