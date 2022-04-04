@@ -28,7 +28,7 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 |  |  |
 |--|--|
 | What | Create E-ARK2 SIPs by combining archival data and their respective descriptive metadata in structured way. |
-| How | RODA-In is our recommended SIP creation tool. Use it to select your data folders and automatically match descriptive metadata. Then you can make representation edits and add extra documentation if needed. Lastly generate E-ARK2 structured SIPS, with METS file and representations.</br></br>![image](https://user-images.githubusercontent.com/87436774/161509331-adc80ea2-8ad4-48a5-a5b1-8633440db885.png) |
+| How | RODA-In is our recommended SIP creation tool. Use it to select your data folders and automatically match descriptive metadata. Then you can make representation edits and add extra documentation if needed. Lastly generate E-ARK2 structured SIPS, with METS file and representations.</br>![image](https://user-images.githubusercontent.com/87436774/161509331-adc80ea2-8ad4-48a5-a5b1-8633440db885.png) |
 | Where | You can download the latest RODA-In version [here](https://rodain.roda-community.org/). |
 | Video example | Coming soon! |
 
@@ -38,28 +38,34 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 
 |  |  |
 |--|--|
-| What |  |
-| How |  |
-| Where |  |
+| What | Upload SIPs to a dedicated SFTP server using an FTP client. |
+| Why | Once uploaded to the server, the RODA tool can automatically start ingesting the SIPs and transform them into AIPs. |
+| How | Download an FTP client and connect to the server. Upload SIPs and mark them as 'ready for ingestion by RODA'.</br>![image](https://user-images.githubusercontent.com/87436774/161511035-c9e7fcfd-4818-4dc0-8e1a-b33666880092.png)|
+| Where | Any FTP client you can find online should work, such as WinSCP. Contact a server administration at meemoo to get the required connection details for the server. |
 | Video example | Coming soon! |
 
-### 2.2. Transform SIPs to AIPs using the AIDA ingest workflow in RODA
+### 2.2. Transform SIPs into AIPs using the AIDA ingest workflow in RODA
 
 |  |  |
 |--|--|
-| What |  |
-| How |  |
-| Where |  |
+| What | Transform uploaded SIPs into AIPs in RODA. |
+| How | Automatically! SIPs on the SFTP server are picked up and go through an AIDA ingest workflow where several plugins do checks and transformations on the SIP. This results in an E-ARK2 AIP if no issues were found. |
+| Where | The ingest process can be tracked on the [RODA process tab](https://scala.meemoo.be/#ingest/process). |
 | Video example | Coming soon! |
 
-#### 2.2.1. AIDA ingest workflow steps
+#### AIDA ingest workflow steps
 
-|  |  |
-|--|--|
-| What |  |
-| How |  |
-| Where |  |
-| Video example | Coming soon! |
+RODA executes the following plugins in order during the AIDA ingest workflow.
+
+1. **E-ARK SIP2 to AIP** - Checks if the IP is correct according to E-ARK validators.
+1. **Remove unwanted files** - A blacklist is maintained with useless file formats that are automatically extracted from the SIP. This blacklist can be expanded if necessary.
+1. **Antivirus** - Scans information package(s) for malicious content using the antivirus application ClamAV. If malicious software is detected, a report is generated and a PREMIS event records this action.
+1. **Descriptive metadata validation** - Checks that descriptive metadata exists in the information package and that it is valid according to the XML Schemas (XSD) installed in the repository. A validation report is generated indicating which information packets have valid and invalid metadata.
+1. **Fixity information computation**
+1. **File format identification (Siegfried)**
+1. **Verify user authorization**
+1. **Generate meemoo descriptive metadata**
+1. **Auto accept IP**
 
 #### 2.2.2. Consult AIW progress and results
 
