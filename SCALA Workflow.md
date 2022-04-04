@@ -66,10 +66,6 @@ RODA executes the following plugins in order during the AIDA ingest workflow.
 1. **Verify user authorization** - Each institution can arrange its AIPs in a tree/folder structure according to its own wishes. Each user can be set to which parts he/she has access. This process checks whether the user has sufficient rights to place the AIP at the desired level in the classification scheme/tree.</br>![image](https://user-images.githubusercontent.com/87436774/161523140-c1e88207-45fb-4933-a861-4355cd42f3e1.png)
 1. **Generate meemoo descriptive metadata** - Create descriptive metadata with information to use when integrating with meemoo MAM. Put this in a meemoo.xml file.</br>![image](https://user-images.githubusercontent.com/87436774/161523222-0dfe1ad4-5cfa-428a-91fb-6fc801355ac5.png)
 
-#### Consult AIW progress and results
-
-![image](https://user-images.githubusercontent.com/87436774/161524127-a1683433-7588-45ce-bc39-5b57712c60f6.png)
-
 ### 2.3. Edit AIPs in RODA
 
 |  |  |
