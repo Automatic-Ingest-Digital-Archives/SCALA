@@ -50,57 +50,51 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 |--|--|
 | What | Transform uploaded SIPs into AIPs in RODA. |
 | How | Automatically! SIPs on the SFTP server are picked up and go through an AIDA ingest workflow where several plugins do checks and transformations on the SIP. This results in an E-ARK2 AIP if no issues were found. |
-| Where | The ingest process can be tracked on the [RODA process tab](https://scala.meemoo.be/#ingest/process). |
+| Where | The ingest process can be tracked on the [RODA process tab](https://scala.meemoo.be/#ingest/process). You will need to request RODA login credentials with your organization. |
 | Video example | Coming soon! |
 
 #### AIDA ingest workflow steps
 
 RODA executes the following plugins in order during the AIDA ingest workflow.
 
-1. **E-ARK SIP2 to AIP** - Checks if the IP is correct according to E-ARK validators.
-1. **Remove unwanted files** - A blacklist is maintained with useless file formats that are automatically extracted from the SIP. This blacklist can be expanded if necessary.
-1. **Antivirus** - Scans information package(s) for malicious content using the antivirus application ClamAV. If malicious software is detected, a report is generated and a PREMIS event records this action.
-1. **Descriptive metadata validation** - Checks that descriptive metadata exists in the information package and that it is valid according to the XML Schemas (XSD) installed in the repository. A validation report is generated indicating which information packets have valid and invalid metadata.
-1. **Fixity information computation**
-1. **File format identification (Siegfried)**
-1. **Verify user authorization**
-1. **Generate meemoo descriptive metadata**
-1. **Auto accept IP**
+1. **E-ARK SIP2 to AIP** - Checks if the IP is correct according to E-ARK validators.</br>![image](https://user-images.githubusercontent.com/87436774/161522613-06bb421d-d153-4736-93ec-f08dac8ae681.png)
+1. **Remove unwanted files** - A blacklist is maintained with useless file formats that are automatically extracted from the SIP. This blacklist can be expanded if necessary.</br>![image](https://user-images.githubusercontent.com/87436774/161522802-49434bd2-946b-4887-b9b6-eda50f859928.png)
+1. **Antivirus** - Scans information package(s) for malicious content using the antivirus application ClamAV. If malicious software is detected, a report is generated and a PREMIS event records this action.</br>![image](https://user-images.githubusercontent.com/87436774/161522881-e4b2f078-8f55-47ef-b9d5-f2ef1bd4fad1.png)
+1. **Descriptive metadata validation** - Checks that descriptive metadata exists in the information package and that it is valid according to the XML Schemas (XSD) installed in the repository. A validation report is generated indicating which information packets have valid and invalid metadata.</br>![image](https://user-images.githubusercontent.com/87436774/161522958-5627d9a8-f388-425a-ae31-efcae7083dc1.png)
+1. **Fixity information computation** - Calculates the file fixity information (also known as checksum) for all data files within an AIP, representation, or file and stores this information in PREMIS objects.</br>![image](https://user-images.githubusercontent.com/87436774/161523009-76ce0ff3-badc-4645-a924-5b8cca22bd86.png)
+1. **File format identification (Siegfried)** - Identifies the file format and version of data files contained in information packages using the Siegfried tool. Like DROID, Siegfried identifies files based on digital file signatures stored in the PRONOM database. The job updates the PREMIS object metadata in the information package to store the format identification results. A PREMIS event is logged after the task is executed.</br>![image](https://user-images.githubusercontent.com/87436774/161523072-26c363b2-6c09-4ef2-a121-36e8e9888245.png)
+1. **Verify user authorization** - Each institution can arrange its AIPs in a tree/folder structure according to its own wishes. Each user can be set to which parts he/she has access. This process checks whether the user has sufficient rights to place the AIP at the desired level in the classification scheme/tree.</br>![image](https://user-images.githubusercontent.com/87436774/161523140-c1e88207-45fb-4933-a861-4355cd42f3e1.png)
+1. **Generate meemoo descriptive metadata** - Create descriptive metadata with information to use when integrating with meemoo MAM. Put this in a meemoo.xml file.</br>![image](https://user-images.githubusercontent.com/87436774/161523222-0dfe1ad4-5cfa-428a-91fb-6fc801355ac5.png)
 
-#### 2.2.2. Consult AIW progress and results
+#### Consult AIW progress and results
+
+![image](https://user-images.githubusercontent.com/87436774/161524127-a1683433-7588-45ce-bc39-5b57712c60f6.png)
+
+### 2.3. Edit AIPs in RODA
 
 |  |  |
 |--|--|
-| What |  |
-| How |  |
-| Where |  |
+| What | Edit AIPs in RODA and mark them for long-term storage. |
+| How | In the RODA catalogue you will have be able to find and inspect all your AIPs.</br>![image](https://user-images.githubusercontent.com/87436774/161526406-50cc9282-2dd2-4d55-858f-17bd21cc13f1.png)</br>You can update the content of data representations or descriptive metadata, or run new process plugins on your AIPs.</br>![image](https://user-images.githubusercontent.com/87436774/161526722-e5c505f7-fe98-4e93-b6ea-a22f9e8e1579.png)</br>These actions result in PREMIS events which are added to the AIPs.</br>![image](https://user-images.githubusercontent.com/87436774/161526543-17ff48c8-a4ac-4797-bfc7-883a56346f8e.png)</br>When you are done, you can mark your AIPs for long-term storage. |
+| Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. You can use it to search, select and edit AIPs. |
 | Video example | Coming soon! |
 
-### 3. Edit and assess AIPs in RODA
+## 3. AIP to MAM
 
-## 3.1. AIP to MAM
+### 3.1. Submit AIPs from RODA to MAM for permanent storage
 
 |  |  |
 |--|--|
-| What |  |
-| How |  |
-| Where |  |
+| What | Select AIPs to be stored long-term on the meemoo MAM. |
+| How | Select all AIPs you wish to store. Then start the 'Submit  AIP to meemoo' plugin.</br>![image](https://user-images.githubusercontent.com/87436774/161527535-8937e2d4-a670-4301-9d84-3446b23cf24c.png)</br>The AIPs will then be submitted to the meemoo MAM. You can follow the progress of this job in RODA. Each AIP will have meemoo metadata present in RODA. This metadata details the synchronization status with MAM.</br>![image](https://user-images.githubusercontent.com/87436774/161529320-7a4fc8f1-8287-48d2-97eb-277a1557fc1c.png)</br>After the AIPs have been safely stored on the MAM, you can choose to remove the data representations in RODA. This way, you keep working memory available in RODA for new processes. The metadata will remain in RODA however, allowing you to keep using its search engine for looking up AIPs. The process of removing data representations is called pruning, and it can be reversed by restoring data from MAM to RODA using 'unpruning'.</br> ![image](https://user-images.githubusercontent.com/87436774/161530342-2ee7a0fd-5c20-4e1c-8293-dbfc1afd35ca.png)</br>![image](https://user-images.githubusercontent.com/87436774/161530432-434658ad-0253-421f-9f60-0155c1e597b0.png)|
+| Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. Simply select the AIPs you want to submit to MAM, prune or unprune. Then execute the desired plugin. |
 | Video example | Coming soon! |
 
-### 3.2. Submit AIPs from RODA to MAM for permanent storage
+### 3.2. Retrieve AIPs from MAM to RODA for updating
 
 |  |  |
 |--|--|
-| What |  |
-| How |  |
-| Where |  |
-| Video example | Coming soon! |
-
-### 3.3. Retrieve AIPs from MAM to RODA for editing
-
-|  |  |
-|--|--|
-| What |  |
-| How |  |
-| Where |  |
+| What | Retrieve AIP representation data from MAM to RODA and make updates to it. |
+| How | Select the 'restore pruned representations from meemoo' process and execute it on AIPs to restore their data representations. You can then further edit the data or run other plugins on it. |
+| Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. Select the AIPs you want to retrieve data representations from and then execute the 'restore pruned representations from meemoo' plugin. |
 | Video example | Coming soon! |
