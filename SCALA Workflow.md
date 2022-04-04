@@ -1,10 +1,10 @@
 # SCALA Workflow
 
-## Raw data to SIP
+## Archival data to SIP
 
-### Extraction of raw data from archive management tool
+### Extraction of archival data from archive management system
 
-### Extraction of descriptive metadata from archive management tool
+### Extraction of descriptive metadata from archive management system
 
 ### Creating SIPs using RODA-In
 
