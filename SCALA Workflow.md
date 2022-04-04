@@ -57,7 +57,9 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 
 RODA executes the following plugins in order during the AIDA ingest workflow.
 
-1. **E-ARK SIP2 to AIP** - Checks if the IP is correct according to E-ARK validators.</br>![image](https://user-images.githubusercontent.com/87436774/161522613-06bb421d-d153-4736-93ec-f08dac8ae681.png)
+![image](https://user-images.githubusercontent.com/87436774/161570039-4e7c4b68-cf73-4c10-952e-35d6ba8983fc.png)
+
+1. **E-ARK SIP2 to AIP** - Checks if the IP is correct according to the [commons IP E-ARK validator tool](https://github.com/keeps/commons-ip#:~:text=Notifications-,Commons%20IP%20is%20project%20that%20provide%20a%20command%2Dline%20tool,validate%20them%20against%20official%20specifications.).</br>![image](https://user-images.githubusercontent.com/87436774/161522613-06bb421d-d153-4736-93ec-f08dac8ae681.png)
 1. **Remove unwanted files** - A [blacklist](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/FileName%26ExtensionBlacklist.md) is maintained with useless file formats that are automatically extracted from the SIP. This blacklist can be expanded if necessary.</br>![image](https://user-images.githubusercontent.com/87436774/161522802-49434bd2-946b-4887-b9b6-eda50f859928.png)
 1. **Antivirus** - Scans information package(s) for malicious content using the antivirus application ClamAV. If malicious software is detected, a report is generated and a PREMIS event records this action.</br>![image](https://user-images.githubusercontent.com/87436774/161522881-e4b2f078-8f55-47ef-b9d5-f2ef1bd4fad1.png)
 1. **Descriptive metadata validation** - Checks that descriptive metadata exists in the information package and that it is valid according to the XML Schemas (XSD) installed in the repository. A validation report is generated indicating which information packets have valid and invalid metadata.</br>![image](https://user-images.githubusercontent.com/87436774/161522958-5627d9a8-f388-425a-ae31-efcae7083dc1.png)
