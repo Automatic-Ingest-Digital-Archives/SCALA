@@ -98,3 +98,12 @@ RODA executes the following plugins in order during the AIDA ingest workflow.
 | How | Select the 'restore pruned representations from meemoo' process and execute it on AIPs to restore their data representations. You can then further edit the data or run other plugins on it. |
 | Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. Select the AIPs you want to retrieve data representations from and then execute the 'restore pruned representations from meemoo' plugin. |
 | Video example | Coming soon! |
+
+### 3.3. Inspect AIPs in MAM
+
+|  |  |
+|--|--|
+| What | Confirm that your AIPs are stored in the MAM. |
+| How | Log into the MAM site and search for your AIPs using the search bar.</br>![image](https://user-images.githubusercontent.com/87436774/161540816-12af1423-d06b-46e9-af96-b7e09e55cfbe.png) |
+| Where | You can log into the MAM [here](https://archief-qas.viaa.be/index.php/search?fa%5B%5D=dtag%3A%22root%3Eorganisation_name%3Eapa%22&q%5B%5D=&csid=61765d6e97c24&view=list&limit=&sort=&per_page=0&sd=&ed=). Request user credentials via your meemoo contact. |
+| Video example | Coming soon! |
