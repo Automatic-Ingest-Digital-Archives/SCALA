@@ -4,8 +4,7 @@
 
 ## Plugins
 
-###
-<details><summary><b>Siegfried configuration</b></summary>
+### Siegfried configuration
 
 We normally use the Siegfried REST API, as the command bootstrap time per file is huge. We do an /identify/%s?base64=true&format=json and will keep the original Siegfried information under the representation other metadata. From it, we take the mime type, pronom, and format name and version if of the most prominent match. We currently don't use the basis, warning or other matches to record them in PREMIS.
 
@@ -30,10 +29,9 @@ Example:
 }
 ```
 
-</details>
 
-###
-<details><summary><b>Unoconv configuration</b></summary>
+
+### Unoconv configuration
   
 By default, unoconv will pick files with the selected file name extension OR MIME types OR PRONOM IDs.
   
@@ -136,10 +134,9 @@ core.tools.mimetype.image/jpeg = jpeg
   
 If there are mappings missing between certain extension(s) and PRONOM identifiers and MIME type identifiers, you can choose to add them as a parameter.
   
-</details>
 
-###
-<details><summary><b>Mandatory vs. optional ingest plugins</b></summary>
+
+### Mandatory vs. optional ingest plugins
   
 Mandatory plugins have to run and if they fail they will stop fail the ingestion. Optional plugins will not fail ingestion if they fail.
 	
@@ -158,20 +155,18 @@ For AIDA ingest workflow (1.0) the plugin optionality is as follows:
 | Meemoo descriptive metadata                     | Mandatory   |
 | Auto accept                                     | Mandatory   |
 
-</details>
 
-###
-<details><summary><b>Remove unwanted files</b></summary>
+
+### Remove unwanted files
   
 The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
 	
 This plugin checks through predetermined rules, if the AIP has any unwanted files. The rules configuration is under config named ingest.ignore, and contains the following default ones:
 ![image](https://user-images.githubusercontent.com/87436774/153424300-ee9b8ff0-424d-4aad-85bb-61f2eb470788.png)
   
-</details>
 
-###
-<details><summary><b>Meemoo descriptive metadata</b></summary>
+
+### Meemoo descriptive metadata
   
 The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
 	
@@ -180,10 +175,9 @@ This plugin creates a descriptive metadata with information for __Meemoo__ API i
 
 This plugin will create a descriptive metadata file with the information represented above, such as the auto submission flag, if the AIP is pruned or not, the initial synchronization AIP status **“on_roda”** and the notification email.
   
-</details>
 
-###
-<details><summary><b>AIDA specific preservation actions</b></summary>
+
+### AIDA specific preservation actions
 	
 The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
 	
@@ -201,26 +195,23 @@ ImageMagick is a tool that can read and write images in a variety of formats (ov
 	
 Converts office files using the “unoconv” (Universal Office Converter), which uses LibreOffice to convert Office files. The results of conversion will be placed on a new representation under the same Archival Information Package (AIP) where the files were originally found. A PREMIS event is also recorded after the task is run. “unoconv” is a tool that converts between any document format that OpenOffice understands. It uses OpenOffice's UNO bindings for non-interactive conversion of documents. Supported document formats include Open Document Format (odt), MS Word (doc), MS Office Open/MS OOXML (ooxml), Portable Document Format (pdf), HTML (html), XHTML (xhtml), RTF (rtf), Docbook (docbook), and more. The outcome of this task is the creation of a new OpenOffice (and thus unoconv) that supports various import and export formats. Not all formats that can be imported can be exported and vice versa. For a full list of supported formats, please visit - http://dag.wiee.rs/home-made/unoconv/.
 	
-</details>
 
-###
-<details><summary><b>All commercial plugins</b></summary>
+
+### All commercial plugins
   
 Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/RODA%20plugins.pdf).
   
-</details>
+
 
 ## Data Management
 
-###
-<details><summary><b>RODA API documentation</b></summary>
+### RODA API documentation
   
 [API documentation](https://demo.roda-community.org/api-docs/).
   
-</details>
 
-###
-<details><summary><b>Solr querying</b></summary>
+
+### Solr querying
   
 URL: https://scala.meemoo.be/solr/#/.
   
@@ -230,12 +221,11 @@ KEEP training Solr use cases and exercises: https://github.com/Automatic-Ingest-
   
 KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/Solr%20exercises%20answers.txt.
 
-</details>
+
 
 ## Features
 
-###
-<details><summary><b>RODA AIP storage</b></summary>
+### RODA AIP storage
 	
 |Task||
 |----|-----|
@@ -244,10 +234,9 @@ KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives
 | Prune AIP in RODA|Pruning an AIP includes removing PREMIS files and other technical metadata. This results in pruned AIPs having less information for reporting. Therefore, pruning should generally not be done.</br>![image](https://user-images.githubusercontent.com/87436774/138085338-43ad9e04-92d5-424b-90fc-f5ef338734ce.png)|
 | Restore pruned AIP representations from meemoo to in RODA|![image](https://user-images.githubusercontent.com/87436774/138085445-8f54ec7f-75f2-4563-bd16-19c03fc360da.png)|
 		
-</details>
 
-###
-<details><summary><b>RODA AIP editing</b></summary>
+
+### RODA AIP editing
 
 |Task||
 |----|-----|
@@ -258,10 +247,9 @@ KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives
 | Create new representation automatically after running plugin | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/representation%202.png)</br>Deselect "Create dissemination".|
 | Set status of representation | ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/representation%203.png)</br> ![](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/representation%204.png)|
 	
-</details>
 
-###
-<details><summary><b>RODA AIP searching</b></summary>
+
+### RODA AIP searching
 
 |Task||
 |----|-----|
@@ -271,10 +259,9 @@ KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives
 | Search field | ![image](https://user-images.githubusercontent.com/87436774/138086973-c0cb4230-cce4-493b-a074-efe077477438.png)|
 | Advanced search field | ![image](https://user-images.githubusercontent.com/87436774/138087110-fea88151-0a69-4704-874c-e0607ceb4759.png)|
 	
-</details>
 
-###
-<details><summary><b>RODA AIP plugins</b></summary>
+
+### RODA AIP plugins
 	
 | Workflow| Details|
 |---------|--------|
@@ -298,10 +285,9 @@ KEEP training Solr answers: https://github.com/Automatic-Ingest-Digital-Archives
 | Submit AIP to Meemoo (1.0)| AIP submission plugin for MEEMOO integrated serviceCategories: Meemoo|
 | Verify user authorization (1.0) | Checks if the user has enough permissions to place the AIP under the desired node in the classification schemeCategories: validation |
 	
-</details>
 
-###
-<details><summary><b>Activating full-text search</b></summary>
+
+### Activating full-text search
   
 You need to activate the full-text by running the full-text plugin, either on ingest or afterwards (e.g. restore from meemoo). The plugin is called "Feature extraction (Apache Tika)" and runs Apache Tika to perform, optionally:
 
@@ -310,28 +296,25 @@ You need to activate the full-text by running the full-text plugin, either on in
 
 Please note that extracting full text will require much more index size capabilities.
   
-</details>
 
-###
-<details><summary><b>AIDA default ingest workflow</b></summary>
+
+### AIDA default ingest workflow
   
 The AIDA ingest workflow (1.0) runs the following plugins in order:
 	
 ![image](https://user-images.githubusercontent.com/87436774/148739625-e2563688-5a28-4e7b-a7a5-9ffb5a5d7131.png)
 
-</details>
 
-###
-<details><summary><b>AIP pruning</b></summary>
+
+### AIP pruning
 
 Pruning is the process of removing all representations from an AIP. The aim is to save storage space while still leaving searchable metadata. Later one can unprune an AIP to restore all representations.
 
 However, in RODA, pruning also removes representation level PREMIS files and other technical metadata. This results in pruned AIPs having less information for reporting. Therefore, pruning in RODA should generally not be done.
   
-</details>
 
-###
-<details><summary><b>Orphaned IPs</b></summary>
+
+### Orphaned IPs
 
 If a child IP (IP with reference to a parent IP) is accepted in the catalogue, but its parent is not (or not yet), it will be an orphan IP. Orphaned IPs appear under a ghost node in the organization repository.
   
@@ -339,10 +322,9 @@ If a child IP (IP with reference to a parent IP) is accepted in the catalogue, b
 
 It is currently unclear who you can easily search/retrieve all orphaned IPs.
   
-</details>
 
-###
-<details><summary><b>Internal actions</b></summary>
+
+### Internal actions
   
 Internal actions are complex tasks performed by the repository as background jobs that enhance the user experience by not blocking the user interface during long lasting operations. Examples of such operations are: moving AIPs, reindexing parts of the repository, or deleting a large number of files. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
 
@@ -358,10 +340,9 @@ Report example:
 | 189796fb-007a-465d-9ac3-723a73705036-c084632a-5e66-4ccd-a9be-6ab01cf5950e-c084632a-5e66-4ccd-a9be-6ab01cf5950e | 189796fb-007a-465d-9ac3-723a73705036 | AIP appraisal | c084632a-5e66-4ccd-a9be-6ab01cf5950e | ingenium18[047]05 (kopie) 2 | org.roda.core.data.v2.ip.AIP | []                | c084632a-5e66-4ccd-a9be-6ab01cf5950e | ingenium18[047]05 (kopie) 2 | org.roda.core.data.v2.ip.AIP | CREATED            | Update AIP permissions recursively | Wed Dec 08 07:59:22 UTC 2021 | Wed Dec 08 07:59:23 UTC 2021 | 100         | 1                    | 1              | org.roda.core.plugins.plugins.internal.AppraisalPlugin | Update AIP permissions recursively | 1.0        | SUCCESS       | The AIP 'c084632a-5e66-4ccd-a9be-6ab01cf5950e' was accepted into the repository. | FALSE         | []                | []                | [Report [id=189796fb-007a-465d-9ac3-723a73705036-c084632a-5e66-4ccd-a9be-6ab01cf5950e-c084632a-5e66-4ccd-a9be-6ab01cf5950e, jobId=189796fb-007a-465d-9ac3-723a73705036, sourceObjectId=c084632a-5e66-4ccd-a9be-6ab01cf5950e, sourceObjectClass=org.roda.core.data.v2.ip.AIP, sourceObjectOriginalIds=[], outcomeObjectId=c084632a-5e66-4ccd-a9be-6ab01cf5950e, outcomeObjectClass=org.roda.core.data.v2.ip.AIP, outcomeObjectState=CREATED, title=Update AIP permissions recursively, dateCreated=Wed Dec 08 07:59:22 UTC 2021, dateUpdated=Wed Dec 08 07:59:23 UTC 2021, completionPercentage=0, stepsCompleted=0, totalSteps=1, plugin=org.roda.core.plugins.plugins.internal.AppraisalPlugin, pluginName=Update AIP permissions recursively, pluginVersion=1.0, pluginState=SUCCESS, pluginIsMandatory=true, pluginDetails=The AIP 'c084632a-5e66-4ccd-a9be-6ab01cf5950e' was accepted into the repository., htmlPluginDetails=false, reports=[]]] |         |
 | 189796fb-007a-465d-9ac3-723a73705036-5590bdbf-332f-4965-8918-c77740d22459-5590bdbf-332f-4965-8918-c77740d22459 | 189796fb-007a-465d-9ac3-723a73705036 | AIP appraisal | 5590bdbf-332f-4965-8918-c77740d22459 | ingenium18[047]05 (kopie)   | org.roda.core.data.v2.ip.AIP | []                | 5590bdbf-332f-4965-8918-c77740d22459 | ingenium18[047]05 (kopie)   | org.roda.core.data.v2.ip.AIP | CREATED            | Update AIP permissions recursively | Wed Dec 08 07:59:22 UTC 2021 | Wed Dec 08 07:59:22 UTC 2021 | 100         | 1                    | 1              | org.roda.core.plugins.plugins.internal.AppraisalPlugin | Update AIP permissions recursively | 1.0        | SUCCESS       | The AIP '5590bdbf-332f-4965-8918-c77740d22459' was accepted into the repository. | FALSE         | []                | []                | [Report [id=189796fb-007a-465d-9ac3-723a73705036-5590bdbf-332f-4965-8918-c77740d22459-5590bdbf-332f-4965-8918-c77740d22459, jobId=189796fb-007a-465d-9ac3-723a73705036, sourceObjectId=5590bdbf-332f-4965-8918-c77740d22459, sourceObjectClass=org.roda.core.data.v2.ip.AIP, sourceObjectOriginalIds=[], outcomeObjectId=5590bdbf-332f-4965-8918-c77740d22459, outcomeObjectClass=org.roda.core.data.v2.ip.AIP, outcomeObjectState=CREATED, title=Update AIP permissions recursively, dateCreated=Wed Dec 08 07:59:22 UTC 2021, dateUpdated=Wed Dec 08 07:59:22 UTC 2021, completionPercentage=0, stepsCompleted=0, totalSteps=1, plugin=org.roda.core.plugins.plugins.internal.AppraisalPlugin, pluginName=Update AIP permissions recursively, pluginVersion=1.0, pluginState=SUCCESS, pluginIsMandatory=true, pluginDetails=The AIP '5590bdbf-332f-4965-8918-c77740d22459' was accepted into the repository., htmlPluginDetails=false, reports=[]]] |         |
   
-</details>
 
-###
-<details><summary><b>Preservation actions</b></summary>
+
+### Preservation actions
   
 Preservation actions are tasks performed on the contents of the repository that aim to enhance the accessibility of archived files or to mitigate digital preservation risks. Within RODA, preservation actions are handled by a job execution module. The job execution module allows the repository manager to run actions over a given set of data (AIPs, representations or files). Preservation actions include format conversions, checksum verifications, reporting (e.g. to automatically send SIP acceptance/rejection emails), virus checks, etc. Each operation is called a job, and each job leads to one or more reports (one report per AIP).
   
@@ -376,10 +357,9 @@ Report export example:
 | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-40bdb2ff-f314-3178-87c2-35005e9b6137-40bdb2ff-f314-3178-87c2-35005e9b6137 | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5 | Office documents conversion (unoconv) (7.0.4.2) | 40bdb2ff-f314-3178-87c2-35005e9b6137 |                          | PV INSCH.DOC                        | org.roda.core.data.v2.ip.File | []                      | 40bdb2ff-f314-3178-87c2-35005e9b6137 |                    | org.roda.core.data.v2.ip.DIP | ACTIVE             | Office documents conversion (unoconv) | Tue Nov 23 16:37:05 UTC 2021 | Tue Nov 23 16:37:05 UTC 2021 | 100                  | 1              | 1          | org.roda.core.plugins.external.UnoconvConvertPlugin | Office documents conversion (unoconv) | 7.0.4.2       | SUCCESS     | This file was ignored. | FALSE             | []                | []                  | [Report   [id=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-40bdb2ff-f314-3178-87c2-35005e9b6137-40bdb2ff-f314-3178-87c2-35005e9b6137,   jobId=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5,   sourceObjectId=40bdb2ff-f314-3178-87c2-35005e9b6137,   sourceObjectClass=org.roda.core.data.v2.ip.File, sourceObjectOriginalIds=[],   outcomeObjectId=40bdb2ff-f314-3178-87c2-35005e9b6137,   outcomeObjectClass=org.roda.core.data.v2.ip.DIP, outcomeObjectState=ACTIVE,   title=Office documents conversion (unoconv), dateCreated=Tue Nov 23 16:37:05   UTC 2021, dateUpdated=Tue Nov 23 16:37:05 UTC 2021, completionPercentage=0,   stepsCompleted=0, totalSteps=1,   plugin=org.roda.core.plugins.external.UnoconvConvertPlugin, pluginName=Office   documents conversion (unoconv), pluginVersion=7.0.4.2, pluginState=SUCCESS,   pluginIsMandatory=true, pluginDetails=This file was ignored.,   htmlPluginDetails=false, reports=[]]] |
 | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-56fa195f-fc2a-39a6-b113-45eebd46c72f-56fa195f-fc2a-39a6-b113-45eebd46c72f | c0ed7762-1f11-4ec6-9461-23d0dde7a0f5 | Office documents conversion (unoconv) (7.0.4.2) | 56fa195f-fc2a-39a6-b113-45eebd46c72f |                          | PV_INSCH.DOC                        | org.roda.core.data.v2.ip.File | []                      | 56fa195f-fc2a-39a6-b113-45eebd46c72f |                    | org.roda.core.data.v2.ip.DIP | ACTIVE             | Office documents conversion (unoconv) | Tue Nov 23 16:37:05 UTC 2021 | Tue Nov 23 16:37:05 UTC 2021 | 100                  | 1              | 1          | org.roda.core.plugins.external.UnoconvConvertPlugin | Office documents conversion (unoconv) | 7.0.4.2       | SUCCESS     | This file was ignored. | FALSE             | []                | []                  | [Report   [id=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5-56fa195f-fc2a-39a6-b113-45eebd46c72f-56fa195f-fc2a-39a6-b113-45eebd46c72f,   jobId=c0ed7762-1f11-4ec6-9461-23d0dde7a0f5,   sourceObjectId=56fa195f-fc2a-39a6-b113-45eebd46c72f,   sourceObjectClass=org.roda.core.data.v2.ip.File, sourceObjectOriginalIds=[],   outcomeObjectId=56fa195f-fc2a-39a6-b113-45eebd46c72f,   outcomeObjectClass=org.roda.core.data.v2.ip.DIP, outcomeObjectState=ACTIVE,   title=Office documents conversion (unoconv), dateCreated=Tue Nov 23 16:37:05   UTC 2021, dateUpdated=Tue Nov 23 16:37:05 UTC 2021, completionPercentage=0,   stepsCompleted=0, totalSteps=1,   plugin=org.roda.core.plugins.external.UnoconvConvertPlugin, pluginName=Office   documents conversion (unoconv), pluginVersion=7.0.4.2, pluginState=SUCCESS,   pluginIsMandatory=true, pluginDetails=This file was ignored.,   htmlPluginDetails=false, reports=[]]] |
   
-</details>
 
-###
-<details><summary><b>IP meemoo status data</b></summary>
+
+### IP meemoo status data
   
 RODA keeps track of the following data about IPs in regards to their status on meemoo.
 
@@ -393,10 +373,9 @@ RODA keeps track of the following data about IPs in regards to their status on m
 6. Archive status (None / On disk)
 7. Automatically submitted after ingestion (Yes / No)
   
-</details>
 
-###
-<details><summary><b>Meemoo sync</b></summary>
+
+### Meemoo sync
 	
 The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
   
@@ -456,10 +435,9 @@ After this process of restore is complete the plugin executes three additional p
 
 This plugin like the submission plugin creates a preservention event of the type **“Transfer”** at the repository level.
 	
-</details>
 
-###
-<details><summary><b>Access features</b></summary>
+
+### Access features
 	
 The following information is taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
 	
@@ -475,7 +453,7 @@ In terms of facets, the attributes added are the following:
 * Meemoo prune
 * Meemoo archive status
 	
-</details>
+
 	
 ## API examples
 
