@@ -22,8 +22,7 @@ over it.
 
 ## Pre-Ingestion
 
-###
-<details><summary><b>Archival data preparation</b></summary>
+### Archival data preparation
 
 #### Create your TS
 
@@ -76,17 +75,15 @@ If you are on Mac or Linux, you have to install the “tree” app. Windows has 
 |----|---------|
 |Delete system files <span title="The SCALA digital repository contains a delete system files function. However, including system files in your SIP includes a heavier METS-file. It is recommended to delete these before adding them in RODA-In."><i>[recommended]</i></span>|Make sure to only execute this step after Create a filelist and filetree [recommended].</br>Manually delete system files.|
 
-</details>
 
-###
-<details><summary><b>Descriptive metadata requirements</b></summary>
+
+### Descriptive metadata requirements
 
 [Requirements for descriptive metadata.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Descriptive%20Metadata%20Requirements.md)
 
-</details>
 
-###
-<details><summary><b>RODA-In SIP creation and repository classification scheme</b></summary>
+
+### RODA-In SIP creation and repository classification scheme
 
 Make sure you install and configure RODA-In according to the [RODA-In Installation & Configuration](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA-In%20Installation%20&%20Configuration.md) instructions.
 	
@@ -106,12 +103,11 @@ Make sure you install and configure RODA-In according to the [RODA-In Installati
 |----|-----|
 |Using your repository classification scheme|You can download the AIP structural information from your repository. This is called the classification scheme. To use the classification scheme, go to RODA menu Ingest > Pre-ingest and download the classification scheme.</br>![image](https://user-images.githubusercontent.com/87436774/153401950-526493a0-3d97-4f13-ae4d-e2f15c316d46.png)</br>Then you can for example load it into RODA-In, and then you can drag'n'drop SIPs to a specific node under your organization.</br>![image](https://user-images.githubusercontent.com/87436774/153402235-de857e98-f0ce-4568-9ac9-5de7af76ce01.png)</br>Click the load button in RODA-In and then select the classification scheme json file you downloaded from RODA.|
 
-</details>
+
 
 ## Ingestion
 
-###
-<details><summary><b>RODA account, FTP client and meemoo connection</b></summary>
+### RODA account, FTP client and meemoo connection
 
 |Task||
 |----|-----|
@@ -131,10 +127,9 @@ This is better suited to transfer large SIPs to RODA instead of using their webs
 |----|-----|
 |Connect to RODA on meemoo via FTP|Create a <a href="https://accounts-qas.meemoo.be/pwm/public/ForgottenPassword">meemoo user account</a>.</br>Open your FTP client.</br>Use settings:</br>* File protocol: SFTP</br>* Host name: 193.190.71.178 OR scala-sftp.meemoo.be</br>* Port number: 22</br>* User name: [your meemoo username]</br>* Password: [your meemoo password]</br></br>Login and connect to the server.</br><img src="https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Pictures/Picture18.png">|
 
-</details>
 
-###
-<details><summary><b>RODA AIP creation</b></summary>
+
+### RODA AIP creation
 
 |Task||
 |----|-----|
@@ -148,13 +143,8 @@ Alternatively, you can [upload and ingest SIPs via HTTPS](https://github.com/Aut
 |Restart failed/interrupted ingest processes|In RODA, you can go to Ingest > Transfer and search for the content you have uploaded. Then choose "Select all pages" and then "Start new process". There you need to select the same ingest parameters, including Parent node, OR identifier and ingest finished email notification.|
 
 	
-</details>
-
-###
-<details><summary><b>RODA AIP assessment</b></summary>
+### RODA AIP assessment
 
 |Task||
 |----|-----|
 |AIP assessment|![image](https://user-images.githubusercontent.com/87436774/138085894-e06e3476-a3d7-4d9a-8eea-e122262d366f.png)</br>Assessment is the process of determining whether records and other materials have permanent (archival) value. Assessment may be done at the collection, creator, series, file, or item level.|
-
-</details>
