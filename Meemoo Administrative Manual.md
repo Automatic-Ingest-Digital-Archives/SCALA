@@ -1,16 +1,12 @@
 # Meemoo Administrative Manual
 
-###
-<details><summary><b>View AIPs on meemoo</b></summary>
+## View AIPs on meemoo
 
 |Task||
 |----|-----|
 |Log into meemoo QAS|[Meemoo QAS site](https://archief-qas.viaa.be/).</br>Username and password are the same as for the meemoo FTP server login.|
 
-</details>
-
-##
-<details><summary><b>Archiving on meemoo</b></summary>
+## Archiving on meemoo
   
 Meemoo keeps its own version of documentation for the project on https://meemoo.atlassian.net/wiki/spaces/SRP/overview?homepageId=3171909795.
   
@@ -176,10 +172,9 @@ Example of metadata in meemoo Mediahaven. It contains information from the sidec
 }
 ```
   
-</details>
 
-##
-<details><summary><b>Meemoo AIP querying</b></summary>
+
+## Meemoo AIP querying
   
 Querying the meemoo API for AIPs is based on the key dc_identifier_localidsScalaID. There are two versions of the API (v1 and v2). Make sure you are logged into the meemoo qas.
   
@@ -195,10 +190,9 @@ Example: https://archief-qas.viaa.be/mediahaven-rest-api/v2/records?q=%2B(dc_ide
 
 General info about the REST API: https://developer.meemoo.be/docs/development/#rest-api.
   
-</details>
 
-##
-<details><summary><b>MAM access rights information</b></summary>
+
+## MAM access rights information
   
 Accessibility is defined in the following boolean fields. The default settings are:
 
@@ -251,5 +245,3 @@ However, all settings in meemoo should be implementations of the original Access
 AIDA will probably always opt for keeping access rights information outside the AIP-package, since this information is prone to change and since it is not essential for safeguarding the AIP’s authenticity, integrity, useability and findability.
 
 If however integration of Access Rights Information would be necessary within the AIP-package, this can be done by using PREMIS rights information or by adding a descriptive metadata file containing the access rights information. It is up to each partner to foresee a mapping from its conventions to the general AIDA convention. However, this general AIDA convention will  only be established when necessary. Therefore, it is highly recommended that an AIDA partner uses established practices in the archival world, like PREMIS rights, EAD or RiC-CM.
-  
-</details>
