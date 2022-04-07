@@ -2,9 +2,9 @@
 
 Here you can find a description of the steps involved in the SCALA workflow. Following these steps allows you to transfer archival data into SIPs, then into AIPs and finally have them stored on disk for permanent storage.
 
-## 1. Archival data to SIP
+## Archival data to SIP
 
-### 1.1. Extract archival data from your archive management system
+### Extract archival data from your archive management system
 
 |  |  |
 |--|--|
@@ -13,7 +13,7 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 | Where | Your archival data is probably in your company's archive management system. |
 | Video example | Coming soon! |
 
-### 1.2. Extract descriptive metadata from your archive management system
+### Extract descriptive metadata from your archive management system
 
 |  |  |
 |--|--|
@@ -23,7 +23,7 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 | Where | Ideally you can export this data as an XML per SIP from your archive management system. Otherwise you will have to create the XMLs yourself. |
 | Video example | Coming soon! |
 
-### 1.3. Create SIPs using RODA-In
+### Create SIPs using RODA-In
 
 |  |  |
 |--|--|
@@ -32,9 +32,9 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 | Where | You can download the latest RODA-In version [here](https://rodain.roda-community.org/). |
 | Video example | Coming soon! |
 
-## 2. SIP to AIP
+## SIP to AIP
 
-### 2.1. Upload SIPs to a dedicated SFTP server
+### Upload SIPs to a dedicated SFTP server
 
 |  |  |
 |--|--|
@@ -44,7 +44,7 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 | Where | Any FTP client you can find online should work, such as WinSCP. Contact a server administration at meemoo to get the required connection details for the server. |
 | Video example | Coming soon! |
 
-### 2.2. Transform SIPs into AIPs using the AIDA ingest workflow in RODA
+### Transform SIPs into AIPs using the AIDA ingest workflow in RODA
 
 |  |  |
 |--|--|
@@ -68,7 +68,7 @@ RODA executes the following plugins in order during the AIDA ingest workflow. Pl
 1. **Verify user authorization** - Checks whether the user has sufficient rights to ingest AIPs for the organization.
 1. **Generate meemoo descriptive metadata** - Create a [meemoo.xml](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Administrative%20Manual.md#meemoo-descriptive-metadata) file with descriptive metadata detailing the synchronization status with meemoo MAM.
 
-### 2.3. Edit AIPs in RODA
+### Edit AIPs in RODA
 
 |  |  |
 |--|--|
@@ -77,9 +77,9 @@ RODA executes the following plugins in order during the AIDA ingest workflow. Pl
 | Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. You can use it to search, select and edit AIPs. |
 | Video example | Coming soon! |
 
-## 3. AIP to MAM
+## AIP to MAM
 
-### 3.1. Submit AIPs from RODA to MAM for permanent storage
+### Submit AIPs from RODA to MAM for permanent storage
 
 |  |  |
 |--|--|
@@ -88,7 +88,7 @@ RODA executes the following plugins in order during the AIDA ingest workflow. Pl
 | Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. Simply select the AIPs you want to submit to MAM, prune or unprune. Then execute the desired plugin. |
 | Video example | Coming soon! |
 
-### 3.2. Retrieve AIPs from MAM to RODA for updating
+### Retrieve AIPs from MAM to RODA for updating
 
 |  |  |
 |--|--|
@@ -97,7 +97,7 @@ RODA executes the following plugins in order during the AIDA ingest workflow. Pl
 | Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. Select the AIPs you want to retrieve data representations from and then execute the 'restore pruned representations from meemoo' plugin. |
 | Video example | Coming soon! |
 
-### 3.3. Inspect AIPs in MAM
+### Inspect AIPs in MAM
 
 |  |  |
 |--|--|
