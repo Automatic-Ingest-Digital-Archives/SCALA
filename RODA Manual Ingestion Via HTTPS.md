@@ -24,13 +24,13 @@ To perform the manual ingestion in RODA through the interface, the first step is
 * Process
 * Assessment
 
-To make an ingest you need to select or upload one or more SIP's in the system, so you need to click on the Transfer button in the menu described in above and shown in the figure:
+To make an ingest you need to select or upload one or more SIP's in the system, so you need to click on the Transfer button in the menu described in above and shown in the figure:</br>
 ![image](https://user-images.githubusercontent.com/87436774/153420501-4eb5345f-a2b4-46b1-a1f5-e049af1be339.png)
 
-This button sends you to the transfer page, as can be seen here:
+This button sends you to the transfer page, as can be seen here:</br>
 ![image](https://user-images.githubusercontent.com/87436774/153420598-5c812251-42aa-4d01-9e00-3dd7b90de333.png)
 
-In this page click on the upload button, to upload one or more SIP's, when the SIP's upload is done the page will be the same as shown:
+In this page click on the upload button, to upload one or more SIP's, when the SIP's upload is done the page will be the same as shown:</br>
 ![image](https://user-images.githubusercontent.com/87436774/153420709-7d47a967-539b-45e2-aab7-48d7750dac11.png)
 
 To start the ingest process in this page you need to select all the SIPs that you want to ingest and click on the three dots menu on the right side. This click open a menu with the following options:
@@ -40,7 +40,7 @@ To start the ingest process in this page you need to select all the SIPs that yo
 * Remove
 * Start new process
 
-To continue the ingest process after selecting all the SIP’s for the process, go to ”Start new process” in the menu described above. After clicking “Start new process”, the RODA will show a new page:
+To continue the ingest process after selecting all the SIP’s for the process, go to ”Start new process” in the menu described above. After clicking “Start new process”, the RODA will show a new page:</br>
 ![image](https://user-images.githubusercontent.com/87436774/153420960-2e9e5489-3b6d-47f9-a3c9-ee3c607f7135.png)
 
 In this page will appear five options on the left side, being them:
@@ -53,7 +53,7 @@ In this page will appear five options on the left side, being them:
 
 By default the __“AIDA ingest workflow (1.0)”__ is selected, this is the option with all necessary steps to ingest the AIP with AIDA specific requirements. On the right side of the screen you find a panel with options selected by default and fields to fill in like the __“Ingest finished email notification”__ this is the email address that RODA will send the notification of the ingest process. After concluding the configuration of ingest workflow, click on the __“create”__ button on the right side of the panel and the process starts.
 
-This click sends you to the page with all job’s. In this page you can check the state of your job and see the job report by clicking on the row of your job.
+This click sends you to the page with all job’s. In this page you can check the state of your job and see the job report by clicking on the row of your job.</br>
 ![image](https://user-images.githubusercontent.com/87436774/153421251-f32e3e28-dcf9-4982-9197-1bf22abb3568.png)
 
 If the ingest process finished with success you can see the AIP or AIPs created in the catalogue page by clicking the __“Catalogue”__ button in the navigation bar.
