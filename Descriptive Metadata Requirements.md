@@ -14,7 +14,7 @@ __Required fields for submitting to meemoo are:__
 
 __Optional fields are:__
 
-- ead/archdesc/did/accessrestrict/p
+- ead/archdesc/accessrestrict/p
 - ead/archdesc/scopecontent/p
 
 __Example of a correct xml:__
