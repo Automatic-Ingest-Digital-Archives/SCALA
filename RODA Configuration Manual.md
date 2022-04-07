@@ -1,7 +1,6 @@
 # RODA Configuration Manual
 
-###
-<details><summary><b>Institution registration</b></summary>
+## Institution registration
   
 These instructions are taken from the [AIDA Administrative Operations Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf) by KEEPS.
 
@@ -77,10 +76,9 @@ Where N is the number following the last configured institution
 
   3. Restart the service so the new configuration take effect </br>__docker-compose up -d__
   
-</details>
+
   
-###
-<details><summary><b>Metadata format configuration</b></summary>
+## Metadata format configuration
 
 RODA supports any descriptive metadata format (i.e. Descriptive Information as stated in the OAIS) as long as it represented by an XML file. If you have a descriptive metadata format that is not based on XML (e.g. CSV, JSON, MARC21, etc.), you will have to convert it to XML before you can use in RODA. Several tools exist on the Web that allow you to convert most data formats into XML.
 
@@ -112,12 +110,11 @@ To define advanced search fields and fields of the search results:
 
 Other configurations available for other lists that present AIPs either than the Search and Catalogue pages.
   
-</details>
 
-###
-<details><summary><b>User permissions</b></summary>
 
-#### Top level repository permissions
+## User permissions
+
+### Top level repository permissions
 
 | Permission | Detail |
 |------------|--------|
@@ -127,7 +124,7 @@ Other configurations available for other lists that present AIPs either than the
 | Delete | Permission to delete this archival package or any of its sub-components. |
 | Grant | Permission to change the permissions of this archival package. |
   
-#### Lower level IP permissions
+### Lower level IP permissions
 
 | Permission |
 |------------|
@@ -180,6 +177,3 @@ Other configurations available for other lists that present AIPs either than the
 | Destroy intellectual entities (AIPs) according to the disposal confirmation |
 | Restore destroyed intellectual entities (AIPs) according to the disposal confirmation |
 | Permanently delete destroyed intellectual entities (AIPs) according to the disposal confirmation |
-  
-</details>
-
