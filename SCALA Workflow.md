@@ -57,7 +57,7 @@ Here you can find a description of the steps involved in the SCALA workflow. Fol
 
 RODA executes the following plugins in order during the AIDA ingest workflow. Plugins are [mandatory or optional](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Administrative%20Manual.md#mandatory-vs-optional-ingest-plugins). If an issue is raised by a mandatory plugin, the ingest of the AIP will fail and you will need to fix the issue before trying again. Optional plugins will not break the ingest procedure when there is an issue; however you can later still try to address and fix the issue in RODA.
 
-![image](https://user-images.githubusercontent.com/87436774/161722015-51f7673a-2ea7-4110-adc5-8c4aee2a5a4c.png)
+![image](https://user-images.githubusercontent.com/87436774/162978407-2d07805c-b3a4-42e3-baf3-1b91f1858e1d.png)
 
 1. **E-ARK SIP2 to AIP** - Checks if the SIP is well formed, complete and that no unexpected files were included in accordance with the [commons IP E-ARK validator tool](https://github.com/keeps/commons-ip#:~:text=Notifications-,Commons%20IP%20is%20project%20that%20provide%20a%20command%2Dline%20tool,validate%20them%20against%20official%20specifications.).
 1. **Remove unwanted files** - A [blacklist](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/FileName%26ExtensionBlacklist.md) is maintained with useless file formats that are automatically extracted from the SIP. This blacklist can be expanded if necessary.
