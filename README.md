@@ -28,6 +28,7 @@ To get familiar with the pilot preservation system, please start by reading the 
 * [Meemoo Administrative Manual](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Meemoo%20Administrative%20Manual.md)
 
 ## IP
+* [SCALA AIP Specification](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20AIP%20Specification.pdf)
 * [SCALA AIP Structure](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20AIP%20Structure.md)
 * [SCALA SIP Structure](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20SIP%20Structure.md)
 
