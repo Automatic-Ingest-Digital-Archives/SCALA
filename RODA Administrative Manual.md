@@ -2,6 +2,41 @@
 
 [RODA](https://roda-community.org/#welcome) is a browser tool where you can upload SIPs and transform them to AIPs.
 
+## Table of contents
+- [Plugins](#plugins)
+  * [Siegfried configuration](#siegfried-configuration)
+  * [Unoconv configuration](#unoconv-configuration)
+  * [Mandatory vs. optional ingest plugins](#mandatory-vs-optional-ingest-plugins)
+  * [Remove unwanted files](#remove-unwanted-files)
+  * [Meemoo descriptive metadata](#meemoo-descriptive-metadata)
+  * [AIDA specific preservation actions](#aida-specific-preservation-actions)
+    + [Create E-ARK AIP 2.0 manifest files (METS.xml)](#create-e-ark-aip-20-manifest-files--metsxml-)
+    + [Image conversion (ImageMagick)](#image-conversion--imagemagick-)
+    + [Office documents conversion (unoconv)](#office-documents-conversion--unoconv-)
+  * [All commercial plugins](#all-commercial-plugins)
+- [Data Management](#data-management)
+  * [RODA API documentation](#roda-api-documentation)
+  * [Solr querying](#solr-querying)
+- [Features](#features)
+  * [RODA AIP storage](#roda-aip-storage)
+  * [RODA AIP editing](#roda-aip-editing)
+  * [RODA AIP searching](#roda-aip-searching)
+  * [RODA AIP plugins](#roda-aip-plugins)
+  * [Activating full-text search](#activating-full-text-search)
+  * [AIDA default ingest workflow](#aida-default-ingest-workflow)
+  * [AIP pruning](#aip-pruning)
+  * [Orphaned IPs](#orphaned-ips)
+  * [Internal actions](#internal-actions)
+  * [Preservation actions](#preservation-actions)
+  * [IP meemoo status data](#ip-meemoo-status-data)
+  * [Meemoo sync](#meemoo-sync)
+    + [Submit to meemoo](#submit-to-meemoo)
+    + [Prune](#prune)
+    + [Restore from meemoo](#restore-from-meemoo)
+  * [Access features](#access-features)
+- [API examples](#api-examples)
+  * [Change descriptive metadata](#change-descriptive-metadata)
+
 ## Plugins
 
 ### Siegfried configuration
