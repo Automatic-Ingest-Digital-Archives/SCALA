@@ -34,4 +34,3 @@ To get familiar with the pilot preservation system, please start by reading the 
 
 ## Other
 * [How To Create File Based SIPs](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/How%20To%20Create%20File%20Based%20SIPs.md)
-* [DAV AIP Example](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/DAV%20AIP%20Example.md)
