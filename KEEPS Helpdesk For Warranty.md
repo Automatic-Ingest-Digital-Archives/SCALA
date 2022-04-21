@@ -1,2 +1,2 @@
-KEEP helpdesk is bereikbaar op: https://helpdesk.keep.pt/projects/hd-roda-aida.
-Via de helpdesk kan je tickets voor bugs of suggesties aanmaken, binnen de 2 jaar garantie. Tickets moeten gaan over features die werden ontwikkeld binnen het SCALA project.
+KEEP helpdesk is available on https://helpdesk.keep.pt/projects/hd-roda-aida.
+Use the helpdesk to create tickets for bugs or suggestions. The helpdesk can be used within the 2 year warranty period and shouls focus on developed features within the SCALA project.
