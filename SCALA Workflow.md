@@ -19,7 +19,7 @@ Here you can find a description of the steps involved in the SCALA workflow. The
 |--|--|
 | What | Prepare descriptive metadata for each SIP. |
 | Why | Descriptive metadata will help make sure you can look up and retrieve the content of your SIPs in later stages. The more details given, the better. Examples of descriptive metadata fields are title, creator, producer, scope & content, release date, ... |
-| How | From you archive management system, export descriptive metadata into an XML file per SIP. There are international standards with naming and structuring definitions for the fields in these XMLs. EAD 2002 and Dublin Core are famous examples you can adhere to. Otherwise simple key-value pairs work as well.</br></br> If there is no descriptive metadata available in your archive management system, you will have to type it yourself into an XML file per SIP (which can be a time consuming process). Or maybe there is an AI solution out there which can inspect your archival data and extract the metadata for you! |
+| How | From you archive management system, export descriptive metadata into an XML file per SIP. There are international standards with naming and structuring definitions for the fields in these XMLs. EAD 2002 and Dublin Core are famous examples you can adhere to. Otherwise simple key-value pairs work as well.</br></br> If there is no descriptive metadata available in your archive management system, you will have to type it yourself into an XML file per SIP (which can be a time consuming process). |
 | Where | Ideally you can export this data as an XML per SIP from your archive management system. Otherwise you will have to create the XMLs yourself. |
 | Video example | Coming soon! |
 
