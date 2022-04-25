@@ -10,7 +10,7 @@ Here you can find a description of the steps involved in the SCALA workflow. The
 |--|--|
 | What | Get your archival data and export it to your computer. |
 | How | Arrange your digital born files into comprehensive units of archival data (such as series/files/items/...). For each such unit, we will later on create a SIP. You can go as granular as you wish, and there can be parent-child relations between SIPs. Each unit of archival data must be exported into its own separate folder on your computer. |
-| Where | Your archival data is probably in your company's archive management system. |
+| Where | Your archival data are probably on the original carriers, or on temporary storage space. |
 | Video example | Coming soon! |
 
 ### Extract descriptive metadata from your archive management system
