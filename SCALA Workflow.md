@@ -1,6 +1,6 @@
 # SCALA Workflow
 
-Here you can find a description of the steps involved in the SCALA workflow. Following these steps allows you to transfer archival data into SIPs, then into AIPs and finally have them stored on disk for permanent storage.
+Here you can find a description of the steps involved in the SCALA workflow. These steps allow you to transfer archival data into SIPs, then into AIPs and finally have them stored on disk for permanent storage.
 
 ## Archival data to SIP
 
