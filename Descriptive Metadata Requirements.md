@@ -14,6 +14,7 @@ __Required fields for submitting to meemoo are:__
 
 __Optional fields are:__
 
+- ead/archdesc/did/unitid@label='original_filepath'
 - ead/archdesc/accessrestrict/p
 - ead/archdesc/scopecontent/p
 
@@ -37,6 +38,7 @@ __Example of a correct xml:__
 		<ns0:did>
 			<ns0:unittitle>Aanbevelingsbrieven van Christian Kieckens voor studenten, stagiairs en medewerkers</ns0:unittitle>
 			<ns0:unitid repositorycode="BE-653717" label="localId">0099-CK_0220</ns0:unitid>
+			<ns0:unitid label="original_filepath">BACKUP_CKA_2018 12 19/CKA_ADMINISTRATIE_20181219/AANBEVELINGEN</ns0:unitid>
 			<ns0:unitdate>../..</ns0:unitdate>
 			<ns0:repository>
 				<ns0:corpname>Vai</ns0:corpname>
