@@ -30,7 +30,8 @@ Here you can find a description of the steps involved in the SCALA workflow. The
 | What | Create E-ARK2 SIPs by combining archival data and their respective descriptive metadata in structured way. |
 | How | RODA-In is our recommended SIP creation tool. Use it to select your data folders and automatically match descriptive metadata. Then you can make representation edits and add extra documentation if needed. Lastly generate E-ARK2 structured SIPS, with METS file and representations.</br>![image](https://user-images.githubusercontent.com/87436774/161509331-adc80ea2-8ad4-48a5-a5b1-8633440db885.png) |
 | Where | You can download the latest RODA-In version [here](https://rodain.roda-community.org/). |
-| Video example | https://user-images.githubusercontent.com/87436774/168813176-2e8f4df0-5be7-4b55-a17d-bd03e84be8d0.mp4 |
+
+https://user-images.githubusercontent.com/87436774/168813176-2e8f4df0-5be7-4b55-a17d-bd03e84be8d0.mp4
 
 ## SIP to AIP
 
