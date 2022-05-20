@@ -43,7 +43,8 @@ https://user-images.githubusercontent.com/87436774/168813176-2e8f4df0-5be7-4b55-
 | Why | Once uploaded to the server, the RODA tool can automatically start ingesting the SIPs and transform them into AIPs. |
 | How | Download an FTP client and connect to the server. Upload SIPs and mark them as 'ready for ingestion by RODA'. |
 | Where | Any FTP client you can find online should work, such as WinSCP. Contact a server administration at meemoo to get the required connection details for the server. |
-| Video example | Coming soon! |
+
+https://user-images.githubusercontent.com/87436774/168846210-27428b03-423c-48ba-b8b8-dd5bfd8654da.mp4
 
 ### Transform SIPs into AIPs using the AIDA ingest workflow in RODA
 
