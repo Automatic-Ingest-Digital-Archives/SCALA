@@ -53,7 +53,8 @@ https://user-images.githubusercontent.com/87436774/168846210-27428b03-423c-48ba-
 | What | Transform uploaded SIPs into AIPs in RODA. |
 | How | Automatically! SIPs on the SFTP server are picked up and go through an AIDA ingest workflow where several plugins do checks and transformations on the SIP. This results in an E-ARK2 AIP if no issues were found. |
 | Where | The ingest process can be tracked on the [RODA process tab](https://scala.meemoo.be/#ingest/process). You will need to request RODA login credentials with your organization. |
-| Video example | Coming soon! |
+
+https://user-images.githubusercontent.com/87436774/169813420-e2095b06-6e6c-485d-ae03-76ea8b275a3d.mp4
 
 #### AIDA ingest workflow steps
 
