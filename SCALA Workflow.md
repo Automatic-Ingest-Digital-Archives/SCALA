@@ -11,7 +11,6 @@ Here you can find a description of the steps involved in the SCALA workflow. The
 | What | Get your archival data and export it to your computer. |
 | How | Arrange your digital born files into comprehensive units of archival data (such as series/files/items/...). For each such unit, we will later on create a SIP. You can go as granular as you wish, and there can be parent-child relations between SIPs. Each unit of archival data must be exported into its own separate folder on your computer. |
 | Where | Your archival data are probably on the original carriers, or on temporary storage space. |
-| Video example | Coming soon! |
 
 ### Extract descriptive metadata from your archive management system
 
@@ -21,7 +20,6 @@ Here you can find a description of the steps involved in the SCALA workflow. The
 | Why | Descriptive metadata will help make sure you can look up and retrieve the content of your SIPs in later stages. The more details given, the better. Examples of descriptive metadata fields are title, creator, producer, scope & content, release date, ... |
 | How | From you archive management system, export descriptive metadata into an XML file per SIP. There are international standards with naming and structuring definitions for the fields in these XMLs. EAD 2002 and Dublin Core are famous examples you can adhere to. Otherwise simple key-value pairs work as well.</br></br> If there is no descriptive metadata available in your archive management system, you will have to type it yourself into an XML file per SIP (which can be a time consuming process). |
 | Where | Ideally you can export this data as an XML per SIP from your archive management system. Otherwise you will have to create the XMLs yourself. |
-| Video example | Coming soon! |
 
 ### Create SIPs using RODA-In
 
@@ -78,7 +76,8 @@ RODA executes the following plugins in order during the AIDA ingest workflow. Pl
 | What | Edit AIPs in RODA and mark them for long-term storage. |
 | How | In the RODA catalogue you are able to find and inspect all your AIPs.</br>![image](https://user-images.githubusercontent.com/87436774/161526406-50cc9282-2dd2-4d55-858f-17bd21cc13f1.png)</br>You can update the content of data representations or descriptive metadata, or run new [process plugins](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Administrative%20Manual.md#roda-aip-plugins) on your AIPs.</br>![image](https://user-images.githubusercontent.com/87436774/161526722-e5c505f7-fe98-4e93-b6ea-a22f9e8e1579.png)</br>These actions result in PREMIS events which are added to the AIPs.</br>![image](https://user-images.githubusercontent.com/87436774/161526543-17ff48c8-a4ac-4797-bfc7-883a56346f8e.png)</br>When you are done, you can mark your AIPs for long-term storage. |
 | Where | All this can be done in the [RODA Catalogue](https://scala.meemoo.be/#browse) of your organization. You can use it to search, select and edit AIPs. |
-| Video example | Coming soon! |
+
+https://user-images.githubusercontent.com/87436774/170238808-7501ae48-da00-4c80-99c7-4bdf2466f3fc.mp4
 
 ## AIP to MAM
 
