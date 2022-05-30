@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:ead xmlns:ns0="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<ns0:eadheader>
+		<ns0:eadid />
+		<ns0:filedesc>
+			<ns0:titlestmt>
+				<ns0:titleproper />
+			</ns0:titlestmt>
+		</ns0:filedesc>
+		<ns0:profiledesc>
+			<ns0:creation>JelleKleevensVAI</ns0:creation>
+		</ns0:profiledesc>
+	</ns0:eadheader>
+	<ns0:archdesc level="file">
+		<ns0:did>
+			<ns0:unittitle>Addendum bij kandidatuurstelling van CKA voor de uitwerking van een gemeentelijk administratief centrum te Deinze, België</ns0:unittitle>
+			<ns0:unitid repositorycode="BE-653717" label="localId">0099-CK_0346</ns0:unitid>
+			<ns0:unitdate>../..</ns0:unitdate>
+			<ns0:repository>
+				<ns0:corpname>Vai</ns0:corpname>
+			</ns0:repository>
+			<ns0:origination label="creator">
+				<ns0:name>Vai</ns0:name>
+			</ns0:origination>
+			<ns0:origination label="producer"><ns0:name>SCALA</ns0:name></ns0:origination>
+		</ns0:did>
+		<ns0:scopecontent>
+			<ns0:p>Bevat één stuk. Addendum bij de kandidatuurstelling. Stelt dat CKA zijn kandidatuur in stand houdt, maar dat ze ernstige bedenkingen hebben bij een gehanteerde standaard in de projectdefinitie. (geen) link met al geïnventariseerde projectdossiers.</ns0:p>
+			<ns0:p />
+		</ns0:scopecontent>
+		<ns0:relatedmaterial>
+			<ns0:p />
+		</ns0:relatedmaterial>
+		<ns0:accessrestrict>
+			<ns0:p>Enkel raadpleegbaar door Vai</ns0:p>
+		</ns0:accessrestrict>
+		<ns0:processinfo>
+			<ns0:p>
+				<ns0:date>2021-09-23</ns0:date>
+			</ns0:p>
+		</ns0:processinfo>
+		<ns0:dsc type="combined" />
+	</ns0:archdesc>
+</ns0:ead>

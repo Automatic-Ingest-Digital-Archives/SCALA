@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:ead xmlns:ns0="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<ns0:eadheader>
+		<ns0:eadid />
+		<ns0:filedesc>
+			<ns0:titlestmt>
+				<ns0:titleproper />
+			</ns0:titlestmt>
+		</ns0:filedesc>
+		<ns0:profiledesc>
+			<ns0:creation />
+		</ns0:profiledesc>
+	</ns0:eadheader>
+	<ns0:archdesc level="item">
+		<ns0:did>
+			<ns0:unittitle>nagelkerke03.jpg</ns0:unittitle>
+			<ns0:unitid label="original_filepath" original_filepath="localId">NAGELKERKE_FOTOS/nagelkerke03.jpg</ns0:unitid>
+			<ns0:unitid label="localId" localId="localId">0099-CK_0167-1418cd15-31e9-4fde-84a5-5de9b66675de</ns0:unitid>
+			<ns0:origination label="creator">Christiaan Kieckens</ns0:origination>
+			<ns0:origination label="producer"><ns0:name>AIDA</ns0:name></ns0:origination>
+			<ns0:repository>
+				<ns0:corpname>VAi</ns0:corpname>
+			</ns0:repository>
+		</ns0:did>
+		<ns0:scopecontent>
+			<ns0:p>Niet raadpleegbaar.</ns0:p>
+		</ns0:scopecontent>
+	</ns0:archdesc>
+</ns0:ead>
