@@ -491,6 +491,12 @@ In terms of facets, the attributes added are the following:
 
 	
 ## API examples
+	
+### Get descriptive metadata
+
+Example: https://scala.meemoo.be/api/v1/aips/4e222850-4322-43d2-96d6-1b5a49751bd6/descriptive_metadata/scala.xml?metadataType=EAD&metadataVersion=2002&acceptFormat=bin&lang=en_US
+	
+acceptFormat=bin ensures you get the contents of the scala.xml file for the AIP.
 
 ### Change descriptive metadata
 Descriptive metadata can be changed by executing a PUT-request on the RODA API. You cannot change one metadata-element. You need to update a complete descriptive metadata file.
