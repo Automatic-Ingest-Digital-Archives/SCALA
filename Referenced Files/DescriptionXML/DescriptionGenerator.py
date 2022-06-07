@@ -2,29 +2,21 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 import sys
 import os
-from pathlib import Path
-import uuid
 
 """ sys.argv[0] = script name
     sys.argv[1] = XLSX path
+    sys.argv[2] = output dir
     Expected XLSX headers:
-        destinationDirectory	creation	archdeskLevel	unitTitle	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
+        destinationDirectory	creation	archdeskLevel	unitTitle	scalaID	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
 """
 
-"""Read records from XLS"""
+""" 1. Read records from XLS"""
 xlsPath = sys.argv[1]
 dataFrame = pd.read_excel(xlsPath, na_filter=False, dtype=object)
 records = dataFrame.to_dict('records')
 
-"""General XML schema data & output saving information"""
-schemaName = "ead"
-namespaces = {"xmlns": "urn:isbn:1-931666-22-9", "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-              "xsi:schemaLocation": "urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd"}
-currentDir = os.getcwd()
-fileName = "description.xml"
-
-"""Build and save XML for each record"""
-for record in records:
+""" 2. Define how to build the XML"""
+def buildXml (schemaName, namespaces, record):
     root = ET.Element(schemaName, **namespaces)
 
     eadheader = ET.SubElement(root, "eadheader")
@@ -41,6 +33,9 @@ for record in records:
     did = ET.SubElement(archdesc, "did")
     unittitle = ET.SubElement(did, "unittitle")
     unittitle.text = record["unitTitle"]
+    unitid1 = ET.SubElement(did, "unitid")
+    unitid1.set("label", "scalaID")
+    unitid1.text = record["scalaID"]
     unitid2 = ET.SubElement(did, "unitid")
     unitid2.set("repositorycode", record["repositoryCode"])
     unitid2.set("label", "localID")
@@ -51,12 +46,10 @@ for record in records:
     corpname = ET.SubElement(repository, "corpname")
     corpname.text = record["corpName"]
 
-    # TODO: make field repeatable
     origination1 = ET.SubElement(did, "origination")
     origination1.set("label", "creator")
     name1 = ET.SubElement(origination1, "name")
     name1.text = record["creatorName"]
-
     origination2 = ET.SubElement(did, "origination")
     origination2.set("label", "producer")
     name2 = ET.SubElement(origination2, "name")
@@ -79,15 +72,21 @@ for record in records:
 
     xml = ET.tostring(root, encoding="UTF-8",
                       xml_declaration=True).decode("UTF-8")
+    fileName = record["destinationDirectory"] + ".xml"
 
-    directoryName = record["destinationDirectory"]
-    Path(os.path.join(currentDir, directoryName)).mkdir(
-        parents=True, exist_ok=True)
-    savePath = os.path.join(currentDir, directoryName, fileName)
+    return (xml, fileName)
 
+""" 3. Build and save XML for each record"""
+outputDir = sys.argv[2]
+schemaName = "ead"
+namespaces = {"xmlns": "urn:isbn:1-931666-22-9", "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+              "xsi:schemaLocation": "urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd"}
+for record in records:
+    xml, fileName = buildXml(schemaName, namespaces, record)
+    savePath = os.path.join(outputDir, fileName)
     try:
-        with open(savePath, 'w', encoding='UTF-8') as f:
-            print(f"Writing {fileName} for {directoryName}.")
-            f.write(xml)
+        with open(savePath, 'w', encoding='UTF-8') as file:
+            print(f"Writing descriptive metadata for {fileName}.")
+            file.write(xml)
     except Exception as Argument:
         print(Argument)
