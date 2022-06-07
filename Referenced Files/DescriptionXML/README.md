@@ -52,9 +52,9 @@ https://www.python.org/downloads/
 
 ## 3. Download Python script and requirements
 
-[Download the Python script here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/DescriptionGenerator.py)
+[Download the Python script here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/DescriptionXML/DescriptionGenerator.py)
 
-[And the required dependencies here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Manual%20Ingest/DescriptionXML/requirements.txt)
+[And the required dependencies here.](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/DescriptionXML/requirements.txt)
 
 Put both in the **root folder** of your SIPs.
 
