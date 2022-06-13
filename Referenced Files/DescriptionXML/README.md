@@ -62,12 +62,12 @@ Put both in the **root folder** of your SIPs.
 
 Open a terminal in the root folder of your SIPs. Then copy, paste and execute the script below.
 
-! Please note: in the script replace {{YOURFILE}} with the name of your XLSX file.
+! Please note: in the script replace {{YOURFILE}} with the name of your XLSX file and {{OUTPUTDIR}} with your chosen output directory.
 
 <b>PowerShell</b>
 
 ```powershell
 py -m pip install --upgrade pip
 pip install -r requirements.txt
-py .\DescriptionGenerator.py .\{{YOURFILE}}.xlsx
+py .\DescriptionGenerator.py .\{{YOURFILE}}.xlsx .\{{OUTPUTDIR}}\
 ```
