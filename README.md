@@ -18,6 +18,7 @@ To get familiar with the pilot preservation system, please start by reading the 
 * [AIDA Administrative Operations Manual by KEEPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/MU221844%20-%20AIDA%20Administrative%20Operations%20Manual.pdf)
 * [AIDA FTP Dropfolder User Guide by KEEPS](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Dropfolder%20-%20User%20guide.pdf)
 * [KEEPS Helpdesk For Warranty](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/KEEPS%20Helpdesk%20For%20Warranty.md)
+* [RODA Architecture](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/RODA%20Architecture.md)
 * [Solr Backup CRON Job](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Solr%20Backup%20CRON%20Job.md)
 
 ## RODA-In
