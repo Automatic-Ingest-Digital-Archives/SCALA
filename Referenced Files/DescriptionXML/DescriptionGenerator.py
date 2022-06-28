@@ -6,8 +6,6 @@ import os
 """ sys.argv[0] = script name
     sys.argv[1] = XLSX path
     sys.argv[2] = output dir
-    Expected XLSX headers:
-        destinationDirectory	creation	archdeskLevel	unitTitle	scalaID	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
 """
 
 """ 1. Read records from XLS"""
@@ -16,6 +14,8 @@ dataFrame = pd.read_excel(xlsPath, na_filter=False, dtype=object)
 records = dataFrame.to_dict('records')
 
 """ 2. Define how to build the XML"""
+""" Expected XLSX headers in records: destinationDirectory	creation	archdeskLevel	unitTitle	scalaID	repositoryCode	localID	unitDate	corpName	creatorName	producerName	scopeContent	relatedMaterial	accessRestrict	processDate
+"""
 def buildXml (schemaName, namespaces, record):
     root = ET.Element(schemaName, **namespaces)
 
