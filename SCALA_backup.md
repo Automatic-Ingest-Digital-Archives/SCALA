@@ -1,4 +1,13 @@
-### Cron to do the solr backup
+# Backups
+AIDA is fully responsible for performing, validating, and monitoring that backups are being performed correctly. AIDA is responsible for the remote replication of the data and for all other aspects that are part of a good backup policy, which includes defining the retention period, monitoring completeness, disk space, restoration tests, among others best practices.
+
+To backup, replicate to a remote storage the following paths:
+•	/roda/data - All information pertaining RODA
+•	/backup/backup/index/solr - Backup target for the periodic SOLR backup task
+
+KEEP Solutions can assume this responsibility, but this is currently not the case.
+
+## More information about Cron to do the solr backup
 
 This backup cron will run a script that will backup all collections in solr and save this backup in the **/roda/backup/index/solr** folder.
 
