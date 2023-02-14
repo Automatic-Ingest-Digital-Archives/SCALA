@@ -1,10 +1,10 @@
 # SCALA
 
-SCALA is a project of nine heritage institutions in Flanders and Brussels (AIDA), who are jointly designing a system for the long-term preservation of born-digital archives with cultural-historical value. SCALA is conceived as a proof of concept to test a pilot version of a digital archive depot (digital repository). This digital repository stores archives in generic digital archive containers (information packages) according to the OAIS model and the new European standard E-ARK. It is open source and is being developed by a third party IT vendor.
+SCALA is a collaborative project involving nine heritage institutions in Flanders and Brussels (AIDA) with the goal of developing a system for the long-term preservation of born-digital archives with cultural-historical value. The project serves as a proof of concept to test a pilot version of a digital archive depot, which stores archives in generic digital archive containers (information packages) following the OAIS model and the new European standard E-ARK. This open-source repository is being developed by a third-party IT vendor.
 
-SCALA is a pioneer in Flanders with the use of E-ARK and as a result organizes an E-ARK working group with external partners, with whom they want to arrive at a Flemish standard model for information packages. This model should promote sustainability, system independence and collaboration.
+As a pioneer in Flanders with the use of E-ARK, SCALA has established an E-ARK working group with external partners to develop a Flemish standard model for information packages that promotes sustainability, system independence, and collaboration.
 
-To get familiar with the pilot preservation system, please start by reading the SCALA Workflow. Then to start using the system, consult the SCALA IP Ingestion Manual.
+To get started with the pilot preservation system, please read the SCALA Workflow. To begin using the system, consult the SCALA IP Ingestion Manual.
    
 ## SCALA IP Ingestion
 * [SCALA Workflow](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/SCALA%20Workflow.md)
