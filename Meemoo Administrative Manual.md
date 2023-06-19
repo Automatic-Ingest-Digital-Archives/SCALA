@@ -12,7 +12,9 @@ Meemoo keeps its own version of documentation for the project on https://meemoo.
   
 The current strategy is to archive all AIP versions on meemoo. The AIP version is decided by RODA and is also sent with the AIP metadata sidecar xml to meemoo. RODA will always restore the latest version from meemoo. Obsolete versions are not deleted; it is up to meemoo to develop a way to delete obsolete AIP versions later on.
 
-When archiving to meemoo, a sidecar xml is generated and passed to meemoo for cross platform linking of the IP. Example sidecar xml generated when archiving AIP on meemoo:
+When archiving to meemoo, a sidecar xml is generated and passed to meemoo for cross platform linking of the IP.
+
+Example sidecar xml with required fields:
   
 ```xml
 AIP successfully preserved in MEEMOO
@@ -22,17 +24,41 @@ rep1
 sidecar:
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VIAA>
-    <aip_version>1</aip_version>
-    <md5>BB096878ED1F765088A85D23C587B482</md5>
-    <dc_contributors/>
-    <dcterms_created>2021-11-22T14:41:46Z</dcterms_created>
-    <dc_creators/>
-    <dc_identifier_localid>a7cb55ff-f8de-47ea-9a9f-6d14705d3b97</dc_identifier_localid>
-    <dc_identifier_localids>
-        <ScalaID>uuid-16c59bcd-b0c7-492f-9c18-89e83ba48604</ScalaID>
-    </dc_identifier_localids>
-    <CP_id>OR-jq0st8z</CP_id>
-    <dc_titles/>
+	<aip_version>1</aip_version>
+	<md5>BB096878ED1F765088A85D23C587B482</md5>
+	<dc_contributors/>
+	<dcterms_created>2021-11-22T14:41:46Z</dcterms_created>
+	<dc_creators/>
+	<dc_identifier_localid>a7cb55ff-f8de-47ea-9a9f-6d14705d3b97</dc_identifier_localid>
+	<dc_identifier_localids>
+		<ScalaID>uuid-16c59bcd-b0c7-492f-9c18-89e83ba48604</ScalaID>
+	</dc_identifier_localids>
+    	<CP_id>OR-jq0st8z</CP_id>
+    	<dc_titles/>
+</VIAA>
+```
+
+Example sidecar xml with all possible fields:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<VIAA xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"> <!--meemoo sidecar-->
+	<CP>AMSAB-IG</CP> <!--Source: descriptive metadata ead/archdesc/did/repository/corpname-->
+	<CP_id>OR-jq@st8z</CP_id> <!--OR-ID (source?)-->
+	<dc_title>aanwinst van ABVV</dc_title><!--Source:descriptive metadata ead/archdesc/did/unittitle-->
+	<dc_description>collectie van een digitale dragers</dc_description> <!--Source: descriptive metadata ead/archdesc/did/scopecontent-->
+	<dc_identifier_localid>collectie12345</dc_identifier_localid> <!--Source: descriptive metadata ead/archdesc/did/unitid@label='LocalId'. Local ID. See https://github.com/Automatic-Ingest-Digital-Archives/SCALA/issues/57-->
+	<dc_identifier_localids type="list">
+		<ScalaID>a84be406-38a5-4002-a20a-188abd83ff83</ScalaID> <!--Source: AIP. AIP ID. See https://github.com/Automatic-Ingest-Digital-Archives/SCALA/issues/54-->
+	</dc_identifier_localids>
+	<dc_creators type="list">
+		<Archiefvormer>ABVV</Archiefvormer> <!--Source: descriptive metadata ead/archdesc/did/origination@label='creator'/name Client Request-->
+	</dc_creators>
+	<dc_publishers type="list">
+		<publisher>AIDA</publisher> <!--Source: descriptive metadata ead/archdesc/did/origination@label='producer'/name Client Request. This field is hardcoded to AIDA in RODA-In.-->
+	</dc_publishers>
+	<dc_rights_comment>niet-raadpleegbaar</dc_rights_comment> <!--Source: descriptive metadata ead/archdesc/did/accessrestrict-->
+	<md5>582925fef639c663e0abf9c47cad0727</md5> <!--Source: AIP-->
 </VIAA>
 ```
   
