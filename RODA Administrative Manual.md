@@ -36,6 +36,8 @@
   * [Access features](#access-features)
 - [API examples](#api-examples)
   * [Change descriptive metadata](#change-descriptive-metadata)
+- [SOLR examples](#solr-examples)
+  * [Learn the number of files of each partner institution](#learn-the-number-of-files-of-each-partner-institution)
 
 ## Plugins
 
