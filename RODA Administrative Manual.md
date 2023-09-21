@@ -250,7 +250,7 @@ Info and documentation [here](https://github.com/Automatic-Ingest-Digital-Archiv
   
 URL: https://scala.meemoo.be/solr/#/.
   
-Documentation: https://solr.apache.org/guide/7_7/index.html.
+Documentation: https://solr.apache.org/guide/7_7/index.html. For the standard operations, see https://solr.apache.org/guide/6_6/the-standard-query-parser.html
   
 KEEP training Solr use cases and exercises: https://github.com/Automatic-Ingest-Digital-Archives/SCALA/tree/main/Referenced%20Files/Training%20Solr%20use%20cases.pdf.
   
@@ -549,4 +549,33 @@ response = requests.request("PUT", url, headers=headers, files=files)
 print(response)
 print(response.text)
 ```
+## SOLR examples
 
+### Learn the number of files of each partner institution
+You can search by 
+* the main AIP UUID (field 'ancestors'), not safe since this excludes AIPs with ghost nodes/unknown ancestors, like https://scala.meemoo.be/#browse/837e4fb8-c18c-4846-815a-de761612ccc5
+* permission group (field: 'permission_groups_READ'), safest
+
+On main AIP UUID (example of AMVB main AIP): 
+https://scala.meemoo.be/solr/File/select?indent=true&q.op=AND&q=ancestors%3Aed3964e1-d8a7-4786-a594-8f87c08a90f5&useParams=
+
+```json
+"response":{
+  "numFound":86091,
+  "start":0,
+  "maxScore":1.2225661,
+  "numFoundExact":true,
+  "docs":['list of files']
+```
+
+On permission group (example of Group 'Curator-AMVB'): 
+https://scala.meemoo.be/solr/File/select?indent=true&q.op=AND&q=permission_groups_READ%3ACurator-AMVB&useParams=
+
+```json
+"response":{
+  "numFound":86091,
+  "start":0,
+  "maxScore":1.2225661,
+  "numFoundExact":true,
+  "docs":['list of files']
+```
