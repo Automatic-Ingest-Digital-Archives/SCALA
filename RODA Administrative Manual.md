@@ -581,3 +581,5 @@ https://scala.meemoo.be/solr/File/select?indent=true&q.op=AND&q=permission_group
   "numFoundExact":true,
   "docs":['list of files']
 ```
+### SOLR exercises
+(See ppt presentation](https://github.com/Automatic-Ingest-Digital-Archives/SCALA/blob/main/Referenced%20Files/Training%20Solr%20use%20cases.pdf))
